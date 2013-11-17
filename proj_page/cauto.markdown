@@ -63,7 +63,11 @@ The source tree consists of four folders:
 * `exe/` - executable dir
 * `so/` - library dir
 
-Depending on where you put a file, it is going to be compiled into an object file, an executable or a library. Object files are handled by CMake in `build/CMakeFiles/*`. Executables and libraries are created in `build/` using the same basename of the file relative to `exe/` or `so/`.
+Depending on where you put a file, it is going to be compiled into an object file, an executable or a library.
+
+Files in `src/` and `inc/` are compiled into object files and used to link executables and libraries. Object files are handled by CMake in `build/CMakeFiles/*`. In order to tell CAuto a header file corresponds to a certain source file, the basename of both files relative to `inc/` and `src/` has to be the same. For example if a target includes `inc/foo/bar.h`, the target will be compiled with `src/foo/bar.cpp` in the case it exists.
+
+Executables and libraries are created in `build/` using the same basename of the file relative to `exe/` or `so/`. For example `exe/foo/bar.cpp` is compiled into the binary `build/foo/bar` and `src/bar/foo.cpp` is compiled into the binary `build/bar/libfoo.so`.
 
 ### Example Executable
 
