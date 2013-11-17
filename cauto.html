@@ -36,77 +36,137 @@
         </div>
 
        <div id="content">
-<h2>Introduction</h2>
+<h1>Introduction</h1>
 
-<p>CAuto is a simple command line tool for <em>automatic compile and link
-C++ projects</em>. </p>
+<p>CAuto is a simple command line tool for <em>automatic compile and link C++ projects</em>.  </p>
 
-<p>CAuto aims at speeding up the workflow when managing targets and
-source code in a C++ project. Thus, CAuto uses an easy naming
-convention to automatically setup executables and libraries by
-scanning your source tree. Just drop in your files, configure
-dependencies and build. </p>
+<p>CAuto aims at speeding up the workflow when managing targets and source code in a C++ project. Thus, CAuto uses an easy naming convention to automatically setup executables and libraries by scanning your source tree. Just drop in your files, configure dependencies and build.  </p>
 
-<p>Using CAuto doesnt keep you off the important work - implementing
-your project. Create new targets for executables and libraries is
-as easy as creating a new file and run CAuto.</p>
+<p>Using CAuto doesnt keep you off the important work - implementing your project. Create new targets for executables and libraries is as easy as creating a new file and run CAuto.  </p>
 
-<p>CAuto relies on <em>bash</em>, <em>CMake</em> and <em>g++</em>. </p>
+<p>CAuto relies on <em>bash</em>, <em>CMake</em> and <em>g++</em>.  </p>
 
 <ul>
-<li><em>bash</em>  is used to run CAuto.</li>
-<li><em>CMake</em> manages dependencies (scans headers and uses <em>FindPackage.cmake</em> scripts).</li>
-<li><em>g++</em>   is used to scan source files.</li>
+<li><em>bash</em>  is used to run CAuto.  </li>
+<li><em>CMake</em> manages dependencies (scans headers and uses <em>FindPackage.cmake</em> scripts).  </li>
+<li><em>g++</em>   is used to scan source files.  </li>
 </ul>
 
-<p>CAuto is in development. Many things need to be extended and moved to config
-files. However it already can be used to setup C++ executables and libraries
-with only a few commands on the command line. If you like CAuto you
-are welcome participate the project.</p>
+<p>CAuto is in development. Many things need to be extended and moved to config files. However it already can be used to setup C++ executables and libraries with only a few commands on the command line. It works and is simple.  </p>
 
-<h2>Using CAuto</h2>
+<p>Feedback and contributions are welcome.  </p>
 
-<h3>Install</h3>
+<h1>Using CAuto</h1>
 
-<p>CAuto installation:</p>
+<h2>Install</h2>
+
+<p>CAuto only consists of a script and a CMake file. To install simply do:  </p>
 
 <blockquote>
-  <p><code>$ git clone https://github.com/lehmann7/cauto</code> <br>
-<code>$ cd cauto</code> <br>
-<code>$ make PREFIX=/usr/local install</code>    </p>
+  <p>$<code>git clone https://github.com/lehmann7/cauto</code> <br />
+$<code>cd cauto</code> <br />
+$<code>make PREFIX=/usr/local install</code>  </p>
 </blockquote>
 
-<p>After installation test if CAuto is in your path:</p>
+<p>or if you only want to see whats going to happen do:  </p>
 
 <blockquote>
-  <p><code>$ cauto</code> </p>
+  <p>$<code>make -n PREFIX=/usr/local install</code>  </p>
 </blockquote>
 
-<p>This should print the help page of CAuto.</p>
-
-<h3>Setting up a Project</h3>
-
-<p>To setup a project at first create a new folder and then use Cauto to
-init the project:</p>
+<p>After installation test if CAuto is in your path:  </p>
 
 <blockquote>
-  <p><code>$ mkdir myproj</code> <br>
-<code>$ cd myproj</code> <br>
-<code>$ cauto init</code>    </p>
+  <p>$<code>cauto</code>  </p>
 </blockquote>
 
-<p>Now the project is initialized and looks like the following:</p>
+<p>This should print the help page of CAuto.  </p>
+
+<h2>Setup Project</h2>
+
+<p>To setup a project at first create a new folder and then use Cauto to init the project:  </p>
 
 <blockquote>
-  <p><code>$ ls</code> <br>
-<code>build/</code> <br>
-<code>conf/</code> <br>
+  <p>$<code>mkdir myproj</code> <br />
+$<code>cd myproj</code> <br />
+$<code>cauto init</code>  </p>
+</blockquote>
+
+<p>Now the project is initialized and looks like this:  </p>
+
+<blockquote>
+  <p>$<code>ls</code> <br />
+<code>build/</code> <br />
+<code>conf/</code> <br />
 <code>CMakeLists.txt</code>  </p>
 </blockquote>
 
-<p><code>build/</code> contains all compiled binaries (executables, libraries) and
-<code>conf/</code> contains the project configuration (compiler flags, linker
-flags and dependencies).</p>
+<p><code>build/</code> will contain all compiled binaries (object files, executables, libraries) and <code>conf/</code> the project configuration (compiler flags, linker flags and dependencies).  </p>
+
+<h2>Setup Source Tree</h2>
+
+<p>The source tree consists of four folders:  </p>
+
+<ul>
+<li><code>inc/</code> - include dir, headers of the project  </li>
+<li><code>src/</code> - source dir, implementation  </li>
+<li><code>exe/</code> - executable dir  </li>
+<li><code>so/</code> - library dir  </li>
+</ul>
+
+<p>Depending on where you put a file, it is going to be compiled into an object file, an executable or a library. Object files are handled by CMake in <code>build/CMakeFiles/*</code>. Executables and libraries are created in <code>build/</code> using the same basename of the file relative to <code>exe/</code> or <code>so/</code>.  </p>
+
+<h3>Example Executable</h3>
+
+<p>Lets make an example executable and enable C++11:  </p>
+
+<blockquote>
+  <p>$<code>echo "MyProj CXX" &gt;&gt; conf/project</code> <br />
+$<code>echo "-std=c++11" &gt;&gt; conf/cxxflags</code> <br />
+$<code>mkdir -p exe/filesystem</code> <br />
+$<code>wget -O exe/filesystem/simple_ls.cpp http://lehmann7.github.io/example/simple_ls.cpp</code> <br />
+$<code>cauto scan</code>  </p>
+</blockquote>
+
+<p>Now CAuto tells you some information about the project and that it has found a new target <code>filesystem_simple_ls</code> which corresponds to the source file <code>exe/filesystem/simple_ls.cpp</code>.  </p>
+
+<p>Using <code>cauto make</code> you can build the executable. However it will not work, since <em>boost::filesystem</em> is not header-only and needs to be linked against a shared object. Since setting build configuration manually is annoying, CAuto uses CMake find scripts to configure compile and link dependencies.  </p>
+
+<p>To tell CAuto to use <em>boost::filesystem</em> just do the following:  </p>
+
+<blockquote>
+  <p>$<code>echo "ADD_PACKAGE(Boost Boost REQUIRED COMPONENTS system filesystem)" &gt;&gt; conf/package.cmake</code> <br />
+$<code>echo "Boost" &gt;&gt; conf/filesystem/package</code> <br />
+$<code>cauto scan make</code>  </p>
+</blockquote>
+
+<p>Now the target <code>filesystem_simple_ls</code> should compile and link into <code>build/filesystem/simple_ls</code>. The configuration mechanism of CAuto is explained in the section <em>Configure Project</em> below.  </p>
+
+<h3>Example Library</h3>
+
+<p>After we have created an example executable, lets extend the project by an example library:  </p>
+
+<blockquote>
+  <p>$<code>mkdir -p inc/mymath</code> <br />
+$<code>mkdir -p src/mymath</code> <br />
+$<code>mkdir -p so/mymath</code> <br />
+$<code>wget -O inc/mymath/factorial.h http://lehmann7.github.io/example/factorial.h</code> <br />
+$<code>wget -O inc/mymath/crossprod3.h http://lehmann7.github.io/example/crossprod3.h</code> <br />
+$<code>wget -O src/mymath/factorial.cpp http://lehmann7.github.io/example/factorial.cpp</code> <br />
+$<code>wget -O src/mymath/crossprod3.cpp http://lehmann7.github.io/example/crossprod3.cpp</code> <br />
+$<code>wget -O so/mymath/mymath.cpp http://lehmann7.github.io/example/mymath.cpp</code> <br />
+$<code>cauto scan make</code>  </p>
+</blockquote>
+
+<p>Now CAuto rescans and builds the project. You can check the resulting shared object by:  </p>
+
+<blockquote>
+  <p>$<code>nm build/mymath/mymath.so | c++-filt</code>  </p>
+</blockquote>
+
+<h2>Configure Project</h2>
+
+<p>The project configuration is located in <code>conf/</code>  </p>
        </div>
     </div>
     <!--[if !IE]><script>fixScale(document);</script><![endif]-->

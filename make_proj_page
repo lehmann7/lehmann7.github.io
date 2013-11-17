@@ -60,7 +60,16 @@ MARKD=proj_page/${NAME}.markdown
         </div>
 
        <div id="content">
-$(markdown --html4tags ${MARKD})
+$(
+	cat ${MARKD} | \
+	(
+		while read LINE
+		do
+			echo "${LINE}  "
+		done
+	) | \
+	markdown
+)
        </div>
     </div>
     <!--[if !IE]><script>fixScale(document);</script><![endif]-->
