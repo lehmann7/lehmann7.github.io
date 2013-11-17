@@ -107,22 +107,53 @@ Now CAuto rescans and builds the project. You can check the resulting shared obj
 
 ## Configure Project
 
-The project configuration is located in `conf/`. The configuration is based on files. The most important files are:
+The project configuration is located in `conf/`. The configuration is based on the following files:
 
-> `conf/project` - name of project
-> `conf/package.cmake` - external dependencies of project, use CMake find scripts
-> `conf/*/cxxflags` - additional compiler flags
-> `conf/*/ldflags` - additional linker flags
-> `conf/*/package` - packages to be used by targets
+* `conf/project` - name of project
+* `conf/package.cmake` - external dependencies of project, use CMake find scripts
+* `conf/foo/bar/cxxflags` - additional compiler flags for all targets `foo_bar_*`
+* `conf/foo/bar/ldflags` - additional linker flags for all targets `foo_bar_*`
+* `conf/foo/bar/package` - packages to be used by targets for all targets `foo_bar_*`
+* `conf/foo/bar/<NAME>.cxxflags` - additional compiler flags for target `foo_bar_<NAME>`
+* `conf/foo/bar/<NAME>.ldflags` - additional linker flags for `foo_bar_<NAME>`
+* `conf/foo/bar/<NAME>.package` - packages to be used by targets for `foo_bar_<NAME>`
+
+### Project Name
 
 `conf/project` simply contains the name of the project and is passed to the CMake command `PROJECT(...)`. You can set it up by:
 
 > $`echo "MyProjectName" > conf/project`
 
+### External Packages
+
 `conf/package.cmake` contains CMake commands to setup external dependencies using CMake find scripts. To do so the command
 
-> `ADD_PACKAGE(<VARSUFFIX> <FIND_PACKAGE_ARGS...>)`
+> `ADD_PACKAGE(<VAR_SUFFIX> <FIND_PACKAGE_ARGS...>)`
 
 has to be used. `ADD_PACKAGE(...)` wraps the CMake command `FIND_PACKAGE(...)` and requires the find script to setup the following CMake variables:
 
+* `<VAR_SUFFIX>_INCLUDE_DIRS` - include directories of package
+* `<VAR_SUFFIX>_LIBRARIES` - library of package
+* `<VAR_SUFFIX>_DEFINITIONS` - definitions of package
 
+Notice that the `<VAR_SUFFIX>` is the first argument of `ADD_PACKAGE(...)`, whereas all the other arguments are directly passed to `FIND_PACKAGE(...)`. If a CMake find script does not define the variables in this manner, an additional file `conf/<VAR_SUFFIX>.cmake` has to be created which sets the variables using the find scripts custom output variables.
+
+Adding a some packages could look like this:
+
+> `ADD_PACKAGE(Boost Boost REQUIRED COMPONENTS system filesystem program_options)`
+> `ADD_PACKAGE(VTK VTK REQUIRED)`
+> `ADD_PACKAGE(OSG osg)`
+
+### Target Configuration
+
+A configuration file located in `conf/foo/bar/` is applied to configure all executables in `exe/foo/bar/*` and libraries in `so/foo/bar/*`. Supported configuration files are `cxxflags`, `ldflags` and `package`. Each file is simply a list of string separated by white-space.
+
+In contrast the files `conf/foo/bar/<NAME>.cxxflags`, `conf/foo/bar/<NAME>.ldflags` and `conf/foo/bar/<NAME>.package` are used to configure the compiling and linking of the single target `foo_bar_<NAME>`.
+
+The `package` or `<NAME>.package` file contains a list of `<VAR_SUFFIX>` of the packages which are added to the project using `ADD_PACKAGE(...)` in `conf/package.cmake`.
+
+An example configuration which applies to all targets of the whole project could look like this:
+
+> $`echo "-std=c++11" > conf/cxxflags`
+> $`echo "-Llib -lmylib" > conf/ldflags`
+> $`echo "Boost VTK OSG" > conf/package`
