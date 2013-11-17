@@ -121,7 +121,7 @@ $<code>cauto init</code>  </p>
 <p>Lets make an example executable and enable C++11:  </p>
 
 <blockquote>
-  <p>$<code>echo "MyProj CXX" &gt;&gt; conf/project</code> <br />
+  <p>$<code>echo "MyProject" &gt;&gt; conf/project</code> <br />
 $<code>echo "-std=c++11" &gt;&gt; conf/cxxflags</code> <br />
 $<code>mkdir -p exe/filesystem</code> <br />
 $<code>wget -O exe/filesystem/simple_ls.cpp http://lehmann7.github.io/example/simple_ls.cpp</code> <br />
@@ -161,12 +161,34 @@ $<code>cauto scan make</code>  </p>
 <p>Now CAuto rescans and builds the project. You can check the resulting shared object by:  </p>
 
 <blockquote>
-  <p>$<code>nm build/mymath/mymath.so | c++-filt</code>  </p>
+  <p>$<code>nm build/mymath/mymath.so | c++-filt | tail -n 2</code>  </p>
 </blockquote>
 
 <h2>Configure Project</h2>
 
-<p>The project configuration is located in <code>conf/</code>  </p>
+<p>The project configuration is located in <code>conf/</code>. The configuration is based on files. The most important files are:  </p>
+
+<blockquote>
+  <p><code>conf/project</code> - name of project <br />
+<code>conf/package.cmake</code> - external dependencies of project, use CMake find scripts <br />
+<code>conf/*/cxxflags</code> - additional compiler flags <br />
+<code>conf/*/ldflags</code> - additional linker flags <br />
+<code>conf/*/package</code> - packages to be used by targets  </p>
+</blockquote>
+
+<p><code>conf/project</code> simply contains the name of the project and is passed to the CMake command <code>PROJECT(...)</code>. You can set it up by:  </p>
+
+<blockquote>
+  <p>$<code>echo "MyProjectName" &gt; conf/project</code>  </p>
+</blockquote>
+
+<p><code>conf/package.cmake</code> contains CMake commands to setup external dependencies using CMake find scripts. To do so the command  </p>
+
+<blockquote>
+  <p><code>ADD_PACKAGE(&lt;VARSUFFIX&gt; &lt;FIND_PACKAGE_ARGS...&gt;)</code>  </p>
+</blockquote>
+
+<p>has to be used. <code>ADD_PACKAGE(...)</code> wraps the CMake command <code>FIND_PACKAGE(...)</code> and requires the find script to setup the following CMake variables:  </p>
        </div>
     </div>
     <!--[if !IE]><script>fixScale(document);</script><![endif]-->

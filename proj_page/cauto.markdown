@@ -69,7 +69,7 @@ Depending on where you put a file, it is going to be compiled into an object fil
 
 Lets make an example executable and enable C++11:
 
-> $`echo "MyProj CXX" >> conf/project`
+> $`echo "MyProject" >> conf/project`
 > $`echo "-std=c++11" >> conf/cxxflags`
 > $`mkdir -p exe/filesystem`
 > $`wget -O exe/filesystem/simple_ls.cpp http://lehmann7.github.io/example/simple_ls.cpp`
@@ -107,4 +107,22 @@ Now CAuto rescans and builds the project. You can check the resulting shared obj
 
 ## Configure Project
 
-The project configuration is located in `conf/`.
+The project configuration is located in `conf/`. The configuration is based on files. The most important files are:
+
+> `conf/project` - name of project
+> `conf/package.cmake` - external dependencies of project, use CMake find scripts
+> `conf/*/cxxflags` - additional compiler flags
+> `conf/*/ldflags` - additional linker flags
+> `conf/*/package` - packages to be used by targets
+
+`conf/project` simply contains the name of the project and is passed to the CMake command `PROJECT(...)`. You can set it up by:
+
+> $`echo "MyProjectName" > conf/project`
+
+`conf/package.cmake` contains CMake commands to setup external dependencies using CMake find scripts. To do so the command
+
+> `ADD_PACKAGE(<VARSUFFIX> <FIND_PACKAGE_ARGS...>)`
+
+has to be used. `ADD_PACKAGE(...)` wraps the CMake command `FIND_PACKAGE(...)` and requires the find script to setup the following CMake variables:
+
+
