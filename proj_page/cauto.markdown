@@ -118,7 +118,7 @@ The project configuration is located in `conf/`. The configuration is based on t
 * `conf/package.cmake` - external dependencies of project, use CMake find scripts
 * `conf/foo/bar/cxxflags` - additional compiler flags for all targets `foo_bar_*`
 * `conf/foo/bar/ldflags` - additional linker flags for all targets `foo_bar_*`
-* `conf/foo/bar/package` - packages to be used by targets for all targets `foo_bar_*`
+* `conf/foo/bar/package` - packages to be used for all targets `foo_bar_*`
 * `conf/foo/bar/<NAME>.cxxflags` - additional compiler flags for target `foo_bar_<NAME>`
 * `conf/foo/bar/<NAME>.ldflags` - additional linker flags for `foo_bar_<NAME>`
 * `conf/foo/bar/<NAME>.package` - packages to be used by targets for `foo_bar_<NAME>`
