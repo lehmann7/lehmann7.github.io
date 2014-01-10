@@ -86,6 +86,7 @@ Using `cauto make` you can build the executable. However it will not work, since
 To tell CAuto to use _boost::filesystem_ just do the following:
 
 > $`echo "ADD_PACKAGE(Boost Boost REQUIRED COMPONENTS system filesystem)" >> conf/package.cmake`
+> $`mkdir -p conf/filesystem`
 > $`echo "Boost" >> conf/filesystem/package`
 > $`cauto scan make`
 
@@ -107,7 +108,7 @@ After we have created an example executable, lets extend the project by an examp
 
 Now CAuto rescans and builds the project. You can check the resulting shared object by:
 
-> $`nm build/mymath/mymath.so | c++-filt | tail -n 2`
+> $`nm build/mymath/libmymath.so | c++filt | tail -n 2`
 
 ## Configure Project
 

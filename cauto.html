@@ -140,6 +140,7 @@ $<code>cauto scan</code>  </p>
 
 <blockquote>
   <p>$<code>echo "ADD_PACKAGE(Boost Boost REQUIRED COMPONENTS system filesystem)" &gt;&gt; conf/package.cmake</code> <br />
+$<code>mkdir -p conf/filesystem</code> <br />
 $<code>echo "Boost" &gt;&gt; conf/filesystem/package</code> <br />
 $<code>cauto scan make</code>  </p>
 </blockquote>
@@ -165,7 +166,7 @@ $<code>cauto scan make</code>  </p>
 <p>Now CAuto rescans and builds the project. You can check the resulting shared object by:  </p>
 
 <blockquote>
-  <p>$<code>nm build/mymath/mymath.so | c++-filt | tail -n 2</code>  </p>
+  <p>$<code>nm build/mymath/libmymath.so | c++filt | tail -n 2</code>  </p>
 </blockquote>
 
 <h2>Configure Project</h2>
