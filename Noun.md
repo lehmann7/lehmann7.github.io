@@ -10,38 +10,18 @@ version:  1
 
 @t: Das Thema
 
-@word0.eng.sig: recorder
-@word0.eng.plu: recorders
-@word0.deu.sig: Rekorder
-@word0.deu.plu: Rekorder
-@word0.deu.sig.art: der
-@word0.deu.plu.art: die
-@word0.deu.sig.hinta: aaRekorder
-@word0.deu.sig.hintb: bbRekorder
-@word0.deu.plu.hinta: aaRekorder
-@word0.deu.plu.hintb: bbRekorder
-@word0.deu.sig.puz: ppRekorder
-@word0.deu.plu.puz: ppRekorder
-@word0.deu.sig.puz.hint: phRekorder
-@word0.deu.plu.puz.hint: phRekorder
-@word0.deu.img: memory.png
-@word0.deu.sig.voice: recorder.mp3
-@word0.deu.plu.voice: recorder.mp3
-
 @word1.eng.sig: tree
 @word1.eng.plu: trees
 @word1.deu.sig: Baum
 @word1.deu.plu: Bäume
 @word1.deu.sig.art: der
 @word1.deu.plu.art: die
-@word1.deu.sig.hinta: aaBaum
-@word1.deu.sig.hintb: bbBaum
-@word1.deu.plu.hinta: aaBäume
-@word1.deu.plu.hintb: bbBäume
-@word1.deu.sig.puz: ppBaum
-@word1.deu.plu.puz: ppBäume
-@word1.deu.sig.hint: phBaum
-@word1.deu.plu.hint: phBäume
+@word1.deu.sig.hinta: *x*au*x*
+@word1.deu.plu.hinta: *x*ä*xxx*
+@word1.deu.sig.puz: uaBm
+@word1.deu.plu.puz: äeuBme
+@word1.deu.sig.hint: B*xxxx*
+@word1.deu.plu.hint: *xxxx*e
 @word1.deu.img: light.png
 @word1.deu.sig.voice: a1.mp3
 @word1.deu.plu.voice: a1.mp3
@@ -52,12 +32,10 @@ version:  1
 @word2.deu.plu: Blumen
 @word2.deu.sig.art: die
 @word2.deu.plu.art: die
-@word2.deu.sig.hinta: aaBlume
-@word2.deu.sig.hintb: bbBlume
-@word2.deu.plu.hinta: aaBlumen
-@word2.deu.plu.hintb: bbBlumen
-@word2.deu.sig.puz: ppBlume
-@word2.deu.plu.puz: ppBlumen
+@word2.deu.sig.hinta: B*xx*me
+@word2.deu.plu.hinta: *xx*u*x*en
+@word2.deu.sig.puz: euBlm
+@word2.deu.plu.puz: lmnBeu
 @word2.deu.sig.puz.hint: phBlume
 @word2.deu.plu.puz.hint: phBlumen
 @word2.deu.img: light.png
@@ -70,9 +48,7 @@ version:  1
 @word3.deu.sig.art: das
 @word3.deu.plu.art: die
 @word3.deu.sig.hinta: aaHaus
-@word3.deu.sig.hintb: bbHaus
 @word3.deu.plu.hinta: aaHäuser
-@word3.deu.plu.hintb: bbHäuser
 @word3.deu.sig.puz: ppHaus
 @word3.deu.plu.puz: ppHäuser
 @word3.deu.sig.puz.hint: phHaus
@@ -88,9 +64,7 @@ version:  1
 @word4.deu.sig.art: die
 @word4.deu.plu.art: die
 @word4.deu.sig.hinta: aaWiese
-@word4.deu.sig.hintb: bbWiese
 @word4.deu.plu.hinta: aaWiesen
-@word4.deu.plu.hintb: bbWiesen
 @word4.deu.sig.puz: ppWiese
 @word4.deu.plu.puz: ppWiesen
 @word4.deu.sig.puz.hint: phWiese
@@ -106,9 +80,7 @@ version:  1
 @word5.deu.sig.art: das
 @word5.deu.plu.art: die
 @word5.deu.sig.hinta: aaLicht
-@word5.deu.sig.hintb: bbLicht
 @word5.deu.plu.hinta: aaLichter
-@word5.deu.plu.hintb: bbLichter
 @word5.deu.sig.puz: ppLicht
 @word5.deu.plu.puz: ppLichter
 @word5.deu.sig.puz.hint: phLicht
@@ -124,9 +96,7 @@ version:  1
 @word6.deu.sig.art: der
 @word6.deu.plu.art: die
 @word6.deu.sig.hinta: aaApfel
-@word6.deu.sig.hintb: bbApfel
 @word6.deu.plu.hinta: aaÄpfel
-@word6.deu.plu.hintb: bbÄpfel
 @word6.deu.sig.puz: ppApfel
 @word6.deu.plu.puz: ppÄpfel
 @word6.deu.sig.puz.hint: phApfel
@@ -398,7 +368,7 @@ document.getElementById("lia-hear-speak-play@0").addEventListener(
 
 
 
-@transl.ende.helper.a: @transl.ende.helper.b(@word@0.deu.@1.art @word@0.deu.@1,@word@0.deu.@1.hinta,@word@0.deu.@1.hintb,@transl.ende.w@0.@1)
+@transl.ende.helper.a: @transl.ende.helper.b(@word@0.deu.@1.art @word@0.deu.@1,@word@0.deu.@1.art,@word@0.deu.@1.hinta,@transl.ende.w@0.@1)
 @transl.ende.helper.b
 [[@0]]
 [[?]] @1
@@ -432,7 +402,7 @@ document.getElementById("lia-transl-ende@0").addEventListener(
 
 
 
-@hear.write.helper.a: @hear.write.helper.b(@word@0.deu.@1.art @word@0.deu.@1,@word@0.deu.@1.hinta,@word@0.deu.@1.hintb,@hear.write.w@0)
+@hear.write.helper.a: @hear.write.helper.b(@word@0.deu.@1.art @word@0.deu.@1,@word@0.deu.@1.art,@word@0.deu.@1.hinta,@hear.write.w@0)
 @hear.write.helper.b
 [[@0]]
 [[?]] @1
