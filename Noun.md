@@ -49,7 +49,7 @@ version:  1
 @word3.deu.sig.art: das
 @word3.deu.plu.art: die
 @word3.deu.sig.hint: H*xx*s
-@word3.deu.plu.hint: *x*a*xx*e*x
+@word3.deu.plu.hint: *x*ä*xx*e*x*
 @word3.deu.sig.puz: suHa
 @word3.deu.plu.puz: uHeräu
 @word3.deu.sig.puz.hint: H*x*u*x*
@@ -592,7 +592,6 @@ document.getElementById("lia-puzzle-ende@0").addEventListener(
 @clear(6)
 
 # 7.Berichtigen.<!-- style = "display: none;" -->
-
 
 <table width="100%">
 <tr><td style="text-align: center; vertical-align: middle;">
