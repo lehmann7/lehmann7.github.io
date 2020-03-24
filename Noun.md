@@ -386,6 +386,9 @@ var recorder_func@0 = (stream => {
 			recorder_audio@0.play();
 		}
 	);
+	recorder_obj@0.start();
+	recorder_obj@0.stop();
+	if (@0 == 6) alert("Der Rekorder funktioniert jetzt. Lets go!");
 });
 navigator.getWebcam = (navigator.getUserMedia || navigator.webKitGetUserMedia || navigator.moxGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia);
 if (navigator.mediaDevices.getUserMedia) {
