@@ -361,7 +361,7 @@ var recorder_btn@0 = ( (e, a, b) => {
 	document.getElementById("lia-image-recloud@0").style.display   = ( a == 5 ? "inline-block" : "none");
 	document.getElementById("lia-image-rectape@0").style.display   = ( b == 0 ? "inline-block" : "none");
 	document.getElementById("lia-image-rechear@0").style.display   = ( b == 1 ? "inline-block" : "none");
-	Array.from(document.getElementsByClassName("lia-hear-speak-recbtn")).forEach(elem => { elem.disabled = !e; });
+	//~ Array.from(document.getElementsByClassName("lia-hear-speak-recbtn")).forEach(elem => { elem.disabled = !e; });
 });
 var recorder_func@0 = (stream => {
 	recorder_obj@0 = new MediaRecorder(stream);
