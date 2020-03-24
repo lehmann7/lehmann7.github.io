@@ -16,15 +16,15 @@ version:  1
 @word1.deu.plu: Bäume
 @word1.deu.sig.art: der
 @word1.deu.plu.art: die
-@word1.deu.sig.hinta: *x*au*x*
-@word1.deu.plu.hinta: *x*ä*xxx*
+@word1.deu.sig.hint: *x*au*x*
+@word1.deu.plu.hint: *x*ä*xxx*
 @word1.deu.sig.puz: uaBm
 @word1.deu.plu.puz: äeuBme
 @word1.deu.sig.hint: B*xxxx*
 @word1.deu.plu.hint: *xxxx*e
 @word1.deu.img: light.png
-@word1.deu.sig.voice: a1.mp3
-@word1.deu.plu.voice: a1.mp3
+@word1.deu.sig.voice: a1s.mp3
+@word1.deu.plu.voice: a1p.mp3
 
 @word2.eng.sig: flower
 @word2.eng.plu: flowers
@@ -32,14 +32,15 @@ version:  1
 @word2.deu.plu: Blumen
 @word2.deu.sig.art: die
 @word2.deu.plu.art: die
-@word2.deu.sig.hinta: B*xx*me
-@word2.deu.plu.hinta: *xx*u*x*en
+@word2.deu.sig.hint: B*xx*me
+@word2.deu.plu.hint: *xx*u*x*en
 @word2.deu.sig.puz: euBlm
 @word2.deu.plu.puz: lmnBeu
-@word2.deu.sig.puz.hint: phBlume
-@word2.deu.plu.puz.hint: phBlumen
+@word2.deu.sig.puz.hint: B*x*u*x*e
+@word2.deu.plu.puz.hint: B*x*u*x*e*x*
 @word2.deu.img: light.png
-@word2.deu.sig.voice: a2.mp3
+@word2.deu.sig.voice: a2s.mp3
+@word2.deu.plu.voice: a2p.mp3
 
 @word3.eng.sig: house
 @word3.eng.plu: houses
@@ -47,15 +48,15 @@ version:  1
 @word3.deu.plu: Häuser
 @word3.deu.sig.art: das
 @word3.deu.plu.art: die
-@word3.deu.sig.hinta: aaHaus
-@word3.deu.plu.hinta: aaHäuser
-@word3.deu.sig.puz: ppHaus
-@word3.deu.plu.puz: ppHäuser
-@word3.deu.sig.puz.hint: phHaus
-@word3.deu.plu.puz.hint: phHäuser
+@word3.deu.sig.hint: H*xx*s
+@word3.deu.plu.hint: *x*a*xx*e*x
+@word3.deu.sig.puz: suHa
+@word3.deu.plu.puz: uHeräu
+@word3.deu.sig.puz.hint: H*x*u*x*
+@word3.deu.plu.puz.hint: H*xx*s*x*r
 @word3.deu.img: light.png
-@word3.deu.sig.voice: a3.mp3
-@word3.deu.plu.voice: a3.mp3
+@word3.deu.sig.voice: a3s.mp3
+@word3.deu.plu.voice: a3p.mp3
 
 @word4.eng.sig: field
 @word4.eng.plu: fields
@@ -63,15 +64,15 @@ version:  1
 @word4.deu.plu: Wiesen
 @word4.deu.sig.art: die
 @word4.deu.plu.art: die
-@word4.deu.sig.hinta: aaWiese
-@word4.deu.plu.hinta: aaWiesen
-@word4.deu.sig.puz: ppWiese
-@word4.deu.plu.puz: ppWiesen
-@word4.deu.sig.puz.hint: phWiese
-@word4.deu.plu.puz.hint: phWiesen
+@word4.deu.sig.hint: *xx*e*x*e
+@word4.deu.plu.hint: *x*i*xx*en
+@word4.deu.sig.puz: sWeie
+@word4.deu.plu.puz: sWeeni
+@word4.deu.sig.puz.hint: W*xxxx*
+@word4.deu.plu.puz.hint: *xxxx*en
 @word4.deu.img: light.png
-@word4.deu.sig.voice: a4.mp3
-@word4.deu.plu.voice: a4.mp3
+@word4.deu.sig.voice: a4s.mp3
+@word4.deu.plu.voice: a4p.mp3
 
 @word5.eng.sig: light
 @word5.eng.plu: lights
@@ -79,15 +80,15 @@ version:  1
 @word5.deu.plu: Lichter
 @word5.deu.sig.art: das
 @word5.deu.plu.art: die
-@word5.deu.sig.hinta: aaLicht
-@word5.deu.plu.hinta: aaLichter
-@word5.deu.sig.puz: ppLicht
-@word5.deu.plu.puz: ppLichter
-@word5.deu.sig.puz.hint: phLicht
-@word5.deu.plu.puz.hint: phLichter
+@word5.deu.sig.hint: *xx*ch*x*
+@word5.deu.plu.hint: L*xxx*ter
+@word5.deu.sig.puz: hLcit
+@word5.deu.plu.puz: ihctLer
+@word5.deu.sig.puz.hint: L*xxxx*
+@word5.deu.plu.puz.hint: *x*i*xxx*er
 @word5.deu.img: light.png
-@word5.deu.sig.voice: a5.mp3
-@word5.deu.plu.voice: a5.mp3
+@word5.deu.sig.voice: a5s.mp3
+@word5.deu.plu.voice: a5p.mp3
 
 @word6.eng.sig: apple
 @word6.eng.plu: apples
@@ -95,15 +96,15 @@ version:  1
 @word6.deu.plu: Äpfel
 @word6.deu.sig.art: der
 @word6.deu.plu.art: die
-@word6.deu.sig.hinta: aaApfel
-@word6.deu.plu.hinta: aaÄpfel
-@word6.deu.sig.puz: ppApfel
-@word6.deu.plu.puz: ppÄpfel
-@word6.deu.sig.puz.hint: phApfel
-@word6.deu.plu.puz.hint: phÄpfel
+@word6.deu.sig.hint: *xx*f*x*l
+@word6.deu.plu.hint: Ä*xpfel
+@word6.deu.sig.puz: peAlf
+@word6.deu.plu.puz: Äfel
+@word6.deu.sig.puz.hint: Apfel
+@word6.deu.plu.puz.hint: Äpfel
 @word6.deu.img: light.png
-@word6.deu.sig.voice: a6.mp3
-@word6.deu.plu.voice: a6.mp3
+@word6.deu.sig.voice: a6s.mp3
+@word6.deu.plu.voice: a6p.mp3
 
 @match.noun.n1: 3
 @match.noun.n2: 4
@@ -368,7 +369,7 @@ document.getElementById("lia-hear-speak-play@0").addEventListener(
 
 
 
-@transl.ende.helper.a: @transl.ende.helper.b(@word@0.deu.@1.art @word@0.deu.@1,@word@0.deu.@1.art,@word@0.deu.@1.hinta,@transl.ende.w@0.@1)
+@transl.ende.helper.a: @transl.ende.helper.b(@word@0.deu.@1.art @word@0.deu.@1,@word@0.deu.@1.art,@word@0.deu.@1.hint,@transl.ende.w@0.@1)
 @transl.ende.helper.b
 [[@0]]
 [[?]] *@1* ...
@@ -402,7 +403,7 @@ document.getElementById("lia-transl-ende@0").addEventListener(
 
 
 
-@hear.write.helper.a: @hear.write.helper.b(@word@0.deu.@1.art @word@0.deu.@1,@word@0.deu.@1.art,@word@0.deu.@1.hinta,@hear.write.w@0)
+@hear.write.helper.a: @hear.write.helper.b(@word@0.deu.@1.art @word@0.deu.@1,@word@0.deu.@1.art,@word@0.deu.@1.hint,@hear.write.w@0)
 @hear.write.helper.b
 [[@0]]
 [[?]] *@1* ...
