@@ -122,10 +122,10 @@ version:  1
 
 @match.article.n1: 5
 @match.article.n2: 4
-@match.article.n3: 2
+@match.article.n3: 1
 @match.article.n4: 3
 @match.article.n5: 6
-@match.article.n6: 1
+@match.article.n6: 2
 @match.article.x1: ( ) ( ) (X)
 @match.article.x2: ( ) (X) ( )
 @match.article.x3: (X) ( ) ( )
