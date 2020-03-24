@@ -8,7 +8,7 @@ version:  1
 
 @onload.style: 1
 
-@t: Das Thema
+@topic: Noun
 
 @word1.eng.sig: tree
 @word1.eng.plu: trees
@@ -22,9 +22,9 @@ version:  1
 @word1.deu.plu.puz: äeuBme
 @word1.deu.sig.hint: B*xxxx*
 @word1.deu.plu.hint: *xxxx*e
-@word1.deu.img: light.png
-@word1.deu.sig.voice: a1s.mp3
-@word1.deu.plu.voice: a1p.mp3
+@word1.deu.img: baum.png
+@word1.deu.sig.voice: baum_s.mp3
+@word1.deu.plu.voice: baum_p.mp3
 
 @word2.eng.sig: flower
 @word2.eng.plu: flowers
@@ -38,9 +38,9 @@ version:  1
 @word2.deu.plu.puz: lmnBeu
 @word2.deu.sig.puz.hint: B*x*u*x*e
 @word2.deu.plu.puz.hint: B*x*u*x*e*x*
-@word2.deu.img: light.png
-@word2.deu.sig.voice: a2s.mp3
-@word2.deu.plu.voice: a2p.mp3
+@word2.deu.img: blume.png
+@word2.deu.sig.voice: blume_s.mp3
+@word2.deu.plu.voice: blume_p.mp3
 
 @word3.eng.sig: house
 @word3.eng.plu: houses
@@ -54,9 +54,9 @@ version:  1
 @word3.deu.plu.puz: uHeräu
 @word3.deu.sig.puz.hint: H*x*u*x*
 @word3.deu.plu.puz.hint: H*xx*s*x*r
-@word3.deu.img: light.png
-@word3.deu.sig.voice: a3s.mp3
-@word3.deu.plu.voice: a3p.mp3
+@word3.deu.img: haus.png
+@word3.deu.sig.voice: haus_s.mp3
+@word3.deu.plu.voice: haus_p.mp3
 
 @word4.eng.sig: field
 @word4.eng.plu: fields
@@ -70,9 +70,9 @@ version:  1
 @word4.deu.plu.puz: sWeeni
 @word4.deu.sig.puz.hint: W*xxxx*
 @word4.deu.plu.puz.hint: *xxxx*en
-@word4.deu.img: light.png
-@word4.deu.sig.voice: a4s.mp3
-@word4.deu.plu.voice: a4p.mp3
+@word4.deu.img: wiese.png
+@word4.deu.sig.voice: wiese_s.mp3
+@word4.deu.plu.voice: wiese_p.mp3
 
 @word5.eng.sig: light
 @word5.eng.plu: lights
@@ -86,9 +86,9 @@ version:  1
 @word5.deu.plu.puz: ihctLer
 @word5.deu.sig.puz.hint: L*xxxx*
 @word5.deu.plu.puz.hint: *x*i*xxx*er
-@word5.deu.img: light.png
-@word5.deu.sig.voice: a5s.mp3
-@word5.deu.plu.voice: a5p.mp3
+@word5.deu.img: licht.png
+@word5.deu.sig.voice: licht_s.mp3
+@word5.deu.plu.voice: licht_p.mp3
 
 @word6.eng.sig: apple
 @word6.eng.plu: apples
@@ -102,9 +102,9 @@ version:  1
 @word6.deu.plu.puz: Äfel
 @word6.deu.sig.puz.hint: Apfel
 @word6.deu.plu.puz.hint: Äpfel
-@word6.deu.img: light.png
-@word6.deu.sig.voice: a6s.mp3
-@word6.deu.plu.voice: a6p.mp3
+@word6.deu.img: apfel.png
+@word6.deu.sig.voice: apfel_s.mp3
+@word6.deu.plu.voice: apfel_p.mp3
 
 @match.noun.n1: 3
 @match.noun.n2: 4
@@ -258,12 +258,12 @@ document.getElementById("lia-clear").addEventListener(
 
 
 @word: @word@0.@1
-@word.image.helper: <img src="www/img/@1" width="48px" id="lia-word-image@0">
-@word.image: @word.image.helper(@0,@word@0.deu.img)
-@word.voice.helper: <audio src="www/mp3/@2" preload="auto" id="lia-word-voice-@1@0"></audio>
-@word.voice: @word.voice.helper(@0,sig,@word@0.deu.sig.voice) @word.voice.helper(@0,plu,@word@0.deu.plu.voice)
-@audio: <audio src="www/mp3/@1" preload="auto" id="lia-audio-@0"></audio>
-@image: <img src="www/img/@1" width="@2" id="lia-image-@0">
+@word.image.helper: <img src="@2/@1" width="48px" id="lia-word-image@0">
+@word.image: @word.image.helper(@0,@word@0.deu.img,@topic)
+@word.voice.helper: <audio src="@3/@2" preload="auto" id="lia-word-voice-@1@0"></audio>
+@word.voice: @word.voice.helper(@0,sig,@word@0.deu.sig.voice,@topic) @word.voice.helper(@0,plu,@word@0.deu.plu.voice,@topic)
+@audio: <audio src="mp3/@1" preload="auto" id="lia-audio-@0"></audio>
+@image: <img src="img/@1" width="@2" id="lia-image-@0">
 
 
 
