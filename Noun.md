@@ -371,8 +371,8 @@ document.getElementById("lia-hear-speak-play@0").addEventListener(
 @transl.ende.helper.a: @transl.ende.helper.b(@word@0.deu.@1.art @word@0.deu.@1,@word@0.deu.@1.art,@word@0.deu.@1.hinta,@transl.ende.w@0.@1)
 @transl.ende.helper.b
 [[@0]]
-[[?]] @1
-[[?]] @2
+[[?]] *@1* ...
+[[?]] **@2**
 ***********************************
 @3!
 ***********************************
@@ -405,8 +405,8 @@ document.getElementById("lia-transl-ende@0").addEventListener(
 @hear.write.helper.a: @hear.write.helper.b(@word@0.deu.@1.art @word@0.deu.@1,@word@0.deu.@1.art,@word@0.deu.@1.hinta,@hear.write.w@0)
 @hear.write.helper.b
 [[@0]]
-[[?]] @1
-[[?]] @2
+[[?]] *@1* ...
+[[?]] **@2**
 ***********************************
 @3
 ***********************************
@@ -443,8 +443,8 @@ document.getElementById("lia-hear-write-show@0").addEventListener(
 @puzzle.ende.helper.a: @puzzle.ende.helper.b(@word@0.deu.@1.art @word@0.deu.@1,@word@0.deu.@1.art,@word@0.deu.@1.puz.hint,@puzzle.ende.w@0)
 @puzzle.ende.helper.b
 [[@0]]
-[[?]] @1 ...
-[[?]] @2
+[[?]] *@1* ...
+[[?]] **@2**
 ***********************************
 @3
 ***********************************
