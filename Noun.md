@@ -16,12 +16,12 @@ version:  1
 @word1.deu.plu: Bäume
 @word1.deu.sig.art: der
 @word1.deu.plu.art: die
-@word1.deu.sig.hint: *x*au*x*
-@word1.deu.plu.hint: *x*ä*xxx*
-@word1.deu.sig.puz: uaBm
-@word1.deu.plu.puz: äeuBme
-@word1.deu.sig.hint: B*xxxx*
-@word1.deu.plu.hint: *xxxx*e
+@word1.deu.sig.hint: - a u -
+@word1.deu.plu.hint: - ä - - - -
+@word1.deu.sig.puz: u a B m
+@word1.deu.plu.puz: ä e u B m e
+@word1.deu.sig.hint: B - - -
+@word1.deu.plu.hint: - - - - e
 @word1.deu.img: baum.png
 @word1.deu.sig.voice: baum_s.mp3
 @word1.deu.plu.voice: baum_p.mp3
@@ -32,12 +32,12 @@ version:  1
 @word2.deu.plu: Blumen
 @word2.deu.sig.art: die
 @word2.deu.plu.art: die
-@word2.deu.sig.hint: B*xx*me
-@word2.deu.plu.hint: *xx*u*x*en
-@word2.deu.sig.puz: euBlm
-@word2.deu.plu.puz: lmnBeu
-@word2.deu.sig.puz.hint: B*x*u*x*e
-@word2.deu.plu.puz.hint: B*x*u*x*e*x*
+@word2.deu.sig.hint: B - - m e
+@word2.deu.plu.hint: - - u - e n
+@word2.deu.sig.puz: e u B l m
+@word2.deu.plu.puz: l m n B e u
+@word2.deu.sig.puz.hint: B - u - e
+@word2.deu.plu.puz.hint: B - u - e -
 @word2.deu.img: blume.png
 @word2.deu.sig.voice: blume_s.mp3
 @word2.deu.plu.voice: blume_p.mp3
@@ -48,12 +48,12 @@ version:  1
 @word3.deu.plu: Häuser
 @word3.deu.sig.art: das
 @word3.deu.plu.art: die
-@word3.deu.sig.hint: H*xx*s
-@word3.deu.plu.hint: *x*ä*xx*e*x*
-@word3.deu.sig.puz: suHa
-@word3.deu.plu.puz: uHeräu
-@word3.deu.sig.puz.hint: H*x*u*x*
-@word3.deu.plu.puz.hint: H*xx*s*x*r
+@word3.deu.sig.hint: H - -s
+@word3.deu.plu.hint:  - ä - - e -
+@word3.deu.sig.puz: s u H a
+@word3.deu.plu.puz: u H e r ä u
+@word3.deu.sig.puz.hint: H - u -
+@word3.deu.plu.puz.hint: H - - s - r
 @word3.deu.img: haus.png
 @word3.deu.sig.voice: haus_s.mp3
 @word3.deu.plu.voice: haus_p.mp3
@@ -64,12 +64,12 @@ version:  1
 @word4.deu.plu: Wiesen
 @word4.deu.sig.art: die
 @word4.deu.plu.art: die
-@word4.deu.sig.hint: *xx*e*x*e
-@word4.deu.plu.hint: *x*i*xx*en
-@word4.deu.sig.puz: sWeie
-@word4.deu.plu.puz: sWeeni
-@word4.deu.sig.puz.hint: W*xxxx*
-@word4.deu.plu.puz.hint: *xxxx*en
+@word4.deu.sig.hint: - - e - e
+@word4.deu.plu.hint: - i - - e n
+@word4.deu.sig.puz: s W e i e
+@word4.deu.plu.puz: s W e e n i
+@word4.deu.sig.puz.hint: W - - -
+@word4.deu.plu.puz.hint: - - - - e n
 @word4.deu.img: wiese.png
 @word4.deu.sig.voice: wiese_s.mp3
 @word4.deu.plu.voice: wiese_p.mp3
@@ -80,12 +80,12 @@ version:  1
 @word5.deu.plu: Lichter
 @word5.deu.sig.art: das
 @word5.deu.plu.art: die
-@word5.deu.sig.hint: *xx*ch*x*
-@word5.deu.plu.hint: L*xxx*ter
-@word5.deu.sig.puz: hLcit
-@word5.deu.plu.puz: ihctLer
-@word5.deu.sig.puz.hint: L*xxxx*
-@word5.deu.plu.puz.hint: *x*i*xxx*er
+@word5.deu.sig.hint: - - c h -
+@word5.deu.plu.hint: L - - - t e r
+@word5.deu.sig.puz: h L c i t
+@word5.deu.plu.puz: i h c t L e r
+@word5.deu.sig.puz.hint: L - - - -
+@word5.deu.plu.puz.hint: - i - - - e r
 @word5.deu.img: licht.png
 @word5.deu.sig.voice: licht_s.mp3
 @word5.deu.plu.voice: licht_p.mp3
@@ -96,12 +96,12 @@ version:  1
 @word6.deu.plu: Äpfel
 @word6.deu.sig.art: der
 @word6.deu.plu.art: die
-@word6.deu.sig.hint: *xx*f*x*l
-@word6.deu.plu.hint: Ä*xxx*l
-@word6.deu.sig.puz: peAlf
-@word6.deu.plu.puz: feplÄ
-@word6.deu.sig.puz.hint: Apfel
-@word6.deu.plu.puz.hint: Äpfel
+@word6.deu.sig.hint: - - f - l
+@word6.deu.plu.hint: Ä - - - l
+@word6.deu.sig.puz: p e A l f
+@word6.deu.plu.puz: f e p l Ä
+@word6.deu.sig.puz.hint: - p - e -
+@word6.deu.plu.puz.hint: - - f e -
 @word6.deu.img: apfel.png
 @word6.deu.sig.voice: apfel_s.mp3
 @word6.deu.plu.voice: apfel_p.mp3
@@ -257,6 +257,7 @@ document.getElementById("lia-clear").addEventListener(
 @end
 
 
+@space: <span style="display:inline-block; width: 8px;"></span>
 @word: @word@0.@1
 @word.image.helper: <img src="www/@2/@1" width="48px" id="lia-word-image@0">
 @word.image: @word.image.helper(@0,@word@0.deu.img,@topic)
@@ -267,8 +268,8 @@ document.getElementById("lia-clear").addEventListener(
 
 
 
-@match.noun.a: <div>*the*-@word@0.eng.sig</div><!-- style = "transform: rotate(-67.5deg);" -->
-@match.noun.b: <div>***@word@0.deu.sig.art***-**@word@0.deu.sig**</div>
+@match.noun.a: <div>*the*@space@word@0.eng.sig</div><!-- style = "transform: rotate(-67.5deg);" -->
+@match.noun.b: <div>***@word@0.deu.sig.art***@space**@word@0.deu.sig**</div>
 @match.noun.helper
 [[@match.noun.a(1)] [@match.noun.a(2)] [@match.noun.a(3)] [@match.noun.a(4)] [@match.noun.a(5)] [@match.noun.a(6)]]
 [@0] @match.noun.b(@match.noun.n1)
@@ -307,9 +308,9 @@ document.getElementById("lia-clear").addEventListener(
 <tr><td style="text-align: center; vertical-align: middle;">
 <button id="lia-hear-read-play@0" style="height: 96px; width: 96px;">@image(play,play.png,48px)</button>
 </td><td style="text-align: center; vertical-align: middle;">
-<div class="lia-hear-read-play@0" style="display: none;">***@word(@0,deu.sig.art)***-**@word(@0,deu.sig)**</div>
+<div class="lia-hear-read-play@0" style="display: none;">***@word(@0,deu.sig.art)***@space**@word(@0,deu.sig)**</div>
 </td><td style="text-align: center; vertical-align: middle;">
-<div class="lia-hear-read-play@0" style="display: none;">***@word(@0,deu.plu.art)***-**@word(@0,deu.plu)**</div>
+<div class="lia-hear-read-play@0" style="display: none;">***@word(@0,deu.plu.art)***@space**@word(@0,deu.plu)**</div>
 </td><td style="text-align: center; vertical-align: middle;">
 <div class="lia-hear-read-play@0" style="display: none;">@word.image(@0)</div>
 </td><td style="text-align: center; vertical-align: middle;">
@@ -339,9 +340,9 @@ document.getElementById("lia-hear-read-play@0").addEventListener(
 <tr><td style="text-align: center; vertical-align: middle;">
 <button id="lia-hear-speak-play@0" style="height: 96px; width: 96px;">@image(play,play.png,48px)</button>
 </td><td style="text-align: center; vertical-align: middle;">
-<div class="lia-hear-speak-play@0" style="display: none;">***@word(@0,deu.sig.art)***-**@word(@0,deu.sig)**</div>
+<div class="lia-hear-speak-play@0" style="display: none;">***@word(@0,deu.sig.art)***@space**@word(@0,deu.sig)**</div>
 </td><td style="text-align: center; vertical-align: middle;">
-<div class="lia-hear-speak-play@0" style="display: none;">***@word(@0,deu.plu.art)***-**@word(@0,deu.plu)**</div>
+<div class="lia-hear-speak-play@0" style="display: none;">***@word(@0,deu.plu.art)***@space**@word(@0,deu.plu)**</div>
 </td><td style="text-align: center; vertical-align: middle;">
 <div class="lia-hear-speak-play@0" style="display: none;"><button id="lia-hear-speak-record@0" style="height: 96px; width: 96px;">@image(record,record.png,48px)</button></div>
 </td><td style="text-align: center; vertical-align: middle;">
@@ -378,16 +379,16 @@ document.getElementById("lia-hear-speak-play@0").addEventListener(
 @3
 ***********************************
 @end
-@transl.ende
+@transl.ende.main
 <tr><td style="text-align: center; vertical-align: middle;">
-*the*-@word(@transl.ende.n@0,eng.sig)
+*the*@space@word(@0,eng.sig)
 <div>
-@transl.ende.helper.a(@transl.ende.n@0,sig)
+@transl.ende.helper.a(@0,sig)
 </div>
 </td><td style="text-align: center; vertical-align: middle;">
-*the*-@word(@transl.ende.n@0,eng.plu)
+*the*@space@word(@0,eng.plu)
 <div>
-@transl.ende.helper.a(@transl.ende.n@0,plu)
+@transl.ende.helper.a(@0,plu)
 </div>
 </td><td style="text-align: center; vertical-align: middle;">
 <button id="lia-transl-ende@0" style="height: 96px; width: 96px;">@word.image(@0)<!-- style = "display: none;" --></button>
@@ -400,6 +401,7 @@ document.getElementById("lia-transl-ende@0").addEventListener(
 </script>
 </td></tr>
 @end
+@transl.ende: @transl.ende.main(@transl.ende.n@0)
 
 
 
@@ -452,7 +454,7 @@ document.getElementById("lia-hear-write-show@0").addEventListener(
 @end
 @puzzle.ende
 <tr><td style="text-align: center; vertical-align: middle;">
-*@word(@puzzle.ende.n@0,deu.sig.art)*-@word(@puzzle.ende.n@0,deu.sig.puz)
+d - -@space@word(@puzzle.ende.n@0,deu.sig.puz)
 </td><td style="text-align: center; vertical-align: middle;">
 <div>
 @puzzle.ende.helper.a(@puzzle.ende.n@0,@puzzle.ende.f@0)
