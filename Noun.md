@@ -375,7 +375,7 @@ document.getElementById("lia-hear-speak-play@0").addEventListener(
 [[?]] *@1* ...
 [[?]] **@2**
 ***********************************
-@3!
+@3
 ***********************************
 @end
 @transl.ende
