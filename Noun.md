@@ -97,9 +97,9 @@ version:  1
 @word6.deu.sig.art: der
 @word6.deu.plu.art: die
 @word6.deu.sig.hint: *xx*f*x*l
-@word6.deu.plu.hint: Ä*xpfel
+@word6.deu.plu.hint: Ä*xxx*l
 @word6.deu.sig.puz: peAlf
-@word6.deu.plu.puz: Äfel
+@word6.deu.plu.puz: feplÄ
 @word6.deu.sig.puz.hint: Apfel
 @word6.deu.plu.puz.hint: Äpfel
 @word6.deu.img: apfel.png
@@ -118,7 +118,7 @@ version:  1
 @match.noun.x4: ( ) ( ) ( ) ( ) (X) ( )
 @match.noun.x5: ( ) ( ) ( ) ( ) ( ) (X)
 @match.noun.x6: ( ) (X) ( ) ( ) ( ) ( )
-@match.noun.w: Yeehaaaaaaaa!!!!
+@match.noun.w: Yeehaaaaaaaa!
 
 @match.article.n1: 3
 @match.article.n2: 4
@@ -132,7 +132,7 @@ version:  1
 @match.article.x4: ( ) ( ) (X)
 @match.article.x5: (X) ( ) ( )
 @match.article.x6: ( ) (X) ( )
-@match.article.w: Yes Baby!
+@match.article.w: Sehr gut!
 
 @hear.read.n1: 3
 @hear.read.n2: 4
@@ -153,18 +153,18 @@ version:  1
 @transl.ende.n4: 5
 @transl.ende.n5: 6
 @transl.ende.n6: 2
-@transl.ende.w1.sig: wSupii!
-@transl.ende.w1.plu: wpSupii!
-@transl.ende.w2.sig: wGutii!
-@transl.ende.w2.plu: wpGutii!
-@transl.ende.w3.sig: wGute Gemacht
-@transl.ende.w3.plu: wpGute Gemacht
-@transl.ende.w4.sig: wAyaya
-@transl.ende.w4.plu: wpAyaya
-@transl.ende.w5.sig: wMiau
-@transl.ende.w5.plu: wpMiau
-@transl.ende.w6.sig: wTOll!
-@transl.ende.w6.plu: wpTOll!
+@transl.ende.w1.sig: Supii!
+@transl.ende.w1.plu: Weiter so!
+@transl.ende.w2.sig: Genau!
+@transl.ende.w2.plu: Das ist dr Plural!
+@transl.ende.w3.sig: Gut Gemacht!
+@transl.ende.w3.plu: Gut Gemacht; :-)
+@transl.ende.w4.sig: Ayaya! :-p
+@transl.ende.w4.plu: Yeeehaaa!
+@transl.ende.w5.sig: Miau!
+@transl.ende.w5.plu: Miaaaau!
+@transl.ende.w6.sig: Toll!
+@transl.ende.w6.plu: Töller!
 
 @hear.write.n1: 3
 @hear.write.n2: 4
@@ -178,12 +178,12 @@ version:  1
 @hear.write.f4: sig
 @hear.write.f5: sig
 @hear.write.f6: plu
-@hear.write.w1: wwwSupii!
-@hear.write.w2: wwwGutii!
-@hear.write.w3: wwwGute Gemacht
-@hear.write.w4: wwwAyaya
-@hear.write.w5: wwwMiau
-@hear.write.w6: wwwTOll!
+@hear.write.w1: Wooopie! :-D
+@hear.write.w2: Gutii!
+@hear.write.w3: Gutiiiiiii!
+@hear.write.w4: Ayaya! ;-)
+@hear.write.w5: Miau, Miau.
+@hear.write.w6: Yesssss!
 
 @puzzle.ende.n1: 3
 @puzzle.ende.n2: 4
@@ -197,12 +197,12 @@ version:  1
 @puzzle.ende.f4: sig
 @puzzle.ende.f5: sig
 @puzzle.ende.f6: plu
-@puzzle.ende.w1: wppSupii!
-@puzzle.ende.w2: wppGutii!
-@puzzle.ende.w3: wppGute Gemacht
-@puzzle.ende.w4: wppAyaya
-@puzzle.ende.w5: wppMiau
-@puzzle.ende.w6: wppTOll!
+@puzzle.ende.w1: Super! :-D
+@puzzle.ende.w2: Weiter so!
+@puzzle.ende.w3: Gut Gemacht!
+@puzzle.ende.w4: Ayaya!
+@puzzle.ende.w5: Miau!
+@puzzle.ende.w6: Toll! ;-)
 
 
 
