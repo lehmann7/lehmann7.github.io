@@ -452,12 +452,12 @@ document.getElementById("lia-hear-write-show@0").addEventListener(
 @3
 ***********************************
 @end
-@puzzle.ende
+@puzzle.ende.main
 <tr><td style="text-align: center; vertical-align: middle;">
-d - -@space@word(@puzzle.ende.n@0,deu.sig.puz)
+d - -@space@word(@0,deu.@1.puz)
 </td><td style="text-align: center; vertical-align: middle;">
 <div>
-@puzzle.ende.helper.a(@puzzle.ende.n@0,@puzzle.ende.f@0)
+@puzzle.ende.helper.a(@0,@1)
 </div>
 </td><td style="text-align: center; vertical-align: middle;">
 <button id="lia-puzzle-ende@0" style="height: 96px; width: 96px;">@word.image(@0)<!-- style = "display: none;" --></button>
@@ -470,6 +470,7 @@ document.getElementById("lia-puzzle-ende@0").addEventListener(
 </script>
 </td></tr>
 @end
+@puzzle.ende: @puzzle.ende.main(@puzzle.ende.n@0,@puzzle.ende.f@0)
 
 
 
