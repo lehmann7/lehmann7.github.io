@@ -412,7 +412,7 @@ document.getElementById("lia-hear-speak-record@0").addEventListener(
 document.getElementById("lia-hear-speak-listen@0").addEventListener(
 	"click",
 	() => {
-		recorder_btn@0(false, 2, 1);
+		recorder_btn@0(false, 5, 1);
 		recorder_audio@0.play();
 		setTimeout(() => { recorder_btn@0(true, 0, 0); }, recorder_audio@0.duration*1000.0);
 	}
