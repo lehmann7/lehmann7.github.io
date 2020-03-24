@@ -106,26 +106,26 @@ version:  1
 @word6.deu.sig.voice: apfel_s.mp3
 @word6.deu.plu.voice: apfel_p.mp3
 
-@match.noun.n1: 3
-@match.noun.n2: 4
-@match.noun.n3: 1
-@match.noun.n4: 5
-@match.noun.n5: 6
-@match.noun.n6: 2
-@match.noun.x1: ( ) ( ) (X) ( ) ( ) ( )
-@match.noun.x2: ( ) ( ) ( ) (X) ( ) ( )
-@match.noun.x3: (X) ( ) ( ) ( ) ( ) ( )
-@match.noun.x4: ( ) ( ) ( ) ( ) (X) ( )
-@match.noun.x5: ( ) ( ) ( ) ( ) ( ) (X)
-@match.noun.x6: ( ) (X) ( ) ( ) ( ) ( )
+@match.noun.n1: 6
+@match.noun.n2: 1
+@match.noun.n3: 4
+@match.noun.n4: 2
+@match.noun.n5: 3
+@match.noun.n6: 5
+@match.noun.x1: ( ) ( ) ( ) ( ) ( ) (X)
+@match.noun.x2: (X) ( ) ( ) ( ) ( ) ( )
+@match.noun.x3: ( ) ( ) ( ) (X) ( ) ( )
+@match.noun.x4: ( ) (X) ( ) ( ) ( ) ( )
+@match.noun.x5: ( ) ( ) (X) ( ) ( ) ( )
+@match.noun.x6: ( ) ( ) ( ) ( ) (X) ( )
 @match.noun.w: Yeehaaaaaaaa!
 
-@match.article.n1: 3
+@match.article.n1: 5
 @match.article.n2: 4
-@match.article.n3: 1
-@match.article.n4: 5
+@match.article.n3: 2
+@match.article.n4: 3
 @match.article.n5: 6
-@match.article.n6: 2
+@match.article.n6: 1
 @match.article.x1: ( ) ( ) (X)
 @match.article.x2: ( ) (X) ( )
 @match.article.x3: (X) ( ) ( )
@@ -134,24 +134,24 @@ version:  1
 @match.article.x6: ( ) (X) ( )
 @match.article.w: Sehr gut!
 
-@hear.read.n1: 3
+@hear.read.n1: 1
 @hear.read.n2: 4
-@hear.read.n3: 1
-@hear.read.n4: 5
-@hear.read.n5: 6
-@hear.read.n6: 2
-@hear.speak.n1: 3
+@hear.read.n3: 2
+@hear.read.n4: 6
+@hear.read.n5: 5
+@hear.read.n6: 3
+@hear.speak.n1: 2
 @hear.speak.n2: 4
-@hear.speak.n3: 1
-@hear.speak.n4: 5
-@hear.speak.n5: 6
-@hear.speak.n6: 2
+@hear.speak.n3: 6
+@hear.speak.n4: 1
+@hear.speak.n5: 5
+@hear.speak.n6: 3
 
 @transl.ende.n1: 3
-@transl.ende.n2: 4
-@transl.ende.n3: 1
-@transl.ende.n4: 5
-@transl.ende.n5: 6
+@transl.ende.n2: 1
+@transl.ende.n3: 4
+@transl.ende.n4: 6
+@transl.ende.n5: 5
 @transl.ende.n6: 2
 @transl.ende.w1.sig: Supii!
 @transl.ende.w1.plu: Weiter so!
@@ -166,12 +166,12 @@ version:  1
 @transl.ende.w6.sig: Toll!
 @transl.ende.w6.plu: Töller!
 
-@hear.write.n1: 3
+@hear.write.n1: 5
 @hear.write.n2: 4
-@hear.write.n3: 1
-@hear.write.n4: 5
-@hear.write.n5: 6
-@hear.write.n6: 2
+@hear.write.n3: 2
+@hear.write.n4: 1
+@hear.write.n5: 3
+@hear.write.n6: 6
 @hear.write.f1: sig
 @hear.write.f2: plu
 @hear.write.f3: plu
@@ -185,12 +185,12 @@ version:  1
 @hear.write.w5: Miau, Miau.
 @hear.write.w6: Yesssss!
 
-@puzzle.ende.n1: 3
-@puzzle.ende.n2: 4
+@puzzle.ende.n1: 4
+@puzzle.ende.n2: 2
 @puzzle.ende.n3: 1
-@puzzle.ende.n4: 5
+@puzzle.ende.n4: 3
 @puzzle.ende.n5: 6
-@puzzle.ende.n6: 2
+@puzzle.ende.n6: 5
 @puzzle.ende.f1: sig
 @puzzle.ende.f2: plu
 @puzzle.ende.f3: plu
