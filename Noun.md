@@ -669,9 +669,9 @@ document.getElementById("lia-puzzle-ende@0").addEventListener(
 
 <table width="100%">
 <tr><td style="text-align: center; vertical-align: middle;">
-@image(think,think.png,24px)
+@image(speak,speak.png,24px)
 </td><td style="text-align: center; vertical-align: middle;">
-<div>`Singular` *oder* `Plural`? @image(write,write.png,24px)</div>
+<div>`Singular` *oder* `Plural`? @image(think,think.png,24px)@image(write,write.png,24px)</div>
 </td><td style="text-align: center; vertical-align: middle;">
 @image(click,click.png,24px)
 <span class="lia-hint-btn" title="show hint" style="cursor: pointer;">help</span>
