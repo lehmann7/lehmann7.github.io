@@ -344,11 +344,79 @@ document.getElementById("lia-hear-read-play@0").addEventListener(
 </td><td style="text-align: center; vertical-align: middle;">
 <div class="lia-hear-speak-play@0" style="display: none;">***@word(@0,deu.plu.art)***@space**@word(@0,deu.plu)**</div>
 </td><td style="text-align: center; vertical-align: middle;">
-<div class="lia-hear-speak-play@0" style="display: none;"><button id="lia-hear-speak-record@0" style="height: 96px; width: 96px;">@image(record,record.png,48px)</button></div>
+<div class="lia-hear-speak-play@0" style="display: none;"><button class="lia-hear-speak-recbtn" id="lia-hear-speak-record@0" style="height: 96px; width: 96px;">@image(recmic@0,record.png,48px)@image(recspeaka@0,speak0.png,48px)@image(recspeakb@0,speak1.png,48px)@image(recspeakc@0,speak2.png,48px)@image(recspeakd@0,speak3.png,48px)@image(recloud@0,loud.png,48px)</button></div>
 </td><td style="text-align: center; vertical-align: middle;">
-<div class="lia-hear-speak-play@0" style="display: none;"><button id="lia-hear-speak-listen@0" style="height: 96px; width: 96px;">@image(audio,audio.png,48px)</button></div>
+<div class="lia-hear-speak-play@0" style="display: none;"><button class="lia-hear-speak-recbtn" id="lia-hear-speak-listen@0" style="height: 96px; width: 96px;">@image(rectape@0,audio.png,48px)@image(rechear@0,hear.png,48px)</button></div>
 </td><td style="text-align: center; vertical-align: middle;">
 <script>
+var recorder_obj@0 = null;
+var recorder_data@0 = [ ];
+var recorder_audio@0 = new Audio;
+var recorder_btn@0 = ( (e, a, b) => {
+	document.getElementById("lia-image-recmic@0").style.display    = ( a == 0 ? "inline-block" : "none");
+	document.getElementById("lia-image-recspeaka@0").style.display = ( a == 1 ? "inline-block" : "none");
+	document.getElementById("lia-image-recspeakb@0").style.display = ( a == 2 ? "inline-block" : "none");
+	document.getElementById("lia-image-recspeakc@0").style.display = ( a == 3 ? "inline-block" : "none");
+	document.getElementById("lia-image-recspeakd@0").style.display = ( a == 4 ? "inline-block" : "none");
+	document.getElementById("lia-image-recloud@0").style.display   = ( a == 5 ? "inline-block" : "none");
+	document.getElementById("lia-image-rectape@0").style.display   = ( b == 0 ? "inline-block" : "none");
+	document.getElementById("lia-image-rechear@0").style.display   = ( b == 1 ? "inline-block" : "none");
+	Array.from(document.getElementsByClassName("lia-hear-speak-recbtn")).forEach(elem => { elem.disabled = !e; });
+});
+var recorder_func@0 = (stream => {
+	recorder_obj@0 = new MediaRecorder(stream);
+	recorder_obj@0.addEventListener(
+		"dataavailable",
+		event => {
+			recorder_data@0.push(event.data);
+		}
+	);
+	recorder_obj@0.addEventListener(
+		"start",
+		() => {
+			recorder_data@0 = [ ];
+		}
+	);
+	recorder_obj@0.addEventListener(
+		"stop",
+		() => {
+			const blob = new Blob(recorder_data@0);
+			const aurl = URL.createObjectURL(blob);
+			recorder_audio@0 = new Audio(aurl);
+			recorder_audio@0.play();
+		}
+	);
+});
+navigator.getWebcam = (navigator.getUserMedia || navigator.webKitGetUserMedia || navigator.moxGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia);
+if (navigator.mediaDevices.getUserMedia) {
+	navigator.mediaDevices.getUserMedia({audio: true, video: false}).then(recorder_func@0)
+	.catch(function (e) { logError(e.name + ": " + e.message); });
+} else {
+	navigator.getWebcam({audio: true, video: false}, recorder_func@0,
+	function () { logError("Web cam is not accessible."); });
+};
+document.getElementById("lia-hear-speak-record@0").addEventListener(
+	"click",
+	() => {
+		recorder_btn@0(false, 1, 0);
+		recorder_obj@0.start();
+		setTimeout(() => { recorder_obj@0.stop(); }, 4500 );
+		setTimeout(() => { recorder_btn@0(false, 2, 0); }, 1500);
+		setTimeout(() => { recorder_btn@0(false, 3, 0); }, 2500);
+		setTimeout(() => { recorder_btn@0(false, 4, 0); }, 3500);
+		setTimeout(() => { recorder_btn@0(false, 5, 1);
+			               recorder_obj@0.stop();       }, 4500);
+		setTimeout(() => { recorder_btn@0(true, 0, 0); }, 9000);
+	}
+);
+document.getElementById("lia-hear-speak-listen@0").addEventListener(
+	"click",
+	() => {
+		recorder_btn@0(false, 2, 1);
+		recorder_audio@0.play();
+		setTimeout(() => { recorder_btn@0(true, 0, 0); }, recorder_audio@0.duration*1000.0);
+	}
+);
 document.getElementById("lia-hear-speak-play@0").addEventListener(
 	"click",
 	() => {
@@ -363,6 +431,7 @@ document.getElementById("lia-hear-speak-play@0").addEventListener(
 		}
 	}
 );
+recorder_btn@0(true, 0, 0);
 </script>
 </td></tr>
 @end
@@ -471,7 +540,6 @@ document.getElementById("lia-puzzle-ende@0").addEventListener(
 </td></tr>
 @end
 @puzzle.ende: @puzzle.ende.main(@puzzle.ende.n@0,@puzzle.ende.f@0)
-
 
 
 -->
