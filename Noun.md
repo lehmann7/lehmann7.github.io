@@ -257,6 +257,7 @@ document.getElementById("lia-clear").addEventListener(
 @end
 
 
+
 @space: <span style="display:inline-block; width: 8px;"></span>
 @word: @word@0.@1
 @word.image.helper: <img src="www/@2/@1" width="48px" id="lia-word-image@0">
@@ -390,13 +391,13 @@ var recorder_func@0 = (stream => {
 	recorder_obj@0.stop();
 	if (@0 == 6) alert("Der Rekorder funktioniert jetzt. Lets go!");
 });
-navigator.getWebcam = (navigator.getUserMedia || navigator.webKitGetUserMedia || navigator.moxGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia);
+navigator.getAudio = (navigator.getUserMedia || navigator.webKitGetUserMedia || navigator.moxGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia);
 if (navigator.mediaDevices.getUserMedia) {
 	navigator.mediaDevices.getUserMedia({audio: true, video: false}).then(recorder_func@0)
-	.catch(function (e) { logError(e.name + ": " + e.message); });
+	.catch(function (e) { alert(e.name + ": " + e.message); });
 } else {
-	navigator.getWebcam({audio: true, video: false}, recorder_func@0,
-	function () { logError("Web cam is not accessible."); });
+	navigator.getAudio({audio: true, video: false}, recorder_func@0,
+	function () { alert("Audio is not accessible."); });
 };
 document.getElementById("lia-hear-speak-record@0").addEventListener(
 	"click",
