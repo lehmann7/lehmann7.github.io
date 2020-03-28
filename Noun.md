@@ -211,6 +211,15 @@ version:  1
 	var ltoc = document.getElementsByClassName("lia-toc")[0];
 	var lfooter = document.getElementsByClassName("lia-footer")[0];
 	var lnav = document.getElementById("lia-toolbar-nav");
+	Array.from(document.getElementsByClassName("lia-hint-btn")).forEach(
+		elem => { elem.style.display = "none"; }
+	);
+	Array.from(document.getElementsByClassName("lia-btn")).forEach(
+		elem => { elem.style.backgroundColor = "#93c47d"; }
+	);
+	Array.from(document.getElementsByClassName("lia-quiz")).forEach(
+		elem => { elem.style.border = "3px solid #82baba"; }
+	);
 	lnav.style.display = "none";
 	lfooter.style.display = "none";
 	ltoc.style.display = "none";
@@ -240,16 +249,7 @@ document.getElementById("lia-clear").addEventListener(
 	var base = part[1];
 	if (part.length == 2 || part[2].split("&")[0] != "@0")
 	{
-		document.location.href = lia + "?" + base + "?@0&" + new Date()/1.0 + "#" + num[1];
-	}
-	else
-	{
-		var ltoc = document.getElementsByClassName("lia-toc")[0];
-		var lfooter = document.getElementsByClassName("lia-footer")[0];
-		var lnav = document.getElementById("lia-toolbar-nav");
-		lnav.style.display = "none";
-		lfooter.style.display = "none";
-		ltoc.style.display = "none";
+		//~ document.location.href = lia + "?" + base + "?@0&" + new Date()/1.0 + "#" + num[1];
 	}
 })();
 </script>
@@ -266,7 +266,7 @@ document.getElementById("lia-clear").addEventListener(
 @word.voice: @word.voice.helper(@0,sig,@word@0.deu.sig.voice,@topic) @word.voice.helper(@0,plu,@word@0.deu.plu.voice,@topic)
 @audio: <audio src="www/mp3/@1" preload="auto" id="lia-audio-@0"></audio>
 @image: <img src="www/img/@1" width="@2" id="lia-image-@0">
-
+@task: <div>***@0***</div><!-- style = "color: #c395ac;" -->
 
 
 @match.noun.a: <div>*the*@space@word@0.eng.sig</div><!-- style = "transform: rotate(-67.5deg);" -->
@@ -533,12 +533,15 @@ d - -@space@word(@0,deu.@1.puz)
 @puzzle.ende.helper.a(@0,@1)
 </div>
 </td><td style="text-align: center; vertical-align: middle;">
-<button id="lia-puzzle-ende@0" style="height: 96px; width: 96px;">@word.image(@0)<!-- style = "display: none;" --></button>
+<button id="lia-puzzle-ende-play@0" style="height: 96px; width: 96px;">@image(play,play.png,48px)</button>
 </td><td style="text-align: center; vertical-align: middle;">
 <script>
-document.getElementById("lia-puzzle-ende@0").addEventListener(
+document.getElementById("lia-puzzle-ende-play@0").addEventListener(
 	"click",
-	() => { document.getElementById("lia-word-image@0").style.display = "inline-block"; }
+	() => {
+		var media = document.getElementById("lia-word-voice-@1@0");
+		if (media.paused) media.play();
+	}
 );
 </script>
 </td></tr>
@@ -565,9 +568,9 @@ document.getElementById("lia-puzzle-ende@0").addEventListener(
 <tr><td style="text-align: center; vertical-align: middle;">
 @image(click,click.png,24px)@image(loud,loud.png,24px)
 </td><td style="text-align: center; vertical-align: middle;">
-<div>`Singular` @image(hears,hear.png,24px)@image(speaks,speak.png,24px)</div>
+<div>`Singular` @image(hears,hear.png,24px)</div>
 </td><td style="text-align: center; vertical-align: middle;">
-<div>`Plural` @image(hearp,hear.png,24px)@image(speakp,speak.png,24px)</div>
+<div>`Plural` @image(hearp,hear.png,24px)</div>
 </td><td style="text-align: center; vertical-align: middle;">
 <span class="lia-hint-btn" title="show hint" style="cursor: pointer;">help</span>
 </td><td style="text-align: center; vertical-align: middle;">
@@ -622,9 +625,8 @@ document.getElementById("lia-puzzle-ende@0").addEventListener(
 
 <table width="100%">
 <tr><td style="text-align: center; vertical-align: middle;">
-<div>`Singular` @image(thinks,think.png,24px)@image(writes,write.png,24px)</div>
+<div>@task(Schreib auf Deutsch!)@image(writes,write.png,24px)</div>
 </td><td style="text-align: center; vertical-align: middle;">
-<div>`Plural` @image(thinkp,think.png,24px)@image(writep,write.png,24px)</div>
 </td><td style="text-align: center; vertical-align: middle;">
 @image(click,click.png,24px)
 <span class="lia-hint-btn" title="show hint" style="cursor: pointer;">help</span>
@@ -651,7 +653,7 @@ document.getElementById("lia-puzzle-ende@0").addEventListener(
 <tr><td style="text-align: center; vertical-align: middle;">
 @image(click,click.png,24px)@image(loud,loud.png,24px)
 </td><td style="text-align: center; vertical-align: middle;">
-<div>`Singular` *oder* `Plural`? @image(hear,hear.png,24px)@image(write,write.png,24px)</div>
+<div>@task(Höre und schreibe!)@image(hear,hear.png,24px)@image(write,write.png,24px)</div>
 </td><td style="text-align: center; vertical-align: middle;">
 @image(click,click.png,24px)
 <span class="lia-hint-btn" title="show hint" style="cursor: pointer;">help</span>
@@ -668,11 +670,17 @@ document.getElementById("lia-puzzle-ende@0").addEventListener(
 
 # 7.Berichtigen.<!-- style = "display: none;" -->
 
+@word.voice(1)
+@word.voice(2)
+@word.voice(3)
+@word.voice(4)
+@word.voice(5)
+@word.voice(6)
 <table width="100%">
 <tr><td style="text-align: center; vertical-align: middle;">
 @image(speak,speak.png,24px)
 </td><td style="text-align: center; vertical-align: middle;">
-<div>`Singular` *oder* `Plural`? @image(think,think.png,24px)@image(write,write.png,24px)</div>
+<div>@task(Berichtige!)@image(writes,write.png,24px)</div>
 </td><td style="text-align: center; vertical-align: middle;">
 @image(click,click.png,24px)
 <span class="lia-hint-btn" title="show hint" style="cursor: pointer;">help</span>
