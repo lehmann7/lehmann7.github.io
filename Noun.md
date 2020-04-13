@@ -446,12 +446,12 @@ commend: COURSE CODE
 @delim: <span style="display:inline-block; width: 30px; text-align: center;">•</span>
 @blank: @space .......... @space
 @word: @word@0.@1
-@word.image.helper: <img src="www/@2/@1" width="80px" height="80px" id="lia-word-image@0">
+@word.image.helper: <img src="http://lehmann7.github.io/www/@2/@1" width="80px" height="80px" id="lia-word-image@0">
 @word.image: @word.image.helper(@0,@word@0.deu.img,@topic)
-@word.voice.helper: <audio src="www/@3/@2" preload="auto" id="lia-word-voice-@1@0"></audio>
+@word.voice.helper: <audio src="http://lehmann7.github.io/www/@3/@2" preload="auto" id="lia-word-voice-@1@0"></audio>
 @word.voice: @word.voice.helper(@0,sig,@word@0.deu.sig.voice,@topic) @word.voice.helper(@0,plu,@word@0.deu.plu.voice,@topic) @word.voice.helper(@0,ver,@word@0.deu.ver.voice,@topic) @word.voice.helper(@0,pre,@word@0.deu.pre.voice,@topic) @word.voice.helper(@0,phr,@word@0.deu.phr.voice,@topic)
-@audio: <audio src="www/mp3/@1" preload="auto" id="lia-audio-@0"></audio>
-@image: <img src="www/img/@1" width="@2" height="@2" id="lia-image-@0">
+@audio: <audio src="http://lehmann7.github.io/www/mp3/@1" preload="auto" id="lia-audio-@0"></audio>
+@image: <img src="http://lehmann7.github.io/www/img/@1" width="@2" height="@2" id="lia-image-@0">
 
 
 
