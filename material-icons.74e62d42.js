@@ -184,7 +184,13 @@ function reloadCSS() {
 }
 
 module.exports = reloadCSS;
-},{"./bundle-url":"../../../node_modules/parcel/src/builtins/bundle-url.js"}],"../../../node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./bundle-url":"../../../node_modules/parcel/src/builtins/bundle-url.js"}],"../../../node_modules/material-icons/iconfont/material-icons.scss":[function(require,module,exports) {
+
+        var reloadCSS = require('_css_loader');
+        module.hot.dispose(reloadCSS);
+        module.hot.accept(reloadCSS);
+      
+},{"./MaterialIcons-Regular.eot":[["MaterialIcons-Regular.065fdf4d.eot","../../../node_modules/material-icons/iconfont/MaterialIcons-Regular.eot"],"../../../node_modules/material-icons/iconfont/MaterialIcons-Regular.eot"],"./MaterialIcons-Regular.woff2":[["MaterialIcons-Regular.b62915c7.woff2","../../../node_modules/material-icons/iconfont/MaterialIcons-Regular.woff2"],"../../../node_modules/material-icons/iconfont/MaterialIcons-Regular.woff2"],"./MaterialIcons-Regular.woff":[["MaterialIcons-Regular.1cc94d9c.woff","../../../node_modules/material-icons/iconfont/MaterialIcons-Regular.woff"],"../../../node_modules/material-icons/iconfont/MaterialIcons-Regular.woff"],"./MaterialIcons-Regular.ttf":[["MaterialIcons-Regular.c91a9206.ttf","../../../node_modules/material-icons/iconfont/MaterialIcons-Regular.ttf"],"../../../node_modules/material-icons/iconfont/MaterialIcons-Regular.ttf"],"_css_loader":"../../../node_modules/parcel/src/builtins/css-loader.js"}],"../../../node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -389,4 +395,4 @@ function hmrAcceptRun(bundle, id) {
   }
 }
 },{}]},{},["../../../node_modules/parcel/src/builtins/hmr-runtime.js"], null)
-//# sourceMappingURL=/index.js.map
+//# sourceMappingURL=/material-icons.74e62d42.js.map
