@@ -446,7 +446,7 @@ commend: COURSE CODE
 @delim: <span style="display:inline-block; width: 30px; text-align: center;">•</span>
 @blank: @space .......... @space
 @word: @word@0.@1
-@word.image.helper: <img src="http://lehmann7.github.io/www/@2/@1" width="80px" height="80px" id="lia-word-image@0">
+@word.image.helper: <img src="http://lehmann7.github.io/www/@2/@1" width="126px" height="126px" id="lia-word-image@0">
 @word.image: @word.image.helper(@0,@word@0.deu.img,@topic)
 @word.voice.helper: <audio src="http://lehmann7.github.io/www/@3/@2" preload="auto" id="lia-word-voice-@1@0"></audio>
 @word.voice: @word.voice.helper(@0,sig,@word@0.deu.sig.voice,@topic) @word.voice.helper(@0,plu,@word@0.deu.plu.voice,@topic) @word.voice.helper(@0,ver,@word@0.deu.ver.voice,@topic) @word.voice.helper(@0,pre,@word@0.deu.pre.voice,@topic) @word.voice.helper(@0,phr,@word@0.deu.phr.voice,@topic)
@@ -476,7 +476,7 @@ commend: COURSE CODE
 
 @clear
 <p style="text-align: right;">
-<button id="lia-clear" style="border: 3px solid #82baba; border-radius: 3px; height: 96px; width: 96px;">@image(clear,bin.png,48px)</button>
+<button id="lia-clear" style="padding: 0px; border: 3px solid #82baba; border-radius: 3px; height: 100px; width: 100px;">@image(clear,bin.png,48px)</button>
 <script>
 document.getElementById("lia-clear").addEventListener(
 	"click",
@@ -586,7 +586,7 @@ document.getElementById("lia-clear").addEventListener(
 
 @noun.intro.helper
 <tr><td style="text-align: center; vertical-align: middle;">
-<button id="lia-hear-read-play@0" style="border: 3px solid #82baba; border-radius: 3px; height: 96px; width: 96px;">@image(play,audio.png,48px)</button>
+<button id="lia-hear-read-play@0" style="padding: 0px; border: 3px solid #82baba; border-radius: 3px; height: 100px; width: 100px;">@image(play,audio.png,48px)</button>
 </td><td style="text-align: center; vertical-align: middle;">
 <div class="lia-hear-read-play@0" style="display: none;">***@word(@0,deu.sig.art)***@space**@word(@0,deu.sig)**</div>
 </td><td style="text-align: center; vertical-align: middle;">
@@ -618,14 +618,14 @@ document.getElementById("lia-hear-read-play@0").addEventListener(
 
 @verb.speak.helper
 <tr><td style="text-align: center; vertical-align: middle;">
-<button id="lia-verb-speak-play@0" style="border: 3px solid #82baba; border-radius: 3px; height: 96px; width: 96px;">@image(play,audio.png,48px)</button>
+<button id="lia-verb-speak-play@0" style="padding: 0px; border: 3px solid #82baba; border-radius: 3px; height: 100px; width: 100px;">@image(play,audio.png,48px)</button>
 </td><td style="text-align: center; vertical-align: middle;">
 <div class="lia-verb-speak-play@0" style="display: none;">***@word(@0,deu.pre)***@space**@word(@0,deu.ver)**</div>
 </td><td style="text-align: center; vertical-align: middle;">
 <div class="lia-verb-speak-play@0" style="display: none;">
-<button class="lia-verb-speak-recbtn" id="lia-verb-speak-record@0" style="border: 3px solid #82baba; border-radius: 3px; height: 96px; width: 96px;">@image(recmic@0,mic.png,48px)@image(recspeaka@0,speak0.png,48px)@image(recspeakb@0,speak1.png,48px)@image(recspeakc@0,speak2.png,48px)@image(recspeakd@0,speak3.png,48px)@image(recloud@0,loud.png,48px)</button>
+<button class="lia-verb-speak-recbtn" id="lia-verb-speak-record@0" style="padding: 0px; border: 3px solid #82baba; border-radius: 3px; height: 100px; width: 100px;">@image(recmic@0,mic.png,48px)@image(recspeaka@0,speak0.png,48px)@image(recspeakb@0,speak1.png,48px)@image(recspeakc@0,speak2.png,48px)@image(recspeakd@0,speak3.png,48px)@image(recloud@0,loud.png,48px)</button>
 @space
-<button class="lia-verb-speak-recbtn" id="lia-verb-speak-listen@0" style="border: 3px solid #82baba; border-radius: 3px; height: 96px; width: 96px;">@image(rectape@0,ear.png,48px)@image(rechear@0,loud.png,48px)</button>
+<button class="lia-verb-speak-recbtn" id="lia-verb-speak-listen@0" style="padding: 0px; border: 3px solid #82baba; border-radius: 3px; height: 100px; width: 100px;">@image(rectape@0,ear.png,48px)@image(rechear@0,loud.png,48px)</button>
 </div>
 </td><td style="text-align: center; vertical-align: middle;">
 <script>
@@ -641,9 +641,7 @@ var verbrec_btn@0 = ( (e, a, b) => {
 	document.getElementById("lia-image-recloud@0").style.display   = ( a == 5 ? "inline-block" : "none");
 	document.getElementById("lia-image-rectape@0").style.display   = ( b == 0 ? "inline-block" : "none");
 	document.getElementById("lia-image-rechear@0").style.display   = ( b == 1 ? "inline-block" : "none");
-	document.getElementById("lia-verb-speak-record@0").disabled    = ( a == 0 && b == 0 ? false : true);
-	document.getElementById("lia-verb-speak-listen@0").disabled    = ( a == 0 && b == 0 ? false : true);
-	//~ Array.from(document.getElementsByClassName("lia-verb-speak-recbtn")).forEach(elem => { elem.disabled = !e; });
+	Array.from(document.getElementsByClassName("lia-verb-speak-recbtn")).forEach(elem => { elem.disabled = !e; });
 });
 var verbrec_func@0 = (stream => {
 	verbrec_obj@0 = new MediaRecorder(stream);
@@ -710,7 +708,11 @@ document.getElementById("lia-verb-speak-play@0").addEventListener(
 		);
 		var media1 = document.getElementById("lia-word-voice-pre@0");
 		if (media1.paused) {
+			verbrec_btn@0(false, 5, 1);
 			media1.play();
+			setTimeout(() => {
+				verbrec_btn@0(true, 0, 0);
+			}, media1.duration*1000.0);
 		}
 	}
 );
@@ -724,16 +726,16 @@ verbrec_btn@0(true, 0, 0);
 
 @noun.speak.helper
 <tr><td style="text-align: center; vertical-align: middle;">
-<button id="lia-hear-speak-play@0" style="border: 3px solid #82baba; border-radius: 3px; height: 96px; width: 96px;">@image(play,audio.png,48px)</button>
+<button id="lia-hear-speak-play@0" style="padding: 0px; border: 3px solid #82baba; border-radius: 3px; height: 100px; width: 100px;">@image(play,audio.png,48px)</button>
 </td><td style="text-align: center; vertical-align: middle;">
 <div class="lia-hear-speak-play@0" style="display: none;">***@word(@0,deu.sig.art)***@space**@word(@0,deu.sig)**</div>
 </td><td style="text-align: center; vertical-align: middle;">
 <div class="lia-hear-speak-play@0" style="display: none;">***@word(@0,deu.plu.art)***@space**@word(@0,deu.plu)**</div>
 </td><td style="text-align: center; vertical-align: middle;">
 <div class="lia-hear-speak-play@0" style="display: none;">
-<button class="lia-hear-speak-recbtn" id="lia-hear-speak-record@0" style="border: 3px solid #82baba; border-radius: 3px; height: 96px; width: 96px;">@image(recmic@0,mic.png,48px)@image(recspeaka@0,speak0.png,48px)@image(recspeakb@0,speak1.png,48px)@image(recspeakc@0,speak2.png,48px)@image(recspeakd@0,speak3.png,48px)@image(recloud@0,loud.png,48px)</button>
+<button class="lia-hear-speak-recbtn" id="lia-hear-speak-record@0" style="padding: 0px; border: 3px solid #82baba; border-radius: 3px; height: 100px; width: 100px;">@image(recmic@0,mic.png,48px)@image(recspeaka@0,speak0.png,48px)@image(recspeakb@0,speak1.png,48px)@image(recspeakc@0,speak2.png,48px)@image(recspeakd@0,speak3.png,48px)@image(recloud@0,loud.png,48px)</button>
 @space
-<button class="lia-hear-speak-recbtn" id="lia-hear-speak-listen@0" style="border: 3px solid #82baba; border-radius: 3px; height: 96px; width: 96px;">@image(rectape@0,ear.png,48px)@image(rechear@0,loud.png,48px)</button>
+<button class="lia-hear-speak-recbtn" id="lia-hear-speak-listen@0" style="padding: 0px; border: 3px solid #82baba; border-radius: 3px; height: 100px; width: 100px;">@image(rectape@0,ear.png,48px)@image(rechear@0,loud.png,48px)</button>
 </div>
 </td><td style="text-align: center; vertical-align: middle;">
 <script>
@@ -749,9 +751,7 @@ var recorder_btn@0 = ( (e, a, b) => {
 	document.getElementById("lia-image-recloud@0").style.display   = ( a == 5 ? "inline-block" : "none");
 	document.getElementById("lia-image-rectape@0").style.display   = ( b == 0 ? "inline-block" : "none");
 	document.getElementById("lia-image-rechear@0").style.display   = ( b == 1 ? "inline-block" : "none");
-	document.getElementById("lia-hear-speak-record@0").disabled    = ( a == 0 && b == 0 ? false : true);
-	document.getElementById("lia-hear-speak-listen@0").disabled    = ( a == 0 && b == 0 ? false : true);
-	//~ Array.from(document.getElementsByClassName("lia-hear-speak-recbtn")).forEach(elem => { elem.disabled = !e; });
+	Array.from(document.getElementsByClassName("lia-hear-speak-recbtn")).forEach(elem => { elem.disabled = !e; });
 });
 var recorder_func@0 = (stream => {
 	recorder_obj@0 = new MediaRecorder(stream);
@@ -798,7 +798,7 @@ document.getElementById("lia-hear-speak-record@0").addEventListener(
 		setTimeout(() => { recorder_btn@0(false, 3, 0); }, 2500);
 		setTimeout(() => { recorder_btn@0(false, 4, 0); }, 3500);
 		setTimeout(() => { recorder_btn@0(false, 5, 1);
-			               recorder_obj@0.stop();       }, 4500);
+		                   recorder_obj@0.stop();       }, 4500);
 		setTimeout(() => { recorder_btn@0(true, 0, 0); }, 9000);
 	}
 );
@@ -819,8 +819,14 @@ document.getElementById("lia-hear-speak-play@0").addEventListener(
 		var media1 = document.getElementById("lia-word-voice-sig@0");
 		var media2 = document.getElementById("lia-word-voice-plu@0");
 		if (media1.paused && media2.paused) {
+			recorder_btn@0(false, 5, 1);
 			media1.play();
-			setTimeout(() => { media2.play(); }, media1.duration*1000.0);
+			setTimeout(() => {
+				media2.play();
+			}, media1.duration*1000.0);
+			setTimeout(() => {
+				recorder_btn@0(true, 0, 0);
+			}, (media1.duration + media2.duration)*1000.0);
 		}
 	}
 );
@@ -848,7 +854,7 @@ recorder_btn@0(true, 0, 0);
 @noun.transl.helper.a(@0,@1)
 </div>
 </td><td style="text-align: center; vertical-align: middle;">
-<button id="lia-transl-ende@0" style="border: 3px solid #82baba; border-radius: 3px; height: 96px; width: 96px;">@word.image(@0)<!-- style = "display: none;" --></button>
+<button id="lia-transl-ende@0" style="padding: 0px; border: 3px solid #82baba; border-radius: 3px; height: 130px; width: 130px;">@word.image(@0)<!-- style = "display: none;" --></button>
 </td><td style="text-align: center; vertical-align: middle;">
 <script>
 document.getElementById("lia-transl-ende@0").addEventListener(
@@ -879,7 +885,7 @@ document.getElementById("lia-transl-ende@0").addEventListener(
 @verb.conj.helper.a(@0,dec)
 </div>
 </td><td style="text-align: center; vertical-align: middle;">
-<button id="lia-transl-verbb@0" style="border: 3px solid #82baba; border-radius: 3px; height: 96px; width: 96px;">@word.image(@0)<!-- style = "display: none;" --></button>
+<button id="lia-transl-verbb@0" style="padding: 0px; border: 3px solid #82baba; border-radius: 3px; height: 130px; width: 130px;">@word.image(@0)<!-- style = "display: none;" --></button>
 </td><td style="text-align: center; vertical-align: middle;">
 <script>
 document.getElementById("lia-transl-verbb@0").addEventListener(
@@ -910,7 +916,7 @@ document.getElementById("lia-transl-verbb@0").addEventListener(
 @verb.write.helper.a(@0,ver)
 </div>
 </td><td style="text-align: center; vertical-align: middle;">
-<button id="lia-transl-verb@0" style="border: 3px solid #82baba; border-radius: 3px; height: 96px; width: 96px;">@word.image(@0)<!-- style = "display: none;" --></button>
+<button id="lia-transl-verb@0" style="padding: 0px; border: 3px solid #82baba; border-radius: 3px; height: 130px; width: 130px;">@word.image(@0)<!-- style = "display: none;" --></button>
 </td><td style="text-align: center; vertical-align: middle;">
 <script>
 document.getElementById("lia-transl-verb@0").addEventListener(
@@ -936,7 +942,7 @@ document.getElementById("lia-transl-verb@0").addEventListener(
 @end
 @verb.hear.main
 <tr><td style="text-align: center; vertical-align: middle;">
-<button id="lia-hear-verb-play@0" style="border: 3px solid #82baba; border-radius: 3px; height: 96px; width: 96px;">@image(play,audio.png,48px)</button>
+<button id="lia-hear-verb-play@0" style="padding: 0px; border: 3px solid #82baba; border-radius: 3px; height: 100px; width: 100px;">@image(play,audio.png,48px)</button>
 </td><td style="text-align: center; vertical-align: middle;">
 <div>
 @verb.hear.helper.a(@0,@1)
@@ -972,13 +978,13 @@ document.getElementById("lia-hear-verb-show@0").addEventListener(
 @end
 @noun.write.main
 <tr><td style="text-align: center; vertical-align: middle;">
-<button id="lia-hear-write-play@0" style="border: 3px solid #82baba; border-radius: 3px; height: 96px; width: 96px;">@image(play,audio.png,48px)</button>
+<button id="lia-hear-write-play@0" style="padding: 0px; border: 3px solid #82baba; border-radius: 3px; height: 100px; width: 100px;">@image(play,audio.png,48px)</button>
 </td><td style="text-align: center; vertical-align: middle;">
 <div>
 @noun.write.helper.a(@0,@1)
 </div>
 </td><td style="text-align: center; vertical-align: middle;">
-<button id="lia-hear-write-show@0" style="border: 3px solid #82baba; border-radius: 3px; height: 96px; width: 96px;">@word.image(@0)<!-- style = "display: none;" --></button>
+<button id="lia-hear-write-show@0" style="padding: 0px; border: 3px solid #82baba; border-radius: 3px; height: 130px; width: 130px;">@word.image(@0)<!-- style = "display: none;" --></button>
 </td><td style="text-align: center; vertical-align: middle;">
 <script>
 document.getElementById("lia-hear-write-play@0").addEventListener(
@@ -1016,7 +1022,7 @@ d - -@space@word(@0,deu.@1.puz)
 @noun.puzzle.helper.a(@0,@1)
 </div>
 </td><td style="text-align: center; vertical-align: middle;">
-<button id="lia-puzzle-ende-play@0" style="border: 3px solid #82baba; border-radius: 3px; height: 96px; width: 96px;">@image(play,audio.png,48px)</button>
+<button id="lia-puzzle-ende-play@0" style="padding: 0px; border: 3px solid #82baba; border-radius: 3px; height: 100px; width: 100px;">@image(play,audio.png,48px)</button>
 </td><td style="text-align: center; vertical-align: middle;">
 <script>
 document.getElementById("lia-puzzle-ende-play@0").addEventListener(
@@ -1053,9 +1059,9 @@ document.getElementById("lia-puzzle-ende-play@0").addEventListener(
 <table width="100%">
 <tr><td style="text-align: center; vertical-align: middle;">
 </td><td style="text-align: center; vertical-align: middle;">
-<div>`Singular` @image(hears,ear.png,24px)</div>
+<div>`Singular` @image(hears,ear.png,50px)</div>
 </td><td style="text-align: center; vertical-align: middle;">
-<div>`Plural` @image(hearp,ear.png,24px)</div>
+<div>`Plural` @image(hearp,ear.png,50px)</div>
 </td><td style="text-align: center; vertical-align: middle;">
 </td><td style="text-align: center; vertical-align: middle;">
 </td></tr>
@@ -1083,11 +1089,11 @@ document.getElementById("lia-puzzle-ende-play@0").addEventListener(
 <table width="100%">
 <tr><td style="text-align: center; vertical-align: middle;">
 </td><td style="text-align: center; vertical-align: middle;">
-<div>`Singular` @image(hears,ear.png,24px)</div>
+<div>`Singular` @image(hears,ear.png,50px)</div>
 </td><td style="text-align: center; vertical-align: middle;">
-<div>`Plural` @image(hearp,ear.png,24px)</div>
+<div>`Plural` @image(hearp,ear.png,50px)</div>
 </td><td style="text-align: center; vertical-align: middle;">
-@image(speak,speak.png,24px)
+@image(speak,speak.png,50px)
 </td><td style="text-align: center; vertical-align: middle;">
 </td></tr>
 @noun.speak(1)
@@ -1110,9 +1116,9 @@ document.getElementById("lia-puzzle-ende-play@0").addEventListener(
 
 <table width="100%">
 <tr><td style="text-align: center; vertical-align: middle;">
-@image(writes,pen.png,24px)
+@image(writes,pen.png,50px)
 </td><td style="text-align: center; vertical-align: middle;">
-@image(hint,hint.png,24px)
+@image(hint,hint.png,50px)
 </td><td style="text-align: center; vertical-align: middle;">
 </td></tr>
 @noun.transl(1)
@@ -1138,11 +1144,11 @@ document.getElementById("lia-puzzle-ende-play@0").addEventListener(
 @word.voice(8)
 <table width="100%">
 <tr><td style="text-align: center; vertical-align: middle;">
-@image(hear,ear.png,24px)
+@image(hear,ear.png,50px)
 </td><td style="text-align: center; vertical-align: middle;">
-@image(write,pen.png,24px)
+@image(write,pen.png,50px)
 </td><td style="text-align: center; vertical-align: middle;">
-@image(hint,hint.png,24px)
+@image(hint,hint.png,50px)
 </td><td style="text-align: center; vertical-align: middle;">
 </td></tr>
 @noun.write(1)
@@ -1168,11 +1174,11 @@ document.getElementById("lia-puzzle-ende-play@0").addEventListener(
 @word.voice(8)
 <table width="100%">
 <tr><td style="text-align: center; vertical-align: middle;">
-@image(speak,speak.png,24px)
+@image(speak,speak.png,50px)
 </td><td style="text-align: center; vertical-align: middle;">
-@image(writes,pen.png,24px)
+@image(writes,pen.png,50px)
 </td><td style="text-align: center; vertical-align: middle;">
-@image(hint,hint.png,24px)
+@image(hint,hint.png,50px)
 </td></tr>
 @noun.puzzle(1)
 @noun.puzzle(2)
@@ -1203,9 +1209,9 @@ document.getElementById("lia-puzzle-ende-play@0").addEventListener(
 <table width="100%">
 <tr><td style="text-align: center; vertical-align: middle;">
 </td><td style="text-align: center; vertical-align: middle;">
-@image(hear,ear.png,24px)
+@image(hear,ear.png,50px)
 </td><td style="text-align: center; vertical-align: middle;">
-@image(speak,speak.png,24px)
+@image(speak,speak.png,50px)
 </td><td style="text-align: center; vertical-align: middle;">
 </td></tr>
 @verb.speak(1)
@@ -1228,9 +1234,9 @@ document.getElementById("lia-puzzle-ende-play@0").addEventListener(
 
 <table width="100%">
 <tr><td style="text-align: center; vertical-align: middle;">
-<div>@image(writes,pen.png,24px)@verb.write.list</div><!-- style = "color: #c395ac;" -->
+<div>@image(writes,pen.png,50px)@verb.write.list</div><!-- style = "color: #c395ac;" -->
 </td><td style="text-align: center; vertical-align: middle;">
-@image(hint,hint.png,24px)
+@image(hint,hint.png,50px)
 </td><td style="text-align: center; vertical-align: middle;">
 </td></tr>
 @verb.write(1)
@@ -1248,9 +1254,9 @@ document.getElementById("lia-puzzle-ende-play@0").addEventListener(
 
 <table width="100%">
 <tr><td style="text-align: center; vertical-align: middle;">
-<div>@image(writes,pen.png,24px)@verb.conj.list</div><!-- style = "color: #c395ac;" -->
+<div>@image(writes,pen.png,50px)@verb.conj.list</div><!-- style = "color: #c395ac;" -->
 </td><td style="text-align: center; vertical-align: middle;">
-@image(hint,hint.png,24px)
+@image(hint,hint.png,50px)
 </td><td style="text-align: center; vertical-align: middle;">
 </td></tr>
 @verb.conj(1)
@@ -1276,9 +1282,9 @@ document.getElementById("lia-puzzle-ende-play@0").addEventListener(
 @word.voice(8)
 <table width="100%">
 <tr><td style="text-align: center; vertical-align: middle;">
-@image(hear,ear.png,24px)
+@image(hear,ear.png,50px)
 </td><td style="text-align: center; vertical-align: middle;">
-@image(write,pen.png,24px)
+@image(write,pen.png,50px)
 </td><td style="text-align: center; vertical-align: middle;">
 </td></tr>
 @verb.hear(1)
