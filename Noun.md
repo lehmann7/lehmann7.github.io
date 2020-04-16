@@ -13,7 +13,6 @@ comment: COURSE DATA
 
 
 
-
 @topic: MeinTag1
 
 @word1.eng.sig: vision
@@ -103,7 +102,7 @@ comment: COURSE DATA
 @word5.deu.pre: die Seele
 @word5.deu.ver: verwöhnen
 @word5.deu.phr: Wie @blank du deine Seele?
-@word5.deu.dec: vergisst
+@word5.deu.dec: verwöhnst
 @word5.deu.img: seele.jpg
 @word5.deu.sig.voice: seele_sig.mp3
 @word5.deu.plu.voice: seele_plu.mp3
@@ -118,7 +117,7 @@ comment: COURSE DATA
 @word6.deu.sig.art: das
 @word6.deu.plu.art: die
 @word6.deu.sig.puz: Zeil
-@word6.deu.plu.puz: Siele
+@word6.deu.plu.puz: Zile
 @word6.deu.pre: Ziele
 @word6.deu.ver: stecken
 @word6.deu.phr: Für die Zukunft @blank ich mir große Ziele.
@@ -186,7 +185,7 @@ comment: 1. NOUN MATRIX: n PRESENT ORDER, x SOLUTION, w REWARD
 @match.noun.x6: ( ) ( ) ( ) ( ) ( ) ( ) ( ) (X)
 @match.noun.x7: ( ) ( ) ( ) ( ) (X) ( ) ( ) ( )
 @match.noun.x8: ( ) ( ) ( ) ( ) ( ) (X) ( ) ( )
-@match.noun.w: Hurra!
+@match.noun.w: Sehr gut!
 
 comment: 2. NOUN INTRODUCTION: n PRESENT ORDER
 
@@ -220,15 +219,15 @@ comment: 4. NOUN ARTICLE: n PRESENT ORDER
 @match.article.n6: 2
 @match.article.n7: 8
 @match.article.n8: 7
-@match.article.x1: (X) ( ) ( )
-@match.article.x2: ( ) ( ) (X)
-@match.article.x3: (X) ( ) ( )
-@match.article.x4: ( ) (X) ( )
-@match.article.x5: ( ) (X) ( )
+@match.article.x1: ( ) (X) ( )
+@match.article.x2: (X) ( ) ( )
+@match.article.x3: ( ) (X) ( )
+@match.article.x4: (X) ( ) ( )
+@match.article.x5: ( ) ( ) (X)
 @match.article.x6: ( ) (X) ( )
 @match.article.x7: ( ) ( ) (X)
 @match.article.x8: (X) ( ) ( )
-@match.article.w: Sehr gut!
+@match.article.w: Alles richtig!
 
 comment: 5. NOUN TRANSLATE: n PRESENT ORDER, f FORM, w REWARD
 
@@ -240,7 +239,7 @@ comment: 5. NOUN TRANSLATE: n PRESENT ORDER, f FORM, w REWARD
 @noun.transl.n6: 2
 @noun.transl.n7: 1
 @noun.transl.n8: 7
-@noun.transl.f1: plu
+@noun.transl.f1: sig
 @noun.transl.f2: plu
 @noun.transl.f3: plu
 @noun.transl.f4: sig
@@ -268,7 +267,7 @@ comment: 6. NOUN WRITE: n PRESENT ORDER, f FORM, w REWARD
 @noun.write.n7: 5
 @noun.write.n8: 3
 @noun.write.f1: sig
-@noun.write.f2: plu
+@noun.write.f2: sig
 @noun.write.f3: plu
 @noun.write.f4: sig
 @noun.write.f5: sig
@@ -329,7 +328,7 @@ comment: 8. VERB MATRIX: n PRESENT ORDER, x SOLUTION, w REWARD
 @match.verb.x6: ( ) ( ) ( ) ( ) ( ) ( ) ( ) (X)
 @match.verb.x7: ( ) ( ) ( ) ( ) (X) ( ) ( ) ( )
 @match.verb.x8: ( ) ( ) ( ) ( ) ( ) (X) ( ) ( )
-@match.verb.w: Hurra!
+@match.verb.w: Wundervoll!
 
 comment: 9. VERB SPEAK: n PRESENT ORDER
 
@@ -360,7 +359,7 @@ comment: 10. VERB VOWEL CHANGE: n PRESENT ORDER, x SOLUTION, w REWARD
 @match.vowel.x6: (X) ( )
 @match.vowel.x7: ( ) (X)
 @match.vowel.x8: ( ) (X)
-@match.vowel.w: Sehr gut!
+@match.vowel.w: Fantastisch!
 
 comment: 11. VERB WRITE: m LIST ORDER, n PRESENT ORDER, w REWARD
 
@@ -382,8 +381,8 @@ comment: 11. VERB WRITE: m LIST ORDER, n PRESENT ORDER, w REWARD
 @verb.write.n8: 7
 @verb.write.w1: Super!
 @verb.write.w2: Richtig!
-@verb.write.w3: Perfekt!
-@verb.write.w4: Fantastisch!
+@verb.write.w3: Perfekt
+@verb.write.w4: Du bist clever!
 @verb.write.w5: Grandios!
 @verb.write.w6: Hut ab!
 @verb.write.w7: Du wirst immer besser!
@@ -414,7 +413,7 @@ comment: 12. VERB CONJUGATE: m LIST ORDER, n PRESENT ORDER, w REWARD
 @verb.conj.w5: Volltreffer!
 @verb.conj.w6: Cool!
 @verb.conj.w7: Wunderbar!
-@verb.conj.w8: Jaaaaaa!
+@verb.conj.w8: Super gemacht!
 
 comment: 13. VERB LISTEN: m LIST ORDER, n PRESENT ORDER, w REWARD
 
@@ -426,14 +425,17 @@ comment: 13. VERB LISTEN: m LIST ORDER, n PRESENT ORDER, w REWARD
 @verb.hear.n6: 6
 @verb.hear.n7: 5
 @verb.hear.n8: 3
-@verb.hear.w1: Alles richtig!
+@verb.hear.w1: Richtig!
 @verb.hear.w2: Mach weiter so!
 @verb.hear.w3: Klasse Mensch!
 @verb.hear.w4: Mensch, bist du gut.
-@verb.hear.w5: Hast du heimlich geübt?
+@verb.hear.w5: Du lernst schon sehr viel!
 @verb.hear.w6: Genial!
 @verb.hear.w7: Gute Leistung!
 @verb.hear.w8: Du kommst ja richtig in Fahrt!
+
+
+
 
 commend: COURSE CODE
 
