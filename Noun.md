@@ -189,6 +189,14 @@ comment: 1. NOUN MATRIX: n PRESENT ORDER, x SOLUTION, w REWARD
 
 comment: 2. NOUN INTRODUCTION: n PRESENT ORDER
 
+@noun.intro.v1: va
+@noun.intro.v2: va
+@noun.intro.v3: va
+@noun.intro.v4: va
+@noun.intro.v5: va
+@noun.intro.v6: va
+@noun.intro.v7: va
+@noun.intro.v8: va
 @noun.intro.n1: 1
 @noun.intro.n2: 4
 @noun.intro.n3: 2
@@ -200,6 +208,14 @@ comment: 2. NOUN INTRODUCTION: n PRESENT ORDER
 
 comment: 3. NOUN SPEAK: n PRESENT ORDER
 
+@noun.speak.v1: vb
+@noun.speak.v2: vb
+@noun.speak.v3: vb
+@noun.speak.v4: vb
+@noun.speak.v5: vb
+@noun.speak.v6: vb
+@noun.speak.v7: vb
+@noun.speak.v8: vb
 @noun.speak.n1: 7
 @noun.speak.n2: 4
 @noun.speak.n3: 6
@@ -258,6 +274,14 @@ comment: 5. NOUN TRANSLATE: n PRESENT ORDER, f FORM, w REWARD
 
 comment: 6. NOUN WRITE: n PRESENT ORDER, f FORM, w REWARD
 
+@noun.write.v1: va
+@noun.write.v2: va
+@noun.write.v3: va
+@noun.write.v4: va
+@noun.write.v5: va
+@noun.write.v6: va
+@noun.write.v7: va
+@noun.write.v8: va
 @noun.write.n1: 7
 @noun.write.n2: 4
 @noun.write.n3: 2
@@ -285,6 +309,14 @@ comment: 6. NOUN WRITE: n PRESENT ORDER, f FORM, w REWARD
 
 comment: 7. NOUN CORRECT: n PRESENT ORDER, f FORM, w REWARD
 
+@noun.puzzle.v1: va
+@noun.puzzle.v2: va
+@noun.puzzle.v3: va
+@noun.puzzle.v4: va
+@noun.puzzle.v5: va
+@noun.puzzle.v6: va
+@noun.puzzle.v7: va
+@noun.puzzle.v8: va
 @noun.puzzle.n1: 4
 @noun.puzzle.n2: 2
 @noun.puzzle.n3: 1
@@ -332,6 +364,14 @@ comment: 8. VERB MATRIX: n PRESENT ORDER, x SOLUTION, w REWARD
 
 comment: 9. VERB SPEAK: n PRESENT ORDER
 
+@verb.speak.v1: va
+@verb.speak.v2: va
+@verb.speak.v3: va
+@verb.speak.v4: va
+@verb.speak.v5: va
+@verb.speak.v6: va
+@verb.speak.v7: va
+@verb.speak.v8: va
 @verb.speak.n1: 7
 @verb.speak.n2: 4
 @verb.speak.n3: 6
@@ -390,6 +430,14 @@ comment: 11. VERB WRITE: m LIST ORDER, n PRESENT ORDER, w REWARD
 
 comment: 12. VERB CONJUGATE: m LIST ORDER, n PRESENT ORDER, w REWARD
 
+@verb.conj.v1: va
+@verb.conj.v2: vb
+@verb.conj.v3: va
+@verb.conj.v4: vb
+@verb.conj.v5: va
+@verb.conj.v6: vb
+@verb.conj.v7: va
+@verb.conj.v8: vb
 @verb.conj.m1: 6
 @verb.conj.m2: 5
 @verb.conj.m3: 8
@@ -417,6 +465,14 @@ comment: 12. VERB CONJUGATE: m LIST ORDER, n PRESENT ORDER, w REWARD
 
 comment: 13. VERB LISTEN: m LIST ORDER, n PRESENT ORDER, w REWARD
 
+@verb.hear.v1: vb
+@verb.hear.v2: vb
+@verb.hear.v3: vb
+@verb.hear.v4: vb
+@verb.hear.v5: vb
+@verb.hear.v6: vb
+@verb.hear.v7: vb
+@verb.hear.v8: vb
 @verb.hear.n1: 7
 @verb.hear.n2: 4
 @verb.hear.n3: 2
@@ -441,7 +497,6 @@ commend: COURSE CODE
 
 
 
-
 @cblue: 82baba
 @crose: c395ac
 @space: <span style="display:inline-block; width: 8px; text-align: center;"></span>
@@ -450,8 +505,9 @@ commend: COURSE CODE
 @word: @word@0.@1
 @word.image.helper: <img src="http://lehmann7.github.io/www/@2/@1" width="126px" height="126px" id="lia-word-image@0">
 @word.image: @word.image.helper(@0,@word@0.deu.img,@topic)
-@word.voice.helper: <audio src="http://lehmann7.github.io/www/@3/@2" preload="auto" id="lia-word-voice-@1@0"></audio>
-@word.voice: @word.voice.helper(@0,sig,@word@0.deu.sig.voice,@topic) @word.voice.helper(@0,plu,@word@0.deu.plu.voice,@topic) @word.voice.helper(@0,ver,@word@0.deu.ver.voice,@topic) @word.voice.helper(@0,pre,@word@0.deu.pre.voice,@topic) @word.voice.helper(@0,phr,@word@0.deu.phr.voice,@topic)
+@word.voice.helper.b: <audio src="http://lehmann7.github.io/www/@3/@4/@2" preload="auto" id="lia-word-voice-@4@1@0"></audio>
+@word.voice.helper.a: @word.voice.helper.b(@0,sig,@word@0.deu.sig.voice,@topic,@1) @word.voice.helper.b(@0,plu,@word@0.deu.plu.voice,@topic,@1) @word.voice.helper.b(@0,ver,@word@0.deu.ver.voice,@topic,@1) @word.voice.helper.b(@0,pre,@word@0.deu.pre.voice,@topic,@1) @word.voice.helper.b(@0,phr,@word@0.deu.phr.voice,@topic,@1)
+@word.voice: @word.voice.helper.a(@0,va) @word.voice.helper.a(@0,vb)
 @audio: <audio src="http://lehmann7.github.io/www/mp3/@1" preload="auto" id="lia-audio-@0"></audio>
 @image: <img src="http://lehmann7.github.io/www/img/@1" width="@2" height="@2" id="lia-image-@0">
 
@@ -603,8 +659,8 @@ document.getElementById("lia-hear-read-play@0").addEventListener(
 		Array.from(document.getElementsByClassName("lia-hear-read-play@0")).forEach(
 			elem => { elem.style.display = "inline-block"; }
 		);
-		var media1 = document.getElementById("lia-word-voice-sig@0");
-		var media2 = document.getElementById("lia-word-voice-plu@0");
+		var media1 = document.getElementById("lia-word-voice-@1sig@0");
+		var media2 = document.getElementById("lia-word-voice-@1plu@0");
 		if (media1.paused && media2.paused) {
 			media1.play();
 			setTimeout(() => { media2.play(); }, media1.duration*1000.0);
@@ -614,7 +670,7 @@ document.getElementById("lia-hear-read-play@0").addEventListener(
 </script>
 </td></tr>
 @end
-@noun.intro: @noun.intro.helper(@noun.intro.n@0)
+@noun.intro: @noun.intro.helper(@noun.intro.n@0,@noun.intro.v@0)
 
 
 
@@ -708,7 +764,7 @@ document.getElementById("lia-verb-speak-play@0").addEventListener(
 		Array.from(document.getElementsByClassName("lia-verb-speak-play@0")).forEach(
 			elem => { elem.style.display = "inline-block"; }
 		);
-		var media1 = document.getElementById("lia-word-voice-pre@0");
+		var media1 = document.getElementById("lia-word-voice-@1pre@0");
 		if (media1.paused) {
 			verbrec_btn@0(false, 5, 1);
 			media1.play();
@@ -722,7 +778,7 @@ verbrec_btn@0(true, 0, 0);
 </script>
 </td></tr>
 @end
-@verb.speak: @verb.speak.helper(@verb.speak.n@0)
+@verb.speak: @verb.speak.helper(@verb.speak.n@0,@verb.speak.v@0)
 
 
 
@@ -818,8 +874,8 @@ document.getElementById("lia-hear-speak-play@0").addEventListener(
 		Array.from(document.getElementsByClassName("lia-hear-speak-play@0")).forEach(
 			elem => { elem.style.display = "inline-block"; }
 		);
-		var media1 = document.getElementById("lia-word-voice-sig@0");
-		var media2 = document.getElementById("lia-word-voice-plu@0");
+		var media1 = document.getElementById("lia-word-voice-@1sig@0");
+		var media2 = document.getElementById("lia-word-voice-@1plu@0");
 		if (media1.paused && media2.paused) {
 			recorder_btn@0(false, 5, 1);
 			media1.play();
@@ -836,7 +892,7 @@ recorder_btn@0(true, 0, 0);
 </script>
 </td></tr>
 @end
-@noun.speak: @noun.speak.helper(@noun.speak.n@0)
+@noun.speak: @noun.speak.helper(@noun.speak.n@0,@noun.speak.v@0)
 
 
 
@@ -887,17 +943,20 @@ document.getElementById("lia-transl-ende@0").addEventListener(
 @verb.conj.helper.a(@0,dec)
 </div>
 </td><td style="text-align: center; vertical-align: middle;">
-<button id="lia-transl-verbb@0" style="padding: 0px; border: 3px solid #82baba; border-radius: 3px; height: 130px; width: 130px;">@word.image(@0)<!-- style = "display: none;" --></button>
+<button id="lia-transl-verbb-play@0" style="padding: 0px; border: 3px solid #82baba; border-radius: 3px; height: 100px; width: 100px;">@image(play,audio.png,48px)</button>
 </td><td style="text-align: center; vertical-align: middle;">
 <script>
-document.getElementById("lia-transl-verbb@0").addEventListener(
+document.getElementById("lia-transl-verbb-play@0").addEventListener(
 	"click",
-	() => { document.getElementById("lia-word-image@0").style.display = "inline-block"; }
+	() => {
+		var media = document.getElementById("lia-word-voice-@1phr@0");
+		if (media.paused) media.play();
+	}
 );
 </script>
 </td></tr>
 @end
-@verb.conj: @verb.conj.main(@verb.conj.n@0,@verb.conj.f@0)
+@verb.conj: @verb.conj.main(@verb.conj.n@0,@verb.conj.v@0)
 @verb.conj.list: @word(@verb.conj.m1,deu.ver) @delim @word(@verb.conj.m2,deu.ver) @delim @word(@verb.conj.m3,deu.ver) @delim @word(@verb.conj.m4,deu.ver) @delim @word(@verb.conj.m5,deu.ver) @delim @word(@verb.conj.m6,deu.ver) @delim @word(@verb.conj.m7,deu.ver) @delim @word(@verb.conj.m8,deu.ver)
 
 
@@ -947,14 +1006,14 @@ document.getElementById("lia-transl-verb@0").addEventListener(
 <button id="lia-hear-verb-play@0" style="padding: 0px; border: 3px solid #82baba; border-radius: 3px; height: 100px; width: 100px;">@image(play,audio.png,48px)</button>
 </td><td style="text-align: center; vertical-align: middle;">
 <div>
-@verb.hear.helper.a(@0,@1)
+@verb.hear.helper.a(@0,ver)
 </div>
 </td><td style="text-align: center; vertical-align: middle;">
 <script>
 document.getElementById("lia-hear-verb-play@0").addEventListener(
 	"click",
 	() => {
-		var media = document.getElementById("lia-word-voice-ver@0");
+		var media = document.getElementById("lia-word-voice-@1ver@0");
 		if (media.paused) media.play();
 	}
 );
@@ -965,7 +1024,7 @@ document.getElementById("lia-hear-verb-show@0").addEventListener(
 </script>
 </td></tr>
 @end
-@verb.hear: @verb.hear.main(@verb.hear.n@0,ver)
+@verb.hear: @verb.hear.main(@verb.hear.n@0,@verb.hear.v@0)
 
 
 
@@ -992,7 +1051,7 @@ document.getElementById("lia-hear-verb-show@0").addEventListener(
 document.getElementById("lia-hear-write-play@0").addEventListener(
 	"click",
 	() => {
-		var media = document.getElementById("lia-word-voice-@1@0");
+		var media = document.getElementById("lia-word-voice-@2@1@0");
 		if (media.paused) media.play();
 	}
 );
@@ -1003,7 +1062,7 @@ document.getElementById("lia-hear-write-show@0").addEventListener(
 </script>
 </td></tr>
 @end
-@noun.write: @noun.write.main(@noun.write.n@0,@noun.write.f@0)
+@noun.write: @noun.write.main(@noun.write.n@0,@noun.write.f@0,@noun.write.v@0)
 
 
 
@@ -1019,7 +1078,6 @@ document.getElementById("lia-hear-write-show@0").addEventListener(
 @noun.puzzle.main
 <tr><td style="text-align: center; vertical-align: middle;">
 d - -@space@word(@0,deu.@1.puz)
-</td><td style="text-align: center; vertical-align: middle;">
 <div>
 @noun.puzzle.helper.a(@0,@1)
 </div>
@@ -1030,14 +1088,14 @@ d - -@space@word(@0,deu.@1.puz)
 document.getElementById("lia-puzzle-ende-play@0").addEventListener(
 	"click",
 	() => {
-		var media = document.getElementById("lia-word-voice-@1@0");
+		var media = document.getElementById("lia-word-voice-@2@1@0");
 		if (media.paused) media.play();
 	}
 );
 </script>
 </td></tr>
 @end
-@noun.puzzle: @noun.puzzle.main(@noun.puzzle.n@0,@noun.puzzle.f@0)
+@noun.puzzle: @noun.puzzle.main(@noun.puzzle.n@0,@noun.puzzle.f@0,@noun.puzzle.v@0)
 
 
 
@@ -1176,8 +1234,6 @@ document.getElementById("lia-puzzle-ende-play@0").addEventListener(
 @word.voice(8)
 <table width="100%">
 <tr><td style="text-align: center; vertical-align: middle;">
-@image(speak,speak.png,50px)
-</td><td style="text-align: center; vertical-align: middle;">
 @image(writes,pen.png,50px)
 </td><td style="text-align: center; vertical-align: middle;">
 @image(hint,hint.png,50px)
@@ -1254,6 +1310,14 @@ document.getElementById("lia-puzzle-ende-play@0").addEventListener(
 
 # 12.Verben.Beugen.<!-- style = "display: none;" -->
 
+@word.voice(1)
+@word.voice(2)
+@word.voice(3)
+@word.voice(4)
+@word.voice(5)
+@word.voice(6)
+@word.voice(7)
+@word.voice(8)
 <table width="100%">
 <tr><td style="text-align: center; vertical-align: middle;">
 <div>@image(writes,pen.png,50px)@verb.conj.list</div><!-- style = "color: #c395ac;" -->
