@@ -515,18 +515,14 @@ commend: COURSE CODE
 
 @onload
 (() => {
-	var ltoc = document.getElementsByClassName("lia-toc")[0];
 	var lfooter = document.getElementsByClassName("lia-footer")[0];
-	var lnav = document.getElementById("lia-toolbar-nav");
 	Array.from(document.getElementsByClassName("lia-hint-btn")).forEach(
 		elem => { elem.style.display = "none"; }
 	);
 	Array.from(document.getElementsByClassName("lia-quiz")).forEach(
 		elem => { elem.style.border = "3px solid #82baba"; }
 	);
-	lnav.style.display = "none";
 	lfooter.style.display = "none";
-	ltoc.style.display = "none";
 })();
 @end
 
