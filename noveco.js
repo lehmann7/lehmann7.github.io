@@ -108,7 +108,7 @@ function noveco_input_check(num, reward)
 			}
 			else if (wrong > 0 && wrong % 2 == 0)
 			{
-				hint += "<span style='padding-left: 1px; padding-right: 1px; color: #82baba;'>" + sol[i] + "</span>";
+				hint += "<span style='color: #82baba; font-weight: bold;'>" + sol[i] + "</span>";
 				wrong += 1;
 			}
 			else
@@ -133,7 +133,7 @@ function noveco_input_check(num, reward)
 		}
 		for (i = sol.length; i < text.length; i++)
 		{
-			hint += "<span style='padding-left: 1px; padding-right: 1px; color: #aaaaaa;'>&#9679;</span>";
+			hint += "<span style='color: #aaaaaa; font-weight: bold;'>&#9679;</span>";
 		}
 		helem.html(hint);
 	}
