@@ -1,0 +1,128 @@
+#noveco-content span
+{
+	color: #333333;
+}
+
+#noveco-content a
+{
+	width: 100%;
+	color: #333333;
+}
+
+#noveco-content hr
+{
+	border: 1px dotted #dddddd;
+}
+
+#noveco-content li
+{
+	padding-top: 8px;
+	padding-bottom: 8px;
+	padding-left: 4px;
+	padding-right: 4px;
+}
+
+#noveco-content input
+{
+	text-align: center;
+	padding-top: 8px;
+	padding-bottom: 8px;
+	padding-left: 4px;
+	padding-right: 4px;
+}
+
+#noveco-display
+{
+	font-weight: bold;
+	text-align: center;
+}
+
+.noveco-table
+{
+	width: 100%;
+}
+
+.noveco-striped tbody tr td
+{
+	padding-top: 16px;
+	padding-bottom: 16px;
+	padding-left: 4px;
+	padding-right: 4px;
+}
+
+.noveco-striped tr:nth-child(odd)
+{
+	background-color: #fdfdfd;
+}
+
+.noveco-striped tr:nth-child(even)
+{
+	background-color: #f2f2f2;
+}
+
+.noveco-radio
+{
+	text-align: center;
+}
+
+.noveco-btncol,
+.noveco-head,
+.noveco-head1,
+.noveco-head2,
+.noveco-words,
+.noveco-words1,
+.noveco-words2,
+
+.noveco-inword,
+.noveco-label,
+.noveco-hint
+{
+	text-align: center;
+}
+
+noveco-playword
+{
+	text-align: left;
+}
+
+.noveco-imgbtn
+{
+	width: 48px;
+	height: 48px;
+	cursor: pointer;
+	border: 1px solid #aaaaaa;
+	border-radius: 5px;
+	padding: 5px 5px;
+	text-align: center;
+	display: inline-block;
+}
+
+.noveco-imgbtn > img
+{
+	max-width: 100%;
+	max-height: 100%;
+}
+
+.noveco-img
+{
+	width: 64px;
+}
+
+.noveco-umlautbtn
+{
+	cursor: pointer;
+	border: 1px solid #aaaaaa;
+	border-radius: 3px;
+	padding: 1px 1px;
+	text-align: center;
+	display: inline-block;
+	width: 16px;
+}
+
+.noveco-playbtn
+{
+	width: 100px;
+	height: 100px;
+	border: 0px;
+	background-image: url("/image/play.png");
+}
