@@ -35,19 +35,20 @@ function noveco_row_check(num, all, reward)
 	if (sum_ok == all)
 	{
 		delem.css({"background" : "#82baba"});
-		delem.text(reward);
+		delem.html("<span>" + reward + "</span>");
 	}
 	else
 	{
 		if (click_ok)
 		{
 			delem.css({"background" : "#ffffee"});
+			delem.html("<span>" + sum_ok + " / " + all + "</span><br><span style='font-weight: normal; font-size: small;'>" + reward + "</span>");
 		}
 		else
 		{
 			delem.css({"background" : "#ffffff"});
+			delem.html("<span>" + sum_ok + " / " + all + "</span>");
 		}
-		delem.text(sum_ok + " / " + all);
 	}
 };
 
