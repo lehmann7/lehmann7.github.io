@@ -37,7 +37,7 @@
 	padding-bottom: 8px;
 	padding-left: 4px;
 	padding-right: 4px;
-	outline: 5px dashed;
+	outline: 3px dashed;
 	outline-color: #dddddd;
 }
 
@@ -90,6 +90,7 @@
 
 .noveco-radio
 {
+	transform: scale(1.25);
 	text-align: center;
 }
 
