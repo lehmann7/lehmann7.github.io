@@ -8,13 +8,25 @@ function noveco_row_check(num, all, reward)
 	{
 		$(".noveco-row" + i).each(
 			(index, elem) => {
-				if (elem.checked && $(elem).hasClass("noveco-solution"))
+				if (elem.checked)
 				{
-					if (i == num)
+					if ($(elem).hasClass("noveco-solution"))
 					{
-						click_ok = 1;
+						if (i == num)
+						{
+							click_ok = 1;
+						}
+						sum_ok = sum_ok + 1;
+						$(elem).css({"outline-color" : "#82baba"});
 					}
-					sum_ok = sum_ok + 1;
+					else
+					{
+						$(elem).css({"outline-color" : "#c395ac"});
+					}
+				}
+				else
+				{
+					$(elem).css({"outline-color" : "#eeeeee"});
 				}
 			}
 		);
