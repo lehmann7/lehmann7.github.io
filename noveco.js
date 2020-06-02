@@ -99,12 +99,12 @@ function noveco_input_check(num, reward)
 			else if (text[i] == sol[i])
 			{
 				hint += text[i];
-				wrong = 0;
+				wrong = 1;
 			}
 			else if (text[i].toLowerCase() == sol[i].toLowerCase())
 			{
 				hint += "<span style='color: #c395ac; font-weight: bold;'>" + text[i] + "</span>";
-				wrong = 0;
+				wrong = 1;
 			}
 			else if (wrong > 0 && wrong % 2 == 0)
 			{
