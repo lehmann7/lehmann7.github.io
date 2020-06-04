@@ -36,6 +36,7 @@ function noveco_row_check(num, all, reward)
 	{
 		delem.css({"background" : "#82baba"});
 		delem.html("<span>" + reward + "</span>");
+		delem.show();
 	}
 	else
 	{
@@ -82,6 +83,7 @@ function noveco_input_check(num, reward)
 	if (text == sol)
 	{
 		helem.html("<span style='color: #82baba; font-weight: bold;'>" + reward + "</span>");
+		helem.show();
 	}
 	else
 	{
