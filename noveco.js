@@ -34,9 +34,9 @@ function noveco_row_check(num, all, reward)
 	delem = $("#noveco-display");
 	if (sum_ok == all)
 	{
+		delem.show();
 		delem.css({"background" : "#82baba"});
 		delem.html("<span>" + reward + "</span>");
-		delem.show();
 	}
 	else
 	{
@@ -82,8 +82,8 @@ function noveco_input_check(num, reward)
 	var len = Math.min(text.length, sol.length);
 	if (text == sol)
 	{
-		helem.html("<span style='color: #82baba; font-weight: bold;'>" + reward + "</span>");
 		helem.show();
+		helem.html("<span style='color: #82baba; font-weight: bold;'>" + reward + "</span>");
 	}
 	else
 	{
