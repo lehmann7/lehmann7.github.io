@@ -2,165 +2,174 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Mein-tags on Susanne Richter German Tutoring</title>
-    <link>https://lehmann7.github.io/mein-tag/</link>
+    <link>http://example.org/mein-tag/</link>
     <description>Recent content in Mein-tags on Susanne Richter German Tutoring</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-	<atom:link href="https://lehmann7.github.io/mein-tag/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://example.org/mein-tag/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Berichtige das Nomen.</title>
-      <link>https://lehmann7.github.io/mein-tag/correct-noun/</link>
+      <link>http://example.org/mein-tag/correct-noun/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://lehmann7.github.io/mein-tag/correct-noun/</guid>
-      <description>              der Visjonen  &amp;szlig; &amp;Uuml; &amp;Auml; &amp;Ouml; &amp;uuml; &amp;auml; &amp;ouml;           der Allttage  &amp;szlig; &amp;Uuml; &amp;Auml; &amp;Ouml; &amp;uuml; &amp;auml; &amp;ouml;           die Entscheitungen  &amp;szlig; &amp;Uuml; &amp;Auml; &amp;Ouml; &amp;uuml; &amp;auml; &amp;ouml;           die Sonenstrahlen  &amp;szlig; &amp;Uuml; &amp;Auml; &amp;Ouml; &amp;uuml; &amp;auml; &amp;ouml;           das Raisepläne  &amp;szlig; &amp;Uuml; &amp;Auml; &amp;Ouml; &amp;uuml; &amp;auml; &amp;ouml;           die Sehlen  &amp;szlig; &amp;Uuml; &amp;Auml; &amp;Ouml; &amp;uuml; &amp;auml; &amp;ouml;           die Zile  &amp;szlig; &amp;Uuml; &amp;Auml; &amp;Ouml; &amp;uuml; &amp;auml; &amp;ouml;           das Tagebüscher  &amp;szlig; &amp;Uuml; &amp;Auml; &amp;Ouml; &amp;uuml; &amp;auml; &amp;ouml;          </description>
+      <guid>http://example.org/mein-tag/correct-noun/</guid>
+      <description>              der Allttage  &amp;szlig; &amp;Uuml; &amp;Auml; &amp;Ouml; &amp;uuml; &amp;auml; &amp;ouml;           die Zile  &amp;szlig; &amp;Uuml; &amp;Auml; &amp;Ouml; &amp;uuml; &amp;auml; &amp;ouml;           das Raisepläne  &amp;szlig; &amp;Uuml; &amp;Auml; &amp;Ouml; &amp;uuml; &amp;auml; &amp;ouml;           die Sonenstrahlen  &amp;szlig; &amp;Uuml; &amp;Auml; &amp;Ouml; &amp;uuml; &amp;auml; &amp;ouml;           der Visjonen  &amp;szlig; &amp;Uuml; &amp;Auml; &amp;Ouml; &amp;uuml; &amp;auml; &amp;ouml;           die Sehlen  &amp;szlig; &amp;Uuml; &amp;Auml; &amp;Ouml; &amp;uuml; &amp;auml; &amp;ouml;           das Tagebüscher  &amp;szlig; &amp;Uuml; &amp;Auml; &amp;Ouml; &amp;uuml; &amp;auml; &amp;ouml;           die Entscheitungen  &amp;szlig; &amp;Uuml; &amp;Auml; &amp;Ouml; &amp;uuml; &amp;auml; &amp;ouml;          </description>
     </item>
     
     <item>
       <title>Bestimme den Vokalwechsel.</title>
-      <link>https://lehmann7.github.io/mein-tag/match-vowel/</link>
+      <link>http://example.org/mein-tag/match-vowel/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://lehmann7.github.io/mein-tag/match-vowel/</guid>
-      <description>    ohne Vokalwechsel    mit Vokalwechsel           sprechen      vergessen      genießen      stecken      führen      schmieden      treffen      verwöhnen       </description>
+      <guid>http://example.org/mein-tag/match-vowel/</guid>
+      <description>    mit Vokalwechsel    ohne Vokalwechsel           verwöhnen      schmieden      treffen      führen      genießen      vergessen      sprechen      stecken       </description>
     </item>
     
     <item>
       <title>Dekliniere das Verb.</title>
-      <link>https://lehmann7.github.io/mein-tag/declinate-verb/</link>
+      <link>http://example.org/mein-tag/declinate-verb/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://lehmann7.github.io/mein-tag/declinate-verb/</guid>
-      <description>Für die Zukunft &amp;hellip;&amp;hellip; ich mir große Ziele.  &amp;szlig; &amp;Uuml; &amp;Auml; &amp;Ouml; &amp;uuml; &amp;auml; &amp;ouml;           Wie &amp;hellip;&amp;hellip; du deine Seele?  &amp;szlig; &amp;Uuml; &amp;Auml; &amp;Ouml; &amp;uuml; &amp;auml; &amp;ouml;           Seit 2018 &amp;hellip;&amp;hellip; wir Tagebuch.  &amp;szlig; &amp;Uuml; &amp;Auml; &amp;Ouml; &amp;uuml; &amp;auml; &amp;ouml;           Am Dienstag &amp;hellip;&amp;hellip; sie eine Entscheidung.</description>
+      <guid>http://example.org/mein-tag/declinate-verb/</guid>
+      <description>Wie &amp;hellip;&amp;hellip; du deine Seele?  &amp;szlig; &amp;Uuml; &amp;Auml; &amp;Ouml; &amp;uuml; &amp;auml; &amp;ouml;           Am Dienstag &amp;hellip;&amp;hellip; sie eine Entscheidung. Singular  &amp;szlig; &amp;Uuml; &amp;Auml; &amp;Ouml; &amp;uuml; &amp;auml; &amp;ouml;           Er &amp;hellip;&amp;hellip; über seine Visionen.  &amp;szlig; &amp;Uuml; &amp;Auml; &amp;Ouml; &amp;uuml; &amp;auml; &amp;ouml;           Für einen Moment &amp;hellip;&amp;hellip; sie den Alltag.</description>
     </item>
     
     <item>
       <title>Hör und lies die Nomen mit den Verben.</title>
-      <link>https://lehmann7.github.io/mein-tag/present-verb/</link>
+      <link>http://example.org/mein-tag/present-verb/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://lehmann7.github.io/mein-tag/present-verb/</guid>
-      <description>    Infinitiv Verb  Nomen mit Verb          stecken  Ziele stecken        schmieden  Reisepläne schmieden        führen  Tagebuch führen        genießen  die Sonnenstrahlen genießen        verwöhnen  die Seele verwöhnen        vergessen  den Alltag vergessen        treffen  eine Entscheidung treffen        sprechen  über Visionen sprechen     </description>
+      <guid>http://example.org/mein-tag/present-verb/</guid>
+      <description>    Infinitiv Verb  Nomen mit Verb          stecken  Ziele stecken        sprechen  über Visionen sprechen        führen  Tagebuch führen        treffen  eine Entscheidung treffen        vergessen  den Alltag vergessen        schmieden  Reisepläne schmieden        genießen  die Sonnenstrahlen genießen        verwöhnen  die Seele verwöhnen     </description>
     </item>
     
     <item>
       <title>Hör und lies die Nomen.</title>
-      <link>https://lehmann7.github.io/mein-tag/present-noun/</link>
+      <link>http://example.org/mein-tag/present-noun/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://lehmann7.github.io/mein-tag/present-noun/</guid>
-      <description>    Singular  Plural          das Tagebuch  die Tagebücher        das Ziel  die Ziele        der Sonnenstrahl  die Sonnenstrahlen        die Vision  die Visionen        die Entscheidung  die Entscheidungen        der Reiseplan  die Reisepläne        der Alltag  die Alltage        die Seele  die Seelen     </description>
+      <guid>http://example.org/mein-tag/present-noun/</guid>
+      <description>    Singular  Plural          der Sonnenstrahl  die Sonnenstrahlen        die Seele  die Seelen        der Reiseplan  die Reisepläne        die Entscheidung  die Entscheidungen        die Vision  die Visionen        der Alltag  die Alltage        das Tagebuch  die Tagebücher        das Ziel  die Ziele     </description>
     </item>
     
     <item>
       <title>Hör und lies die Wortgruppen.</title>
-      <link>https://lehmann7.github.io/mein-tag/present-phrase/</link>
+      <link>http://example.org/mein-tag/present-phrase/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://lehmann7.github.io/mein-tag/present-phrase/</guid>
-      <description>    Nomen  Verb         eine Entscheidung  treffen       die Seele  verwöhnen       Reisepläne  schmieden       über Visionen  sprechen       die Sonnenstrahlen  genießen       den Alltag  vergessen       Ziele  stecken       Tagebuch  führen     </description>
+      <guid>http://example.org/mein-tag/present-phrase/</guid>
+      <description>    Nomen  Verb         die Sonnenstrahlen  genießen       Tagebuch  führen       Reisepläne  schmieden       über Visionen  sprechen       eine Entscheidung  treffen       Ziele  stecken       den Alltag  vergessen       die Seele  verwöhnen     </description>
     </item>
     
     <item>
       <title>Hör und schreib die Verben.</title>
-      <link>https://lehmann7.github.io/mein-tag/write-verb/</link>
+      <link>http://example.org/mein-tag/write-verb/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://lehmann7.github.io/mein-tag/write-verb/</guid>
-      <description>&amp;#9679; vergessen &amp;#9679; sprechen &amp;#9679; stecken &amp;#9679; führen &amp;#9679; schmieden &amp;#9679; treffen &amp;#9679; verwöhnen &amp;#9679; genießen &amp;#9679;    Nomen mit Verb        die Seele ......  &amp;szlig; &amp;Uuml; &amp;Auml; &amp;Ouml; &amp;uuml; &amp;auml; &amp;ouml;        Tagebuch ......  &amp;szlig; &amp;Uuml; &amp;Auml; &amp;Ouml; &amp;uuml; &amp;auml; &amp;ouml;        Ziele ......  &amp;szlig; &amp;Uuml; &amp;Auml; &amp;Ouml; &amp;uuml; &amp;auml; &amp;ouml;        Reisepläne .</description>
+      <guid>http://example.org/mein-tag/write-verb/</guid>
+      <description>&amp;#9679; treffen &amp;#9679; führen &amp;#9679; schmieden &amp;#9679; stecken &amp;#9679; genießen &amp;#9679; vergessen &amp;#9679; verwöhnen &amp;#9679; sprechen &amp;#9679;    Nomen mit Verb        Reisepläne ......  &amp;szlig; &amp;Uuml; &amp;Auml; &amp;Ouml; &amp;uuml; &amp;auml; &amp;ouml;        die Seele ......  &amp;szlig; &amp;Uuml; &amp;Auml; &amp;Ouml; &amp;uuml; &amp;auml; &amp;ouml;        Tagebuch ......  &amp;szlig; &amp;Uuml; &amp;Auml; &amp;Ouml; &amp;uuml; &amp;auml; &amp;ouml;        Ziele .</description>
     </item>
     
     <item>
       <title>Höre das Nomen.</title>
-      <link>https://lehmann7.github.io/mein-tag/listen-noun/</link>
+      <link>http://example.org/mein-tag/listen-noun/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://lehmann7.github.io/mein-tag/listen-noun/</guid>
+      <guid>http://example.org/mein-tag/listen-noun/</guid>
       <description>                &amp;szlig; &amp;Uuml; &amp;Auml; &amp;Ouml; &amp;uuml; &amp;auml; &amp;ouml;             &amp;szlig; &amp;Uuml; &amp;Auml; &amp;Ouml; &amp;uuml; &amp;auml; &amp;ouml;             &amp;szlig; &amp;Uuml; &amp;Auml; &amp;Ouml; &amp;uuml; &amp;auml; &amp;ouml;             &amp;szlig; &amp;Uuml; &amp;Auml; &amp;Ouml; &amp;uuml; &amp;auml; &amp;ouml;             &amp;szlig; &amp;Uuml; &amp;Auml; &amp;Ouml; &amp;uuml; &amp;auml; &amp;ouml;             &amp;szlig; &amp;Uuml; &amp;Auml; &amp;Ouml; &amp;uuml; &amp;auml; &amp;ouml;             &amp;szlig; &amp;Uuml; &amp;Auml; &amp;Ouml; &amp;uuml; &amp;auml; &amp;ouml;             &amp;szlig; &amp;Uuml; &amp;Auml; &amp;Ouml; &amp;uuml; &amp;auml; &amp;ouml;          </description>
     </item>
     
     <item>
       <title>Höre das Verb.</title>
-      <link>https://lehmann7.github.io/mein-tag/listen-verb/</link>
+      <link>http://example.org/mein-tag/listen-verb/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://lehmann7.github.io/mein-tag/listen-verb/</guid>
+      <guid>http://example.org/mein-tag/listen-verb/</guid>
       <description>                &amp;szlig; &amp;Uuml; &amp;Auml; &amp;Ouml; &amp;uuml; &amp;auml; &amp;ouml;             &amp;szlig; &amp;Uuml; &amp;Auml; &amp;Ouml; &amp;uuml; &amp;auml; &amp;ouml;             &amp;szlig; &amp;Uuml; &amp;Auml; &amp;Ouml; &amp;uuml; &amp;auml; &amp;ouml;             &amp;szlig; &amp;Uuml; &amp;Auml; &amp;Ouml; &amp;uuml; &amp;auml; &amp;ouml;             &amp;szlig; &amp;Uuml; &amp;Auml; &amp;Ouml; &amp;uuml; &amp;auml; &amp;ouml;             &amp;szlig; &amp;Uuml; &amp;Auml; &amp;Ouml; &amp;uuml; &amp;auml; &amp;ouml;             &amp;szlig; &amp;Uuml; &amp;Auml; &amp;Ouml; &amp;uuml; &amp;auml; &amp;ouml;             &amp;szlig; &amp;Uuml; &amp;Auml; &amp;Ouml; &amp;uuml; &amp;auml; &amp;ouml;          </description>
     </item>
     
     <item>
       <title>Orde die Nomen den Verben zu.</title>
-      <link>https://lehmann7.github.io/mein-tag/match-verb/</link>
+      <link>http://example.org/mein-tag/match-verb/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://lehmann7.github.io/mein-tag/match-verb/</guid>
-      <description>   Ziele    den Alltag    die Seele    eine Entscheidung    Tagebuch    Reisepläne    über Visionen    die Sonnenstrahlen                 vergessen            genießen            schmieden            führen            verwöhnen            sprechen            stecken            treffen      </description>
+      <guid>http://example.org/mein-tag/match-verb/</guid>
+      <description>   über Visionen    Reisepläne    eine Entscheidung    den Alltag    Ziele    die Seele    Tagebuch    die Sonnenstrahlen                 führen            schmieden            stecken            verwöhnen            genießen            treffen            sprechen            vergessen      </description>
     </item>
     
     <item>
       <title>Ordne den Artikel zu.</title>
-      <link>https://lehmann7.github.io/mein-tag/match-article/</link>
+      <link>http://example.org/mein-tag/match-article/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://lehmann7.github.io/mein-tag/match-article/</guid>
-      <description>    der    das    die            Entscheidung       Vision       Reiseplan       Ziel       Tagebuch       Sonnenstrahl       Seele       Alltag       </description>
+      <guid>http://example.org/mein-tag/match-article/</guid>
+      <description>    der    die    das            Seele       Sonnenstrahl       Alltag       Entscheidung       Vision       Tagebuch       Ziel       Reiseplan       </description>
     </item>
     
     <item>
       <title>Ordne die Nomen zu.</title>
-      <link>https://lehmann7.github.io/mein-tag/match-noun/</link>
+      <link>http://example.org/mein-tag/match-noun/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://lehmann7.github.io/mein-tag/match-noun/</guid>
-      <description>   the travelling plan    the sunray    the decision    the goal    the soul    the diary    the vision    the everyday life                 der Reiseplan            der Sonnenstrahl            das Ziel            die Seele            die Vision            der Alltag            die Entscheidung            das Tagebuch      </description>
+      <guid>http://example.org/mein-tag/match-noun/</guid>
+      <description>   the travelling plan    the diary    the goal    the vision    the sunray    the everyday life    the soul    the decision                 der Sonnenstrahl            die Vision            der Alltag            die Seele            das Tagebuch            das Ziel            die Entscheidung            der Reiseplan      </description>
+    </item>
+    
+    <item>
+      <title>Record Button.</title>
+      <link>http://example.org/mein-tag/record-button/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/mein-tag/record-button/</guid>
+      <description>    </description>
     </item>
     
     <item>
       <title>Wiederhole die Nomen.</title>
-      <link>https://lehmann7.github.io/mein-tag/repeat-noun/</link>
+      <link>http://example.org/mein-tag/repeat-noun/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://lehmann7.github.io/mein-tag/repeat-noun/</guid>
-      <description>    Singular  Plural           der Reiseplan  die Reisepläne           das Tagebuch  die Tagebücher           der Alltag  die Alltage           die Entscheidung  die Entscheidungen           die Seele  die Seelen           der Sonnenstrahl  die Sonnenstrahlen           die Vision  die Visionen           das Ziel  die Ziele         </description>
+      <guid>http://example.org/mein-tag/repeat-noun/</guid>
+      <description>    Singular  Plural           die Vision  die Visionen           die Seele  die Seelen           das Ziel  die Ziele           der Alltag  die Alltage           der Sonnenstrahl  die Sonnenstrahlen           die Entscheidung  die Entscheidungen           das Tagebuch  die Tagebücher           der Reiseplan  die Reisepläne         </description>
     </item>
     
     <item>
       <title>Wiederhole die Sätze.</title>
-      <link>https://lehmann7.github.io/mein-tag/repeat-sentence/</link>
+      <link>http://example.org/mein-tag/repeat-sentence/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://lehmann7.github.io/mein-tag/repeat-sentence/</guid>
-      <description>Infinitiv Verb  Satz mit Nomen und Verb           schmieden  Im Sommer schmieden wir viele Reisepläne.           vergessen  Für einen Moment vergisst sie den Alltag. Sinuglar           verwöhnen  Wie verwöhnst du deine Seele?           führen  Seit 2018 führen wir Tagebuch.</description>
+      <guid>http://example.org/mein-tag/repeat-sentence/</guid>
+      <description>Infinitiv Verb  Satz mit Nomen und Verb           schmieden  Im Sommer schmieden wir viele Reisepläne.           verwöhnen  Wie verwöhnst du deine Seele?           treffen  Am Dienstag trifft sie eine Entscheidung. Singular           genießen   Genießt ihr die ersten warmen Sonnenstrahlen?</description>
     </item>
     
     <item>
       <title>Wiederhole die Verben.</title>
-      <link>https://lehmann7.github.io/mein-tag/repeat-verb/</link>
+      <link>http://example.org/mein-tag/repeat-verb/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://lehmann7.github.io/mein-tag/repeat-verb/</guid>
-      <description>    Infinitiv Verb  Nomen mit Verb           genießen  die Sonnenstrahlen genießen           stecken  Ziele stecken           treffen  eine Entscheidung treffen           führen  Tagebuch führen           verwöhnen  die Seele verwöhnen           schmieden  Reisepläne schmieden           vergessen  den Alltag vergessen           sprechen  über Visionen sprechen         </description>
+      <guid>http://example.org/mein-tag/repeat-verb/</guid>
+      <description>    Infinitiv Verb  Nomen mit Verb           führen  Tagebuch führen           genießen  die Sonnenstrahlen genießen           verwöhnen  die Seele verwöhnen           treffen  eine Entscheidung treffen           schmieden  Reisepläne schmieden           vergessen  den Alltag vergessen           sprechen  über Visionen sprechen           stecken  Ziele stecken         </description>
     </item>
     
     <item>
       <title>Übersetze das Nomen.</title>
-      <link>https://lehmann7.github.io/mein-tag/translate-noun/</link>
+      <link>http://example.org/mein-tag/translate-noun/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://lehmann7.github.io/mein-tag/translate-noun/</guid>
-      <description>           the diary  &amp;szlig; &amp;Uuml; &amp;Auml; &amp;Ouml; &amp;uuml; &amp;auml; &amp;ouml;        the soul  &amp;szlig; &amp;Uuml; &amp;Auml; &amp;Ouml; &amp;uuml; &amp;auml; &amp;ouml;        the vision  &amp;szlig; &amp;Uuml; &amp;Auml; &amp;Ouml; &amp;uuml; &amp;auml; &amp;ouml;        the travelling plan  &amp;szlig; &amp;Uuml; &amp;Auml; &amp;Ouml; &amp;uuml; &amp;auml; &amp;ouml;        the goal  &amp;szlig; &amp;Uuml; &amp;Auml; &amp;Ouml; &amp;uuml; &amp;auml; &amp;ouml;        the sunray  &amp;szlig; &amp;Uuml; &amp;Auml; &amp;Ouml; &amp;uuml; &amp;auml; &amp;ouml;        the decision  &amp;szlig; &amp;Uuml; &amp;Auml; &amp;Ouml; &amp;uuml; &amp;auml; &amp;ouml;        the everyday life  &amp;szlig; &amp;Uuml; &amp;Auml; &amp;Ouml; &amp;uuml; &amp;auml; &amp;ouml;          </description>
+      <guid>http://example.org/mein-tag/translate-noun/</guid>
+      <description>           the sunray  &amp;szlig; &amp;Uuml; &amp;Auml; &amp;Ouml; &amp;uuml; &amp;auml; &amp;ouml;        the diary  &amp;szlig; &amp;Uuml; &amp;Auml; &amp;Ouml; &amp;uuml; &amp;auml; &amp;ouml;        the goal  &amp;szlig; &amp;Uuml; &amp;Auml; &amp;Ouml; &amp;uuml; &amp;auml; &amp;ouml;        the soul  &amp;szlig; &amp;Uuml; &amp;Auml; &amp;Ouml; &amp;uuml; &amp;auml; &amp;ouml;        the everyday life  &amp;szlig; &amp;Uuml; &amp;Auml; &amp;Ouml; &amp;uuml; &amp;auml; &amp;ouml;        the vision  &amp;szlig; &amp;Uuml; &amp;Auml; &amp;Ouml; &amp;uuml; &amp;auml; &amp;ouml;        the decision  &amp;szlig; &amp;Uuml; &amp;Auml; &amp;Ouml; &amp;uuml; &amp;auml; &amp;ouml;        the travelling plan  &amp;szlig; &amp;Uuml; &amp;Auml; &amp;Ouml; &amp;uuml; &amp;auml; &amp;ouml;          </description>
     </item>
     
     <item>
       <title>Übersetze die Wortgruppen.</title>
-      <link>https://lehmann7.github.io/mein-tag/match-phrase/</link>
+      <link>http://example.org/mein-tag/match-phrase/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://lehmann7.github.io/mein-tag/match-phrase/</guid>
-      <description>   the enjoy the sunrays    to care about the soul    to forget the everyday-life    to write diary    to make travelling plans    to make a decision    to make goals    to speak about visions                 den Alltag vergessen            Ziele stecken            Reisepläne schmieden            eine Entscheidung treffen            die Sonnenstrahlen genießen            über Visionen sprechen            Tagebuch führen            die Seele verwöhnen      </description>
+      <guid>http://example.org/mein-tag/match-phrase/</guid>
+      <description>   the enjoy the sunrays    to make travelling plans    to speak about visions    to write diary    to make a decision    to forget the everyday-life    to make goals    to care about the soul                 Ziele stecken            Reisepläne schmieden            über Visionen sprechen            eine Entscheidung treffen            Tagebuch führen            die Sonnenstrahlen genießen            den Alltag vergessen            die Seele verwöhnen      </description>
     </item>
     
   </channel>
