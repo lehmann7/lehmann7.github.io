@@ -2,7 +2,7 @@
 
 class Recorder
 {
-	constructor(num, recorder_time)
+	constructor(num, recorder_time = 5000.0)
 	{
 		this.recorder_num = -1;
 		this.recorder_obj = null;
@@ -83,6 +83,7 @@ class Recorder
 	{
 		if (this.recorder_num < 0)
 		{
+			this.recorder_time = Number($("#noveco-reclen").text())*1000.0;
 			this.recorder_num = num;
 			this.recorder_obj.start();
 			setTimeout(() => { this.recorder_obj.stop(); }, 1.0*this.recorder_time);
@@ -90,6 +91,7 @@ class Recorder
 			if (idname)
 			{
 				/****************/ this.button(idname, false, 1);      // 0.0
+				/****************/ $('#' + idname + '-playbtn').hide() // 0.0
 				setTimeout(() => { this.button(idname, false, 2);      }, 0.2*this.recorder_time);
 				setTimeout(() => { this.button(idname, false, 3);      }, 0.4*this.recorder_time);
 				setTimeout(() => { this.button(idname, false, 4);      }, 0.6*this.recorder_time);
@@ -104,13 +106,16 @@ class Recorder
 	{
 		if (this.recorder_num < 0)
 		{
+			this.recorder_time = Number($("#noveco-reclen").text())*1000.0;
 			this.recorder_num = num;
 			this.recorder_words[num].play();
 			setTimeout(() => { this.recorder_num = -1; }, 1.1*this.recorder_time);
 			if (idname)
 			{
-				/****************/ this.button(idname, false, 5); // 0.0
-				setTimeout(() => { this.button(idname, true , 0); }, 1.0*this.recorder_time);
+				/****************/ this.button(idname, false, 5);         // 0.0
+				/****************/ $('#' + idname + '-playbtn').hide()    // 0.0
+				setTimeout(() => { this.button(idname, true , 0); },      1.0*this.recorder_time);
+				setTimeout(() => { $('#' + idname + '-playbtn').show() }, 1.1*this.recorder_time);
 			}
 		}
 	}

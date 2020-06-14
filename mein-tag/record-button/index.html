@@ -22,6 +22,8 @@
 	
 	
 
+	<center>
+
 	<button id="recorder0-recbtn"  class="noveco-imgbtn" onclick="document.recorder.record( 0 , 'recorder0');">
 		<img id="recorder0-mic"    src="/image/mic.png"   >
 		<img id="recorder0-speaka" src="/image/speak0.png">
@@ -34,8 +36,10 @@
 		<img id="recorder0-play"   src="/image/play.png"  >
 	</button>
 
+	</center>
+
 	<script><!--
-		document.recorder = new Recorder( 1 , 5000);
+		document.recorder = new Recorder( 1 );
 		document.recorder.button("recorder0");
 	--></script>
 
@@ -43,7 +47,31 @@
 
 
 
-</div>
+	<hr>
+	<table class="noveco-table">
+		<tr>
+			<td align="left">
+				<button class="noveco-fontsizebtn" onclick="noveco_fontsize_inc();"><i><b>A</b>a</i><sup>+</sup></button>
+			</td>
+			<td align="right">
+				Volume:
+				<span id="noveco-audiovol">100</span>%
+				<input type="range" min="20" max="100" value="100"
+					oninput="noveco_audiovol(this.value);" onchange="noveco_audiovol(this.value);">
+			</td>
+		</tr>
+		<tr>
+			<td align="left">
+				<button class="noveco-fontsizebtn" onclick="noveco_fontsize_dec();"><i>A<b>a</b></i><sup>-</sup></button>
+			</td>
+			<td align="right">
+				Recording:
+				<span id="noveco-reclen">5</span>s
+				<input type="range" min="3" max="20" value="5"
+					oninput="noveco_reclen(this.value);" onchange="noveco_reclen(this.value);">
+			</td>
+		</tr>
+	</table>
 
 </body>
 
