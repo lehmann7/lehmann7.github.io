@@ -8,6 +8,11 @@ var noveco_col_corr_white  = "#ffffff";
 var noveco_col_corr_gray  =  "#eeeeee";
 */
 
+input, select, textarea, button
+{
+	font-family:inherit;
+}
+
 .noveco-reward-sol
 {
 	color: #82baba !important;
@@ -17,23 +22,22 @@ var noveco_col_corr_gray  =  "#eeeeee";
 .noveco-reward-next
 {
 	font-weight: normal;
-	font-size: small;
 }
 
 .noveco-reward-sum
 {
 }
 
-
 .noveco-hint-case
 {
 	color: #c395ac !important;
 	font-weight: bold;
+	text-transform: uppercase;
 }
 
 .noveco-hint-letter
 {
-	color: #82baba !important;
+	color: #c395ac !important;
 	font-weight: bold;
 }
 
@@ -60,14 +64,15 @@ var noveco_col_corr_gray  =  "#eeeeee";
 	font-weight: bold;
 }
 
-/*
-	delim="&#9679;"
-	color="#c395ac"
-*/
+.noveco-list
+{
+	text-align: center;
+}
+
 .noveco-list-delim::after
 {
 	color: #c395ac !important;
-	content:  "\a0\00b7\a0";
+	content: "\a0\00b7\a0";
 }
 
 .noveco-list-text
@@ -77,7 +82,8 @@ var noveco_col_corr_gray  =  "#eeeeee";
 
 #noveco-content *
 {
-	font-size: 1.01em;
+	font-family: Times;
+	font-size: 1.02em;
 }
 
 #noveco-content span
@@ -254,10 +260,10 @@ noveco-playword
 	cursor: pointer;
 	border: 1px solid #aaaaaa;
 	border-radius: 3px;
-	padding: 1px 1px;
+	padding: 2px;
 	text-align: center;
 	display: inline-block;
-	width: 16px;
+	width: auto;
 }
 
 .noveco-playbtn

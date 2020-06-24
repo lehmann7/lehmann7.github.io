@@ -30,6 +30,7 @@ class Recorder
 					const blob = new Blob(that.recorder_data);
 					const aurl = URL.createObjectURL(blob);
 					that.recorder_words[that.recorder_num] = new Audio(aurl);
+					that.recorder_words[that.recorder_num].volume = 1.0;
 					that.recorder_words[that.recorder_num].play();
 				}
 			);
@@ -108,6 +109,7 @@ class Recorder
 		{
 			this.recorder_time = Number($("#noveco-reclen").text())*1000.0;
 			this.recorder_num = num;
+			this.recorder_words[num].volume = 1.0;
 			this.recorder_words[num].play();
 			setTimeout(() => { this.recorder_num = -1; }, 1.1*this.recorder_time);
 			if (idname)

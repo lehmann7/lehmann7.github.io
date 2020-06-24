@@ -1,17 +1,25 @@
 ////////////////////////////////////////////////////////////////////////
 
-var noveco_fontsize = 1.0;
+var noveco_fontsize = 1.02;
 var noveco_col_corp_turk   = "#82baba";
 var noveco_col_corp_rose   = "#c395ac";
-var noveco_col_corr_red    = "#ffb5b5";
-var noveco_col_corr_green  = "#b5ffba";
+var noveco_col_corr_red    = "#efdce5";
+var noveco_col_corr_green1 = "#e7f7d4";
+var noveco_col_corr_green2 = "#daf3be";
 var noveco_col_corr_yellow = "#ffffcc";
 var noveco_col_corr_white  = "#ffffff";
-var noveco_col_corr_gray   = "#eeeeee";
+var noveco_col_corr_gray   = "#aaaaaa";
 
 ////////////////////////////////////////////////////////////////////////
 
-function noveco_row_check(num, all, reward)
+function noveco_get_reward(num)
+{
+	return $("#noveco-reward" + num).val();
+}
+
+////////////////////////////////////////////////////////////////////////
+
+function noveco_row_check(num, all)
 {
 	var sum_ok = 0;
 	var click_ok = 0;
@@ -28,7 +36,7 @@ function noveco_row_check(num, all, reward)
 							click_ok = 1;
 						}
 						sum_ok = sum_ok + 1;
-						$(elem).css({"outline-color" : noveco_col_corr_green});
+						$(elem).css({"outline-color" : noveco_col_corr_green1});
 					}
 					else
 					{
@@ -46,15 +54,16 @@ function noveco_row_check(num, all, reward)
 	if (sum_ok == all)
 	{
 		delem.show();
-		delem.css({"background" : noveco_col_corr_green});
-		delem.html("<span>" + reward + "</span>");
+		delem.css({"background" : noveco_col_corr_green2});
+		delem.html("<span>" + noveco_get_reward(sum_ok) + "</span>");
 	}
 	else
 	{
 		if (click_ok)
 		{
 			delem.css({"background" : noveco_col_corr_yellow});
-			delem.html("<span class='noveco-reward-sum'>" + sum_ok + " / " + all + "</span><br><span class='noveco-reward-next'>" + reward + "</span>");
+			delem.html("<span class='noveco-reward-sum'>" + sum_ok + " / " + all + "</span><br>" +
+				"<span class='noveco-reward-next'>" + noveco_get_reward(sum_ok) + "</span>");
 		}
 		else
 		{

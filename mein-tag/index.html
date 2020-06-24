@@ -87,17 +87,8 @@
 							
 						
 						<li>
-							<a href="https://lehmann7.github.io/mein-tag/present-verb/">
-								8. Hör und lies die Nomen mit den Verben.
-							</a>
-						</li>
-					
-						
-							
-						
-						<li>
 							<a href="https://lehmann7.github.io/mein-tag/match-verb/">
-								9. Orde die Nomen den Verben zu.
+								8. Orde die Nomen den Verben zu.
 							</a>
 						</li>
 					
@@ -106,7 +97,16 @@
 						
 						<li>
 							<a href="https://lehmann7.github.io/mein-tag/repeat-verb/">
-								10. Wiederhole die Verben.
+								9. Wiederhole die Verben.
+							</a>
+						</li>
+					
+						
+							
+						
+						<li>
+							<a href="https://lehmann7.github.io/mein-tag/match-vowel/">
+								10. Bestimme den Vokalwechsel.
 							</a>
 						</li>
 					
@@ -137,8 +137,8 @@
 							
 						
 						<li>
-							<a href="https://lehmann7.github.io/mein-tag/match-vowel/">
-								13. Bestimme den Vokalwechsel.
+							<a href="https://lehmann7.github.io/mein-tag/listen-verb/">
+								13. Höre das Verb.
 							</a>
 						</li>
 					
@@ -146,8 +146,8 @@
 							
 						
 						<li>
-							<a href="https://lehmann7.github.io/mein-tag/listen-verb/">
-								14. Höre das Verb.
+							<a href="https://lehmann7.github.io/mein-tag/present-verb/">
+								14. Hör und lies die Nomen mit den Verben.
 							</a>
 						</li>
 					
@@ -193,30 +193,23 @@
 	</table>
 
 	<hr>
+
 	<table class="noveco-table">
 		<tr>
 			<td align="left">
 				<button class="noveco-fontsizebtn" onclick="noveco_fontsize_inc();"><i><b>A</b>a</i><sup>+</sup></button>
-			</td>
-			<td align="right">
-				Volume:
-				<span id="noveco-audiovol">100</span>%
-				<input type="range" min="20" max="100" value="100"
-					oninput="noveco_audiovol(this.value);" onchange="noveco_audiovol(this.value);">
 			</td>
 		</tr>
 		<tr>
 			<td align="left">
 				<button class="noveco-fontsizebtn" onclick="noveco_fontsize_dec();"><i>A<b>a</b></i><sup>-</sup></button>
 			</td>
-			<td align="right">
-				Recording:
-				<span id="noveco-reclen">5</span>s
-				<input type="range" min="3" max="20" value="5"
-					oninput="noveco_reclen(this.value);" onchange="noveco_reclen(this.value);">
-			</td>
 		</tr>
 	</table>
+
+	<script>
+		noveco_audiovol(100.0);
+	</script>
 
 </body>
 
