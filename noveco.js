@@ -3,12 +3,13 @@
 var noveco_fontsize = 1.02;
 var noveco_col_corp_turk   = "#82baba";
 var noveco_col_corp_rose   = "#c395ac";
-var noveco_col_corr_red    = "#efdce5";
-var noveco_col_corr_green1 = "#e7f7d4";
+var noveco_col_corr_red1   = "#efdce5";
+var noveco_col_corr_red2   = "#e48ab5";
+var noveco_col_corr_green1 = "#aee26f";
 var noveco_col_corr_green2 = "#daf3be";
 var noveco_col_corr_yellow = "#ffffcc";
 var noveco_col_corr_white  = "#ffffff";
-var noveco_col_corr_gray   = "#aaaaaa";
+var noveco_col_corr_gray   = "#cccccc";
 
 ////////////////////////////////////////////////////////////////////////
 
@@ -29,6 +30,7 @@ function noveco_row_check(num, all)
 			(index, elem) => {
 				if (elem.checked)
 				{
+					$(elem).css({"outline" : "3px dashed"});
 					if ($(elem).hasClass("noveco-solution"))
 					{
 						if (i == num)
@@ -40,12 +42,15 @@ function noveco_row_check(num, all)
 					}
 					else
 					{
-						$(elem).css({"outline-color" : noveco_col_corr_red});
+						$(elem).css({"outline-color" : noveco_col_corr_red2});
 					}
 				}
 				else
 				{
-					$(elem).css({"outline-color" : noveco_col_corr_gray});
+					$(elem).css({
+						"outline-color" : noveco_col_corr_gray,
+						"outline" : "0px dashed"
+					});
 				}
 			}
 		);
@@ -61,7 +66,7 @@ function noveco_row_check(num, all)
 	{
 		if (click_ok)
 		{
-			delem.css({"background" : noveco_col_corr_yellow});
+			delem.css({"background" : noveco_col_corr_green1});
 			delem.html("<span class='noveco-reward-sum'>" + sum_ok + " / " + all + "</span><br>" +
 				"<span class='noveco-reward-next'>" + noveco_get_reward(sum_ok) + "</span>");
 		}
@@ -96,7 +101,7 @@ function noveco_input_check(num, reward)
 	}
 	else
 	{
-		color_str = noveco_col_corr_red;
+		color_str = noveco_col_corr_red1;
 	}
 	ielem.css({"background" : color_str});
 	var len = Math.min(text.length, sol.length);
