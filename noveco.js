@@ -59,8 +59,9 @@ function noveco_row_check(num, all)
 	if (sum_ok == all)
 	{
 		delem.show();
-		delem.css({"background" : noveco_col_corr_green2});
-		delem.html("<span>" + noveco_get_reward(sum_ok-1) + "</span>");
+		delem.css({"background" : noveco_col_corr_green1});
+			delem.html("<span class='noveco-reward-sum'>" + sum_ok + " / " + all + "</span><br>" +
+				"<span class='noveco-reward-last'>" + noveco_get_reward(sum_ok - 1) + "</span>");
 	}
 	else
 	{
@@ -68,12 +69,12 @@ function noveco_row_check(num, all)
 		{
 			delem.css({"background" : noveco_col_corr_green1});
 			delem.html("<span class='noveco-reward-sum'>" + sum_ok + " / " + all + "</span><br>" +
-				"<span class='noveco-reward-next'>" + noveco_get_reward(sum_ok-1) + "</span>");
+				"<span class='noveco-reward-next'>" + noveco_get_reward(sum_ok - 1) + "</span>");
 		}
 		else
 		{
 			delem.css({"background" : noveco_col_corr_white});
-			delem.html("<span>" + sum_ok + " / " + all + "</span>");
+			delem.html("<span class='noveco-reward-sum'>" + sum_ok + " / " + all + "</span>");
 		}
 	}
 };
@@ -89,13 +90,13 @@ function noveco_input_check(num, reward)
 	var sol = $.trim(selem.val());
 	if (text == sol)
 	{
-		color_str = noveco_col_corp_turk;
+		color_str = noveco_col_corr_green2;
 	}
-	else if (
-		text.toLowerCase() == sol.substr(0, text.length).toLowerCase() ||
-		text == sol.substr(0, text.length) ||
-		text.toLowerCase() == sol.toLowerCase()
-	)
+	else if (text == sol.substr(0, text.length))
+	{
+		color_str = noveco_col_corr_white;
+	}
+	else if (text.toLowerCase() == sol.substr(0, text.length).toLowerCase())
 	{
 		color_str = noveco_col_corr_yellow;
 	}
@@ -122,7 +123,7 @@ function noveco_input_check(num, reward)
 				{
 					wrong += 1;
 				}
-				hint += " ";
+				hint += "<span class='noveco-hint-space'> </span>";
 			}
 			else if (text[i] == sol[i])
 			{

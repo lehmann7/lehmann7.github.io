@@ -30,7 +30,7 @@ class Recorder
 					const blob = new Blob(that.recorder_data);
 					const aurl = URL.createObjectURL(blob);
 					that.recorder_words[that.recorder_num] = new Audio(aurl);
-					that.recorder_words[that.recorder_num].volume = 1.0;
+					//~ that.recorder_words[that.recorder_num].volume = 1.0;
 					that.recorder_words[that.recorder_num].play();
 				}
 			);
@@ -84,7 +84,7 @@ class Recorder
 	{
 		if (this.recorder_num < 0)
 		{
-			this.recorder_time = Number($("#noveco-reclen").text())*1000.0;
+			//~ this.recorder_time = Number($("#noveco-reclen").text())*1000.0;
 			this.recorder_num = num;
 			this.recorder_obj.start();
 			setTimeout(() => { this.recorder_obj.stop(); }, 1.0*this.recorder_time);
@@ -107,7 +107,7 @@ class Recorder
 	{
 		if (this.recorder_num < 0)
 		{
-			this.recorder_time = Number($("#noveco-reclen").text())*1000.0;
+			//~ this.recorder_time = Number($("#noveco-reclen").text())*1000.0;
 			this.recorder_num = num;
 			this.recorder_words[num].volume = 1.0;
 			this.recorder_words[num].play();

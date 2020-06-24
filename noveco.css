@@ -28,6 +28,12 @@ input, select, textarea, button
 {
 }
 
+.noveco-text-blank
+{
+	padding-left: 4px;
+	padding-right: 4px;
+}
+
 .noveco-hint-case
 {
 	color: #c395ac !important;
@@ -44,11 +50,10 @@ input, select, textarea, button
 .noveco-hint-space::after
 {
 	color: #000000 !important;
-	padding-left: 1px;
-	padding-right: 1px;
+	padding-left: 2px;
+	padding-right: 2px;
 	content: "\a0\a0";
 }
-
 
 .noveco-hint-place::after
 {
@@ -95,6 +100,14 @@ input, select, textarea, button
 {
 	color: #82baba;
 	text-decoration: underline;
+}
+
+#noveco-content code
+{
+	color: #82baba;
+	font-style: italic;
+	padding-left: 5px;
+	padding-right: 5px;
 }
 
 #noveco-content a
