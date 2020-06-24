@@ -69,11 +69,6 @@ input, select, textarea, button
 	font-weight: bold;
 }
 
-.noveco-list
-{
-	text-align: center;
-}
-
 .noveco-list-delim::after
 {
 	color: #c395ac !important;
@@ -104,7 +99,6 @@ input, select, textarea, button
 
 #noveco-content code
 {
-	color: #82baba;
 	font-style: italic;
 	padding-left: 5px;
 	padding-right: 5px;

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en-US">
+
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -15,9 +16,9 @@
 
 <body>
 
-<div id="noveco-content">
-	
-	
+	<div id="noveco-content">
+		
+	<p>
 
 	
 	
@@ -48,24 +49,46 @@
 
 
 
-	<hr>
+	
+	
+	
+	
+	
 
 	<table class="noveco-table">
 		<tr>
 			<td align="left">
-				<button class="noveco-fontsizebtn" onclick="noveco_fontsize_inc();"><i><b>A</b>a</i><sup>+</sup></button>
+				
+			</td>
+			<td align="right">
+				
 			</td>
 		</tr>
 		<tr>
 			<td align="left">
-				<button class="noveco-fontsizebtn" onclick="noveco_fontsize_dec();"><i>A<b>a</b></i><sup>-</sup></button>
+				
+			</td>
+			<td align="right">
+				
+					Recording:
+					<span id="noveco-reclen">15</span>s
+					<input type="range" min="3" max="30" value="15"
+						oninput="noveco_reclen(this.value);" onchange="noveco_reclen(this.value);">
+				
 			</td>
 		</tr>
 	</table>
 
-	<script>
-		noveco_audiovol(100.0);
-	</script>
+	<script><!--
+		noveco_reclen( 15 );
+		noveco_audiovol( 100 );
+	--></script>
+
+
+</p>
+
+
+	</div>
 
 </body>
 

@@ -90,7 +90,7 @@ function noveco_input_check(num, reward)
 	var sol = $.trim(selem.val());
 	if (text == sol)
 	{
-		color_str = noveco_col_corr_green2;
+		color_str = noveco_col_corr_green1;
 	}
 	else if (text == sol.substr(0, text.length))
 	{
