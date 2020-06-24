@@ -60,7 +60,7 @@ function noveco_row_check(num, all)
 	{
 		delem.show();
 		delem.css({"background" : noveco_col_corr_green2});
-		delem.html("<span>" + noveco_get_reward(sum_ok) + "</span>");
+		delem.html("<span>" + noveco_get_reward(sum_ok-1) + "</span>");
 	}
 	else
 	{
@@ -68,7 +68,7 @@ function noveco_row_check(num, all)
 		{
 			delem.css({"background" : noveco_col_corr_green1});
 			delem.html("<span class='noveco-reward-sum'>" + sum_ok + " / " + all + "</span><br>" +
-				"<span class='noveco-reward-next'>" + noveco_get_reward(sum_ok) + "</span>");
+				"<span class='noveco-reward-next'>" + noveco_get_reward(sum_ok-1) + "</span>");
 		}
 		else
 		{
