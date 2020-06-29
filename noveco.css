@@ -10,7 +10,7 @@ var noveco_col_corr_gray  =  "#eeeeee";
 
 input, select, textarea, button
 {
-	font-family:inherit;
+	font-family: inherit;
 }
 
 .noveco-reward-sol
@@ -170,7 +170,7 @@ input, select, textarea, button
 	width: 100%;
 }
 
-.noveco-striped thead tr td
+.noveco-table thead tr td
 {
 	padding-top: 16px;
 	padding-bottom: 16px;
@@ -178,17 +178,7 @@ input, select, textarea, button
 	padding-right: 4px;
 }
 
-.noveco-striped thead tr td:nth-child(odd)
-{
-	background-color: #fdfdfd;
-}
-
-.noveco-striped thead tr td:nth-child(even)
-{
-	background-color: #f2f2f2;
-}
-
-.noveco-striped tbody tr td
+.noveco-table tbody tr td
 {
 	padding-top: 16px;
 	padding-bottom: 16px;
@@ -196,14 +186,20 @@ input, select, textarea, button
 	padding-right: 4px;
 }
 
-.noveco-striped tbody tr:nth-child(odd)
-{
-	background-color: #fdfdfd;
-}
+.noveco-stripev thead tr td:nth-child(odd)  { background-color: #fdfdfd; }
+.noveco-stripev thead tr td:nth-child(even) { background-color: #f2f2f2; }
+.noveco-stripev tbody tr td:nth-child(even) { background-color: #fdfdfd; }
+.noveco-stripev tbody tr td:nth-child(odd)  { background-color: #f2f2f2; }
 
-.noveco-striped tbody tr:nth-child(even)
+.noveco-stripeh thead tr td:nth-child(odd)  { background-color: #fdfdfd; }
+.noveco-stripeh thead tr td:nth-child(even) { background-color: #f2f2f2; }
+.noveco-stripeh tbody tr:nth-child(even) td { background-color: #fdfdfd; }
+.noveco-stripeh tbody tr:nth-child(odd)  td { background-color: #f2f2f2; }
+
+.noveco-ctltable
 {
-	background-color: #f2f2f2;
+	width: 100%;
+	padding: 0.5em;
 }
 
 .noveco-syltable
