@@ -170,14 +170,7 @@ input, select, textarea, button
 	width: 100%;
 }
 
-.noveco-table thead tr td
-{
-	padding-top: 16px;
-	padding-bottom: 16px;
-	padding-left: 4px;
-	padding-right: 4px;
-}
-
+.noveco-table thead tr td,
 .noveco-table tbody tr td
 {
 	padding-top: 16px;
@@ -206,6 +199,7 @@ input, select, textarea, button
 {
 	width: auto;
 	padding-left: 3em;
+	background-color: rgba(0, 0, 0, 0);
 }
 
 .noveco-syltable thead tr,
@@ -217,8 +211,12 @@ input, select, textarea, button
 	border: 0;
 	padding: 0;
 	margin: 0;
-	background-color: rgba(0, 0, 0, 0) !important;
 }
+
+.noveco-syltable thead tr td:nth-child(odd)  { background-color: #fdfdfd; }
+.noveco-syltable thead tr td:nth-child(even) { background-color: #f2f2f2; }
+.noveco-syltable tbody tr td:nth-child(odd)  { background-color: rgba(0, 0, 0, 0); }
+.noveco-syltable tbody tr td:nth-child(even) { background-color: rgba(0, 0, 0, 0); }
 
 .noveco-radio
 {
