@@ -209,10 +209,13 @@ input, select, textarea, button
 .noveco-syltable
 {
 	width: auto;
+	padding-left: 3em;
 }
 
-.noveco-syltable thead *,
-.noveco-syltable tbody *
+.noveco-syltable thead tr,
+.noveco-syltable thead tr td,
+.noveco-syltable tbody tr,
+.noveco-syltable tbody tr td
 {
 	width: auto;
 	border: 0;
