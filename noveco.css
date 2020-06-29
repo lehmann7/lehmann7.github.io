@@ -206,6 +206,21 @@ input, select, textarea, button
 	background-color: #f2f2f2;
 }
 
+.noveco-syltable
+{
+	width: auto;
+}
+
+.noveco-syltable thead *,
+.noveco-syltable tbody *
+{
+	width: auto;
+	border: 0;
+	padding: 0;
+	margin: 0;
+	background-color: rgba(0, 0, 0, 0) !important;
+}
+
 .noveco-radio
 {
 	transform: scale(1.25);

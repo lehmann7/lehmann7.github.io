@@ -20,6 +20,41 @@ function noveco_get_reward(num)
 
 ////////////////////////////////////////////////////////////////////////
 
+function noveco_syl_check(num, tok, all)
+{
+	$(".noveco-audio" + num + "-tok" + tok).each(
+		(index, elem) => {
+			elem.volume = 1.0;
+			elem.play();
+		}
+	);
+	$(".noveco-row" + num + "-tok" + tok).each(
+		(index, elem) => {
+			if (elem.checked)
+			{
+				$(elem).css({"outline" : "3px dashed"});
+				if ($(elem).hasClass("noveco-solution"))
+				{
+					$(elem).css({"outline-color" : noveco_col_corr_green1});
+				}
+				else
+				{
+					$(elem).css({"outline-color" : noveco_col_corr_red2});
+				}
+			}
+			else
+			{
+				$(elem).css({
+					"outline-color" : noveco_col_corr_gray,
+					"outline" : "0px dashed"
+				});
+			}
+		}
+	);
+};
+
+////////////////////////////////////////////////////////////////////////
+
 function noveco_row_check(num, all)
 {
 	var sum_ok = 0;
