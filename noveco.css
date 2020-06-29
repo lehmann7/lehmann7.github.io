@@ -215,8 +215,8 @@ input, select, textarea, button
 
 .noveco-syltable thead tr td:nth-child(odd)  { background-color: #fdfdfd; }
 .noveco-syltable thead tr td:nth-child(even) { background-color: #f2f2f2; }
-.noveco-syltable tbody tr td:nth-child(odd)  { background-color: rgba(0, 0, 0, 0); }
-.noveco-syltable tbody tr td:nth-child(even) { background-color: rgba(0, 0, 0, 0); }
+.noveco-syltable tbody tr td:nth-child(odd)  { background-color: #f2f2f2; }
+.noveco-syltable tbody tr td:nth-child(even) { background-color: #f2f2f2; }
 
 .noveco-radio
 {
