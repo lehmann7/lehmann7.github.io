@@ -1,0 +1,35 @@
+/*
+* {
+	outline: 1px solid;
+}
+*/
+
+.spacer {
+	background-color: #aaaaaa;
+}
+
+.breakpoint {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 768px;
+	height: 64px;
+	background-color: rgba(220, 220, 220, 0.5);
+}
+
+/*
+@media all and (min-width: 768px) {
+	.section-video video
+	{
+		min-height: 101%;
+		width: 101%;
+	}
+}
+@media not all and (min-width: 768px) {
+	.section-video video
+	{
+		min-width: 101%;
+		height: 101%;
+	}
+}
+*/

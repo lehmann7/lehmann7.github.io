@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Verwaltungs on Phytago</title>
+    <link>https://lehmann7.github.io/verwaltung/</link>
+    <description>Recent content in Verwaltungs on Phytago</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="https://lehmann7.github.io/verwaltung/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Datenschutz</title>
+      <link>https://lehmann7.github.io/verwaltung/datenschutz/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://lehmann7.github.io/verwaltung/datenschutz/</guid>
+      <description>1. Name und Kontaktdaten des für die Verarbeitung Verantwortlichen Diese Datenschutz-Information gilt für die Datenverarbeitung durch:
+Verantwortlicher: Nico Jany , Am Fuchsmühlenweg 9, 09599 Freiberg, Deutschland
+Email: contact@phytago.com Telefon: +49 (0)176 5784 2386
+2. Erhebung und Speicherung personenbezogener Daten sowie Art und Zweck von deren Verwendung Beim Besuch der Website
+Beim Aufrufen unserer Website www.phytago.com werden durch den auf Ihrem Endgerät zum Einsatz kommenden Browser automatisch Informationen an den Server unserer Website gesendet.</description>
+    </item>
+    
+    <item>
+      <title>Impressum</title>
+      <link>https://lehmann7.github.io/verwaltung/impressum/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://lehmann7.github.io/verwaltung/impressum/</guid>
+      <description>Geschäftsführer Nico Jany     E-Mail nico.jany@web.de   Telefon +49 0176 57842386   Adresse Am Fuchsmühlenweg 9 09599 Freiberg   Registergericht in Bearbeitung   Handelsregister in Bearbeitung   Steuernummer in Bearbeitung   UST-ID-Nr. in Bearbeitung    Haftungshinweis  Es wird keine Haftung für Inhalte externer Links übernommen. Für den Inhalt der verlinkten Seiten sind ausschließlich die Betreiber verantwortlich.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,54 @@
+/*####################################################################*/
+
+.hero {
+	height: 100vh;
+	margin: 0;
+	padding: 0;
+}
+
+.hero-block {
+	margin: 0;
+	padding: 0;
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+/*####################################################################*/
+
+.hero-items {
+	padding-top: 40vmin;
+}
+
+.hero-slogan {
+	width: 100%;
+	text-align: center;
+	position: absolute;
+	font-weight: 700;
+	color: white;
+	font-size: 4rem;
+	text-shadow: 1px 1px 1px grey, -1px 1px 1px grey, 1px -1px 1px grey, -1px -1px 1px grey;
+}
+
+/*####################################################################*/
+
+.hero-video {
+	margin: 0;
+	padding: 0;
+	z-index: -1;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+.hero-video video {
+	position: relative;
+	height: 125vmax;
+	left: -25vmax;
+	bottom: 25vmax;
+}
+
+/*####################################################################*/
