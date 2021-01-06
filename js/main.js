@@ -106,7 +106,7 @@ function document_loaded()
 		let strs = String(document.location).split("#");
 		if (strs.length > 1)
 		{
-			$('html, body').animate({
+			$('html').animate({
 				scrollTop: ($('#' + strs[1]).offset().top)
 			},500);
 		}
