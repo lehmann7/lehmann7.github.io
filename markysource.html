@@ -1107,11 +1107,11 @@
 <span id="cb1-882"><a href="#cb1-882" aria-hidden="true" tabindex="-1"></a>    </span>
 <span id="cb1-883"><a href="#cb1-883" aria-hidden="true" tabindex="-1"></a>    In order to inject <span class="bu">format</span> specific code, `html` code <span class="kw">or</span> `tex` code</span>
 <span id="cb1-884"><a href="#cb1-884" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> `pdf` documents, the <span class="bu">format</span> codes are used. A <span class="bu">format</span> code <span class="kw">is</span></span>
-<span id="cb1-885"><a href="#cb1-885" aria-hidden="true" tabindex="-1"></a>    written <span class="im">as</span> `` `<span class="op">\!</span>CODE(ARGS)` `` which <span class="kw">is</span> translated <span class="kw">in</span> two python</span>
+<span id="cb1-885"><a href="#cb1-885" aria-hidden="true" tabindex="-1"></a>    written <span class="im">as</span> `` `<span class="op">\</span>?FMTCODE(ARGS)` `` which <span class="kw">is</span> translated <span class="kw">in</span> two python</span>
 <span id="cb1-886"><a href="#cb1-886" aria-hidden="true" tabindex="-1"></a>    function calls:</span>
-<span id="cb1-887"><a href="#cb1-887" aria-hidden="true" tabindex="-1"></a>    <span class="fl">1.</span> `CODE_html(ARGS)`: <span class="bu">format</span> code <span class="cf">for</span> injection of raw `html`</span>
+<span id="cb1-887"><a href="#cb1-887" aria-hidden="true" tabindex="-1"></a>    <span class="fl">1.</span> `FMTCODE_html(ARGS)`: <span class="bu">format</span> code <span class="cf">for</span> injection of raw `html`</span>
 <span id="cb1-888"><a href="#cb1-888" aria-hidden="true" tabindex="-1"></a>    code <span class="cf">for</span> rendering `html`<span class="op">-</span>based documents <span class="kw">in</span> `<span class="op">!</span>P`.</span>
-<span id="cb1-889"><a href="#cb1-889" aria-hidden="true" tabindex="-1"></a>    <span class="fl">2.</span> `CODE_pdf(ARGS)`: <span class="bu">format</span> code <span class="cf">for</span> injection of raw `tex`</span>
+<span id="cb1-889"><a href="#cb1-889" aria-hidden="true" tabindex="-1"></a>    <span class="fl">2.</span> `FMTCODE_pdf(ARGS)`: <span class="bu">format</span> code <span class="cf">for</span> injection of raw `tex`</span>
 <span id="cb1-890"><a href="#cb1-890" aria-hidden="true" tabindex="-1"></a>    code <span class="kw">in</span> `pdf`<span class="op">-</span>based documents <span class="kw">in</span> `<span class="op">!</span>P`.</span>
 <span id="cb1-891"><a href="#cb1-891" aria-hidden="true" tabindex="-1"></a>    </span>
 <span id="cb1-892"><a href="#cb1-892" aria-hidden="true" tabindex="-1"></a>    During preprocessing, `<span class="op">!</span>M` processes <span class="bu">all</span> <span class="bu">format</span> codes <span class="cf">for</span> each</span>

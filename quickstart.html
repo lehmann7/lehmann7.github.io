@@ -381,7 +381,7 @@
 <ul>
 <li><code>build/marky.html.md</code> -&gt; <code>html/marky.html</code></li>
 </ul></li>
-<li><em>Rendering <code>pdf</code></em>: <code>make html-pdf</code>
+<li><em>Rendering <code>pdf</code></em>: <code>make pdf-marky</code>
 <ul>
 <li><code>build/marky.pdf.md</code> -&gt; <code>pdf/marky.pdf</code></li>
 </ul></li>
@@ -529,7 +529,7 @@
 <span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>    <span class="co">#import module_in_working_directory</span></span></code></pre></div>
 <hr />
 <h1 data-number="7" id="inline-code"><span class="header-section-number">7</span> Inline Code</h1>
-<p>Inline statements are directly embedded into the text flow using expressions and variables with the corresponding syntax <code>`!EXPRESSION`</code> or <code>`!VARIABLE`</code>. The output of variables can be formatted using the <code>`!VARIABLE[:FORMAT]`</code> statement according to the python operator <code>{&lt;variable&gt;[:&lt;format&gt;]}</code> implemented in the <a href="https://docs.python.org/3/library/string.html#formatstrings"><code>str.format()</code></a> specification and in <a href="https://docs.python.org/3/reference/lexical_analysis.html#f-strings"><code>f</code>-strings</a>.</p>
+<p>Inline statements are directly embedded into the text flow using expressions and variables with the corresponding syntax <code>`!EXPRESSION`</code> or <code>`!VARIABLE`</code>. The output of variables can be formatted using the <code>`!VARIABLE[:FORMAT]`</code> or <code>`!EXPRESSION[:FORMAT]`</code> statement according to the python operator <code>{&lt;variable&gt;[:&lt;format&gt;]}</code> implemented in the <a href="https://docs.python.org/3/library/string.html#formatstrings"><code>str.format()</code></a> specification and the operator <code>{&lt;expression&gt;[:&lt;format&gt;]}</code> implemented in <a href="https://docs.python.org/3/reference/lexical_analysis.html#f-strings"><code>f</code>-strings</a>.</p>
 <p><strong>Inline Formatted Output</strong></p>
 <p>The result of <span class="math inline">\(\sqrt{2}\)</span> is:</p>
 <ul>
@@ -790,7 +790,7 @@
 <h1 data-number="10" id="format-dependent-code"><span class="header-section-number">10</span> Format Dependent Code</h1>
 <p><code>pandoc</code> Markdown allows to write format specific code within Markdown using <code>html</code> and <em>tex</em> for <code>pdf</code> documents. However, when inserting raw <code>html</code> or raw <em>tex</em> code, the document only can be rendered into <code>html</code> or <code>pdf</code> accordingly.</p>
 <p><code>marky</code> introduces format codes, which are applied during linking after preprocessing. During linking format specific codes for <code>html</code> and <code>pdf</code> are applied in a consistent manner, resulting in documents with Markdown and <code>html</code> or Markdown and <em>tex</em> only. Using this pattern <code>marky</code> documents contain regular Markdown, which can be rendered into <code>html</code> and <code>pdf</code>, as well as format specific codes for tweaking or polishing <code>html</code> and <code>pdf</code> output.</p>
-<p>Format codes are specified in code blocks and called using the inline syntax <code>`!FMTCODE(ARGS)`</code>, which is translated into the two following pyhon function calls.</p>
+<p>Format codes are specified in code blocks and called using the inline syntax <code>`?FMTCODE(ARGS)`</code>, which is translated into the two following pyhon function calls.</p>
 <ol type="1">
 <li><code>FMTCODE_html(ARGS)</code>: called when linked for <code>html</code>.</li>
 <li><code>FMTCODE_pdf(ARGS)</code>: called when linked for <code>pdf</code>.</li>
@@ -806,12 +806,9 @@
 <span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> mcol_end_pdf(): <span class="cf">return</span> <span class="vs">r&quot;\end</span><span class="sc">{multicols}</span><span class="vs">&quot;</span></span>
 <span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> mcol_begin_html(): <span class="cf">return</span> <span class="vs">r&quot;&lt;div style=&#39;column-count: 2;&#39;&gt;&quot;</span></span>
 <span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> mcol_end_html(): <span class="cf">return</span> <span class="vs">r&quot;&lt;/div&gt;&quot;</span></span></code></pre></div>
-<blockquote>
-<p>(The <code>column-count</code> CSS property requires Internet Explorer&gt;=10, Firefox&gt;=52, Safari&gt;=9, Opera&gt;=37 or Chrome&gt;=50, refer to <a href="https://www.w3schools.com/css/css3_multiple_columns.asp">w3schools</a>.)</p>
-</blockquote>
-<p>In order to use the <code>multicol</code> <em>tex</em> package, the statement <code>\usepackage{multicol}</code> has to be included in the yaml meta data</p>
+<p>The <code>column-count</code> CSS property requires Internet Explorer&gt;=10, Firefox&gt;=52, Safari&gt;=9, Opera&gt;=37 or Chrome&gt;=50, refer to <a href="https://www.w3schools.com/css/css3_multiple_columns.asp">w3schools</a>. In order to use the <code>multicol</code> <em>tex</em> package, the statement <code>\usepackage{multicol}</code> has to be included in the yaml meta data in the front matter of the Markdown document.</p>
 <div style="column-count: 2;">
-<p>Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text</p>
+<p>Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text</p>
 </div>
 <hr />
 <h1 data-number="11" id="include-statement"><span class="header-section-number">11</span> Include Statement</h1>
@@ -841,27 +838,27 @@
 <tbody>
 <tr class="odd">
 <td>code block hidden</td>
-<td><code>```!!</code></td>
+<td><code>```\!!</code></td>
 </tr>
 <tr class="even">
 <td>code block shown</td>
-<td><code>```!</code></td>
+<td><code>```\!</code></td>
 </tr>
 <tr class="odd">
 <td>inline code</td>
-<td><code>`!...`</code></td>
+<td><code>`\!...`</code></td>
 </tr>
 <tr class="even">
 <td>format code</td>
-<td><code>`?...`</code></td>
+<td><code>`\?...`</code></td>
 </tr>
 <tr class="odd">
 <td>include statement</td>
-<td><code>!!!</code></td>
+<td><code>\!!!</code></td>
 </tr>
 <tr class="even">
 <td>format link</td>
-<td><code>.???</code></td>
+<td><code>.\???</code></td>
 </tr>
 </tbody>
 </table>

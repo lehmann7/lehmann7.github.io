@@ -480,7 +480,7 @@
 <span id="cb1-255"><a href="#cb1-255" aria-hidden="true" tabindex="-1"></a>        <span class="op">*</span> `build<span class="op">/</span>marky.md` <span class="op">-&gt;</span> `build<span class="op">/</span>marky.pdf.md`</span>
 <span id="cb1-256"><a href="#cb1-256" aria-hidden="true" tabindex="-1"></a>    <span class="fl">4.</span> <span class="op">*</span>Rendering `html`<span class="op">*</span>: `make html<span class="op">-</span>marky`</span>
 <span id="cb1-257"><a href="#cb1-257" aria-hidden="true" tabindex="-1"></a>        <span class="op">*</span> `build<span class="op">/</span>marky.html.md` <span class="op">-&gt;</span> `html<span class="op">/</span>marky.html`</span>
-<span id="cb1-258"><a href="#cb1-258" aria-hidden="true" tabindex="-1"></a>    <span class="fl">5.</span> <span class="op">*</span>Rendering `pdf`<span class="op">*</span>: `make html<span class="op">-</span>pdf`</span>
+<span id="cb1-258"><a href="#cb1-258" aria-hidden="true" tabindex="-1"></a>    <span class="fl">5.</span> <span class="op">*</span>Rendering `pdf`<span class="op">*</span>: `make pdf<span class="op">-</span>marky`</span>
 <span id="cb1-259"><a href="#cb1-259" aria-hidden="true" tabindex="-1"></a>        <span class="op">*</span> `build<span class="op">/</span>marky.pdf.md` <span class="op">-&gt;</span> `pdf<span class="op">/</span>marky.pdf`</span>
 <span id="cb1-260"><a href="#cb1-260" aria-hidden="true" tabindex="-1"></a>    </span>
 <span id="cb1-261"><a href="#cb1-261" aria-hidden="true" tabindex="-1"></a>    <span class="op">---</span></span>
@@ -559,64 +559,64 @@
 <span id="cb1-334"><a href="#cb1-334" aria-hidden="true" tabindex="-1"></a>    expressions <span class="kw">and</span> variables <span class="cf">with</span> the corresponding</span>
 <span id="cb1-335"><a href="#cb1-335" aria-hidden="true" tabindex="-1"></a>    syntax `` `<span class="op">\!</span>EXPRESSION` `` <span class="kw">or</span> `` `<span class="op">\!</span>VARIABLE` ``.</span>
 <span id="cb1-336"><a href="#cb1-336" aria-hidden="true" tabindex="-1"></a>    The output of variables can be formatted using the</span>
-<span id="cb1-337"><a href="#cb1-337" aria-hidden="true" tabindex="-1"></a>    `` `<span class="op">\!</span>VARIABLE[:FORMAT]` `` statement according</span>
-<span id="cb1-338"><a href="#cb1-338" aria-hidden="true" tabindex="-1"></a>    to the python operator `{<span class="op">&lt;</span>variable<span class="op">&gt;</span>[:<span class="op">&lt;</span><span class="bu">format</span><span class="op">&gt;</span>]}` implemented <span class="kw">in</span> the</span>
-<span id="cb1-339"><a href="#cb1-339" aria-hidden="true" tabindex="-1"></a>    [`str.<span class="bu">format</span>()`](https:<span class="op">//</span>docs.python.org<span class="op">/</span><span class="dv">3</span><span class="op">/</span>library<span class="op">/</span>string.html<span class="co">#formatstrings)</span></span>
-<span id="cb1-340"><a href="#cb1-340" aria-hidden="true" tabindex="-1"></a>    specification <span class="kw">and</span> <span class="kw">in</span></span>
-<span id="cb1-341"><a href="#cb1-341" aria-hidden="true" tabindex="-1"></a>    [`f`<span class="op">-</span>strings](https:<span class="op">//</span>docs.python.org<span class="op">/</span><span class="dv">3</span><span class="op">/</span>reference<span class="op">/</span>lexical_analysis.html<span class="co">#f-strings).</span></span>
-<span id="cb1-342"><a href="#cb1-342" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-343"><a href="#cb1-343" aria-hidden="true" tabindex="-1"></a>    <span class="op">**</span>Inline Formatted Output<span class="op">**</span></span>
-<span id="cb1-344"><a href="#cb1-344" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-345"><a href="#cb1-345" aria-hidden="true" tabindex="-1"></a>    The result of $<span class="op">\</span>sqrt{<span class="dv">2</span>}$ <span class="kw">is</span>:</span>
-<span id="cb1-346"><a href="#cb1-346" aria-hidden="true" tabindex="-1"></a>    <span class="op">*</span> unformatted output: `<span class="op">!</span> math.sqrt(<span class="fl">2.0</span>)`</span>
-<span id="cb1-347"><a href="#cb1-347" aria-hidden="true" tabindex="-1"></a>    <span class="op">*</span> formatted output: `<span class="op">!</span> <span class="st">&quot;</span><span class="sc">%.4f</span><span class="st">&quot;</span> <span class="op">%</span> math.sqrt(<span class="fl">2.0</span>)`</span>
-<span id="cb1-348"><a href="#cb1-348" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-349"><a href="#cb1-349" aria-hidden="true" tabindex="-1"></a>    The variable $x$ <span class="kw">is</span></span>
-<span id="cb1-350"><a href="#cb1-350" aria-hidden="true" tabindex="-1"></a>    <span class="op">*</span> unformatted output: `<span class="op">!</span> x`</span>
-<span id="cb1-351"><a href="#cb1-351" aria-hidden="true" tabindex="-1"></a>    <span class="op">*</span> formatted output: `<span class="op">!</span> x:<span class="fl">.4</span>f`</span>
-<span id="cb1-352"><a href="#cb1-352" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-353"><a href="#cb1-353" aria-hidden="true" tabindex="-1"></a>    The variable $y<span class="op">=</span>x<span class="op">+</span><span class="dv">1</span>$ <span class="kw">is</span></span>
-<span id="cb1-354"><a href="#cb1-354" aria-hidden="true" tabindex="-1"></a>    <span class="op">*</span> unformatted output: `<span class="op">!</span> y`</span>
-<span id="cb1-355"><a href="#cb1-355" aria-hidden="true" tabindex="-1"></a>    <span class="op">*</span> formatted output: `<span class="op">!</span> y:<span class="fl">.4</span>f`</span>
-<span id="cb1-356"><a href="#cb1-356" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-357"><a href="#cb1-357" aria-hidden="true" tabindex="-1"></a>    (The code block <span class="cf">for</span> the definition of $y$ <span class="kw">is</span> hidden.)</span>
-<span id="cb1-358"><a href="#cb1-358" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-359"><a href="#cb1-359" aria-hidden="true" tabindex="-1"></a>    <span class="op">**</span>Inline Expression Output<span class="op">**</span></span>
-<span id="cb1-360"><a href="#cb1-360" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-361"><a href="#cb1-361" aria-hidden="true" tabindex="-1"></a>    ```<span class="op">!</span></span>
-<span id="cb1-362"><a href="#cb1-362" aria-hidden="true" tabindex="-1"></a>        x <span class="op">=</span> <span class="bu">list</span>(<span class="bu">range</span>(<span class="dv">1</span>, <span class="dv">11</span>))</span>
-<span id="cb1-363"><a href="#cb1-363" aria-hidden="true" tabindex="-1"></a>        y <span class="op">=</span> [i<span class="op">*</span>i <span class="cf">for</span> i <span class="kw">in</span> x]</span>
-<span id="cb1-364"><a href="#cb1-364" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-365"><a href="#cb1-365" aria-hidden="true" tabindex="-1"></a>        <span class="kw">def</span> list_str(a):</span>
-<span id="cb1-366"><a href="#cb1-366" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> [<span class="bu">str</span>(i) <span class="cf">for</span> i <span class="kw">in</span> a]</span>
-<span id="cb1-367"><a href="#cb1-367" aria-hidden="true" tabindex="-1"></a>        <span class="kw">def</span> list_and(a):</span>
-<span id="cb1-368"><a href="#cb1-368" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> <span class="st">&quot;, &quot;</span>.join(list_str(a[:<span class="op">-</span><span class="dv">1</span>])) <span class="op">+</span> <span class="st">&quot; and &quot;</span> <span class="op">+</span> <span class="bu">str</span>(a[<span class="op">-</span><span class="dv">1</span>])</span>
-<span id="cb1-369"><a href="#cb1-369" aria-hidden="true" tabindex="-1"></a>    ```</span>
-<span id="cb1-370"><a href="#cb1-370" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-371"><a href="#cb1-371" aria-hidden="true" tabindex="-1"></a>    The <span class="bu">list</span> can be inserted into the text. The square of the first</span>
-<span id="cb1-372"><a href="#cb1-372" aria-hidden="true" tabindex="-1"></a>    `<span class="op">!</span><span class="bu">len</span>(x)` numbers `<span class="op">!</span>list_and(x)` <span class="kw">is</span> `<span class="op">!</span>list_and(y)`. Square numbers</span>
-<span id="cb1-373"><a href="#cb1-373" aria-hidden="true" tabindex="-1"></a>    are computed according to $y<span class="op">=</span>x<span class="op">^</span><span class="dv">2</span>$.</span>
-<span id="cb1-374"><a href="#cb1-374" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-375"><a href="#cb1-375" aria-hidden="true" tabindex="-1"></a>    <span class="op">**</span>Inline Statements <span class="kw">in</span> Tables<span class="op">**</span></span>
-<span id="cb1-376"><a href="#cb1-376" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-377"><a href="#cb1-377" aria-hidden="true" tabindex="-1"></a>    ```<span class="op">!</span></span>
-<span id="cb1-378"><a href="#cb1-378" aria-hidden="true" tabindex="-1"></a>        <span class="kw">class</span> square:</span>
-<span id="cb1-379"><a href="#cb1-379" aria-hidden="true" tabindex="-1"></a>            <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>):</span>
-<span id="cb1-380"><a href="#cb1-380" aria-hidden="true" tabindex="-1"></a>                <span class="va">self</span>.x <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb1-381"><a href="#cb1-381" aria-hidden="true" tabindex="-1"></a>            <span class="kw">def</span> get_x(<span class="va">self</span>):</span>
-<span id="cb1-382"><a href="#cb1-382" aria-hidden="true" tabindex="-1"></a>                <span class="cf">return</span> <span class="va">self</span>.x</span>
-<span id="cb1-383"><a href="#cb1-383" aria-hidden="true" tabindex="-1"></a>            <span class="kw">def</span> next_y(<span class="va">self</span>):</span>
-<span id="cb1-384"><a href="#cb1-384" aria-hidden="true" tabindex="-1"></a>                y <span class="op">=</span> <span class="va">self</span>.x<span class="op">**</span><span class="dv">2</span></span>
-<span id="cb1-385"><a href="#cb1-385" aria-hidden="true" tabindex="-1"></a>                <span class="va">self</span>.x <span class="op">+=</span> <span class="dv">1</span></span>
-<span id="cb1-386"><a href="#cb1-386" aria-hidden="true" tabindex="-1"></a>                <span class="cf">return</span> y</span>
-<span id="cb1-387"><a href="#cb1-387" aria-hidden="true" tabindex="-1"></a>        sq <span class="op">=</span> square()</span>
-<span id="cb1-388"><a href="#cb1-388" aria-hidden="true" tabindex="-1"></a>    ```</span>
-<span id="cb1-389"><a href="#cb1-389" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-390"><a href="#cb1-390" aria-hidden="true" tabindex="-1"></a>    The following table <span class="kw">is</span> computed according to $y<span class="op">=</span>x<span class="op">^</span><span class="dv">2</span>$.</span>
-<span id="cb1-391"><a href="#cb1-391" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-392"><a href="#cb1-392" aria-hidden="true" tabindex="-1"></a>    x            <span class="op">|</span>y</span>
-<span id="cb1-393"><a href="#cb1-393" aria-hidden="true" tabindex="-1"></a>    <span class="op">-------------|--------------</span></span>
-<span id="cb1-394"><a href="#cb1-394" aria-hidden="true" tabindex="-1"></a>    `<span class="op">!</span>sq.get_x()`<span class="op">|</span>`<span class="op">!</span>sq.next_y()`</span>
+<span id="cb1-337"><a href="#cb1-337" aria-hidden="true" tabindex="-1"></a>    `` `<span class="op">\!</span>VARIABLE[:FORMAT]` `` <span class="kw">or</span> `` `<span class="op">\!</span>EXPRESSION[:FORMAT]` ``</span>
+<span id="cb1-338"><a href="#cb1-338" aria-hidden="true" tabindex="-1"></a>    statement according to the python operator `{<span class="op">&lt;</span>variable<span class="op">&gt;</span>[:<span class="op">&lt;</span><span class="bu">format</span><span class="op">&gt;</span>]}`</span>
+<span id="cb1-339"><a href="#cb1-339" aria-hidden="true" tabindex="-1"></a>    implemented <span class="kw">in</span> the</span>
+<span id="cb1-340"><a href="#cb1-340" aria-hidden="true" tabindex="-1"></a>    [`str.<span class="bu">format</span>()`](https:<span class="op">//</span>docs.python.org<span class="op">/</span><span class="dv">3</span><span class="op">/</span>library<span class="op">/</span>string.html<span class="co">#formatstrings)</span></span>
+<span id="cb1-341"><a href="#cb1-341" aria-hidden="true" tabindex="-1"></a>    specification <span class="kw">and</span> the operator `{<span class="op">&lt;</span>expression<span class="op">&gt;</span>[:<span class="op">&lt;</span><span class="bu">format</span><span class="op">&gt;</span>]}` implemented <span class="kw">in</span></span>
+<span id="cb1-342"><a href="#cb1-342" aria-hidden="true" tabindex="-1"></a>    [`f`<span class="op">-</span>strings](https:<span class="op">//</span>docs.python.org<span class="op">/</span><span class="dv">3</span><span class="op">/</span>reference<span class="op">/</span>lexical_analysis.html<span class="co">#f-strings).</span></span>
+<span id="cb1-343"><a href="#cb1-343" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-344"><a href="#cb1-344" aria-hidden="true" tabindex="-1"></a>    <span class="op">**</span>Inline Formatted Output<span class="op">**</span></span>
+<span id="cb1-345"><a href="#cb1-345" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-346"><a href="#cb1-346" aria-hidden="true" tabindex="-1"></a>    The result of $<span class="op">\</span>sqrt{<span class="dv">2</span>}$ <span class="kw">is</span>:</span>
+<span id="cb1-347"><a href="#cb1-347" aria-hidden="true" tabindex="-1"></a>    <span class="op">*</span> unformatted output: `<span class="op">!</span> math.sqrt(<span class="fl">2.0</span>)`</span>
+<span id="cb1-348"><a href="#cb1-348" aria-hidden="true" tabindex="-1"></a>    <span class="op">*</span> formatted output: `<span class="op">!</span> <span class="st">&quot;</span><span class="sc">%.4f</span><span class="st">&quot;</span> <span class="op">%</span> math.sqrt(<span class="fl">2.0</span>)`</span>
+<span id="cb1-349"><a href="#cb1-349" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-350"><a href="#cb1-350" aria-hidden="true" tabindex="-1"></a>    The variable $x$ <span class="kw">is</span></span>
+<span id="cb1-351"><a href="#cb1-351" aria-hidden="true" tabindex="-1"></a>    <span class="op">*</span> unformatted output: `<span class="op">!</span> x`</span>
+<span id="cb1-352"><a href="#cb1-352" aria-hidden="true" tabindex="-1"></a>    <span class="op">*</span> formatted output: `<span class="op">!</span> x:<span class="fl">.4</span>f`</span>
+<span id="cb1-353"><a href="#cb1-353" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-354"><a href="#cb1-354" aria-hidden="true" tabindex="-1"></a>    The variable $y<span class="op">=</span>x<span class="op">+</span><span class="dv">1</span>$ <span class="kw">is</span></span>
+<span id="cb1-355"><a href="#cb1-355" aria-hidden="true" tabindex="-1"></a>    <span class="op">*</span> unformatted output: `<span class="op">!</span> y`</span>
+<span id="cb1-356"><a href="#cb1-356" aria-hidden="true" tabindex="-1"></a>    <span class="op">*</span> formatted output: `<span class="op">!</span> y:<span class="fl">.4</span>f`</span>
+<span id="cb1-357"><a href="#cb1-357" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-358"><a href="#cb1-358" aria-hidden="true" tabindex="-1"></a>    (The code block <span class="cf">for</span> the definition of $y$ <span class="kw">is</span> hidden.)</span>
+<span id="cb1-359"><a href="#cb1-359" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-360"><a href="#cb1-360" aria-hidden="true" tabindex="-1"></a>    <span class="op">**</span>Inline Expression Output<span class="op">**</span></span>
+<span id="cb1-361"><a href="#cb1-361" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-362"><a href="#cb1-362" aria-hidden="true" tabindex="-1"></a>    ```<span class="op">!</span></span>
+<span id="cb1-363"><a href="#cb1-363" aria-hidden="true" tabindex="-1"></a>        x <span class="op">=</span> <span class="bu">list</span>(<span class="bu">range</span>(<span class="dv">1</span>, <span class="dv">11</span>))</span>
+<span id="cb1-364"><a href="#cb1-364" aria-hidden="true" tabindex="-1"></a>        y <span class="op">=</span> [i<span class="op">*</span>i <span class="cf">for</span> i <span class="kw">in</span> x]</span>
+<span id="cb1-365"><a href="#cb1-365" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-366"><a href="#cb1-366" aria-hidden="true" tabindex="-1"></a>        <span class="kw">def</span> list_str(a):</span>
+<span id="cb1-367"><a href="#cb1-367" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> [<span class="bu">str</span>(i) <span class="cf">for</span> i <span class="kw">in</span> a]</span>
+<span id="cb1-368"><a href="#cb1-368" aria-hidden="true" tabindex="-1"></a>        <span class="kw">def</span> list_and(a):</span>
+<span id="cb1-369"><a href="#cb1-369" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> <span class="st">&quot;, &quot;</span>.join(list_str(a[:<span class="op">-</span><span class="dv">1</span>])) <span class="op">+</span> <span class="st">&quot; and &quot;</span> <span class="op">+</span> <span class="bu">str</span>(a[<span class="op">-</span><span class="dv">1</span>])</span>
+<span id="cb1-370"><a href="#cb1-370" aria-hidden="true" tabindex="-1"></a>    ```</span>
+<span id="cb1-371"><a href="#cb1-371" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-372"><a href="#cb1-372" aria-hidden="true" tabindex="-1"></a>    The <span class="bu">list</span> can be inserted into the text. The square of the first</span>
+<span id="cb1-373"><a href="#cb1-373" aria-hidden="true" tabindex="-1"></a>    `<span class="op">!</span><span class="bu">len</span>(x)` numbers `<span class="op">!</span>list_and(x)` <span class="kw">is</span> `<span class="op">!</span>list_and(y)`. Square numbers</span>
+<span id="cb1-374"><a href="#cb1-374" aria-hidden="true" tabindex="-1"></a>    are computed according to $y<span class="op">=</span>x<span class="op">^</span><span class="dv">2</span>$.</span>
+<span id="cb1-375"><a href="#cb1-375" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-376"><a href="#cb1-376" aria-hidden="true" tabindex="-1"></a>    <span class="op">**</span>Inline Statements <span class="kw">in</span> Tables<span class="op">**</span></span>
+<span id="cb1-377"><a href="#cb1-377" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-378"><a href="#cb1-378" aria-hidden="true" tabindex="-1"></a>    ```<span class="op">!</span></span>
+<span id="cb1-379"><a href="#cb1-379" aria-hidden="true" tabindex="-1"></a>        <span class="kw">class</span> square:</span>
+<span id="cb1-380"><a href="#cb1-380" aria-hidden="true" tabindex="-1"></a>            <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>):</span>
+<span id="cb1-381"><a href="#cb1-381" aria-hidden="true" tabindex="-1"></a>                <span class="va">self</span>.x <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb1-382"><a href="#cb1-382" aria-hidden="true" tabindex="-1"></a>            <span class="kw">def</span> get_x(<span class="va">self</span>):</span>
+<span id="cb1-383"><a href="#cb1-383" aria-hidden="true" tabindex="-1"></a>                <span class="cf">return</span> <span class="va">self</span>.x</span>
+<span id="cb1-384"><a href="#cb1-384" aria-hidden="true" tabindex="-1"></a>            <span class="kw">def</span> next_y(<span class="va">self</span>):</span>
+<span id="cb1-385"><a href="#cb1-385" aria-hidden="true" tabindex="-1"></a>                y <span class="op">=</span> <span class="va">self</span>.x<span class="op">**</span><span class="dv">2</span></span>
+<span id="cb1-386"><a href="#cb1-386" aria-hidden="true" tabindex="-1"></a>                <span class="va">self</span>.x <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb1-387"><a href="#cb1-387" aria-hidden="true" tabindex="-1"></a>                <span class="cf">return</span> y</span>
+<span id="cb1-388"><a href="#cb1-388" aria-hidden="true" tabindex="-1"></a>        sq <span class="op">=</span> square()</span>
+<span id="cb1-389"><a href="#cb1-389" aria-hidden="true" tabindex="-1"></a>    ```</span>
+<span id="cb1-390"><a href="#cb1-390" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-391"><a href="#cb1-391" aria-hidden="true" tabindex="-1"></a>    The following table <span class="kw">is</span> computed according to $y<span class="op">=</span>x<span class="op">^</span><span class="dv">2</span>$.</span>
+<span id="cb1-392"><a href="#cb1-392" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-393"><a href="#cb1-393" aria-hidden="true" tabindex="-1"></a>    x            <span class="op">|</span>y</span>
+<span id="cb1-394"><a href="#cb1-394" aria-hidden="true" tabindex="-1"></a>    <span class="op">-------------|--------------</span></span>
 <span id="cb1-395"><a href="#cb1-395" aria-hidden="true" tabindex="-1"></a>    `<span class="op">!</span>sq.get_x()`<span class="op">|</span>`<span class="op">!</span>sq.next_y()`</span>
 <span id="cb1-396"><a href="#cb1-396" aria-hidden="true" tabindex="-1"></a>    `<span class="op">!</span>sq.get_x()`<span class="op">|</span>`<span class="op">!</span>sq.next_y()`</span>
 <span id="cb1-397"><a href="#cb1-397" aria-hidden="true" tabindex="-1"></a>    `<span class="op">!</span>sq.get_x()`<span class="op">|</span>`<span class="op">!</span>sq.next_y()`</span>
@@ -626,298 +626,297 @@
 <span id="cb1-401"><a href="#cb1-401" aria-hidden="true" tabindex="-1"></a>    `<span class="op">!</span>sq.get_x()`<span class="op">|</span>`<span class="op">!</span>sq.next_y()`</span>
 <span id="cb1-402"><a href="#cb1-402" aria-hidden="true" tabindex="-1"></a>    `<span class="op">!</span>sq.get_x()`<span class="op">|</span>`<span class="op">!</span>sq.next_y()`</span>
 <span id="cb1-403"><a href="#cb1-403" aria-hidden="true" tabindex="-1"></a>    `<span class="op">!</span>sq.get_x()`<span class="op">|</span>`<span class="op">!</span>sq.next_y()`</span>
-<span id="cb1-404"><a href="#cb1-404" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-405"><a href="#cb1-405" aria-hidden="true" tabindex="-1"></a>    <span class="op">---</span></span>
-<span id="cb1-406"><a href="#cb1-406" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-407"><a href="#cb1-407" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Generate Markdown Text</span></span>
-<span id="cb1-408"><a href="#cb1-408" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-409"><a href="#cb1-409" aria-hidden="true" tabindex="-1"></a>    Markdown text can be produced algorithmically <span class="im">from</span> a python algorithm</span>
-<span id="cb1-410"><a href="#cb1-410" aria-hidden="true" tabindex="-1"></a>    using the `_()` <span class="kw">and</span> `__()` function. The `_()` <span class="kw">and</span> `__()` function are</span>
-<span id="cb1-411"><a href="#cb1-411" aria-hidden="true" tabindex="-1"></a>    special names which are reserved by `marky`. (refer to Generation of</span>
-<span id="cb1-412"><a href="#cb1-412" aria-hidden="true" tabindex="-1"></a>    Markdown Text, [`marky` documentation](marky.html) <span class="cf">for</span> <span class="kw">in</span><span class="op">-</span>depth</span>
-<span id="cb1-413"><a href="#cb1-413" aria-hidden="true" tabindex="-1"></a>    explanation).</span>
-<span id="cb1-414"><a href="#cb1-414" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-415"><a href="#cb1-415" aria-hidden="true" tabindex="-1"></a>    <span class="co">## The `_()` Function</span></span>
-<span id="cb1-416"><a href="#cb1-416" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-417"><a href="#cb1-417" aria-hidden="true" tabindex="-1"></a>     The `_()` function basicly resembled the python `print()` function.</span>
-<span id="cb1-418"><a href="#cb1-418" aria-hidden="true" tabindex="-1"></a>    `marky` does <span class="kw">not</span> patch the standard `print()` function which still</span>
-<span id="cb1-419"><a href="#cb1-419" aria-hidden="true" tabindex="-1"></a>    displays text <span class="kw">in</span> the console <span class="kw">and</span> <span class="kw">not</span> <span class="kw">in</span> the Markdown text.</span>
-<span id="cb1-420"><a href="#cb1-420" aria-hidden="true" tabindex="-1"></a>    The `_()` function supports appending text to the previous <span class="kw">and</span> the <span class="bu">next</span></span>
-<span id="cb1-421"><a href="#cb1-421" aria-hidden="true" tabindex="-1"></a>    line of output by using `_` <span class="im">as</span> the fist <span class="kw">or</span> last parameter.</span>
-<span id="cb1-422"><a href="#cb1-422" aria-hidden="true" tabindex="-1"></a>    <span class="fl">1.</span> `_(_, <span class="op">*</span>args   )`: append this output to previous output</span>
-<span id="cb1-423"><a href="#cb1-423" aria-hidden="true" tabindex="-1"></a>    <span class="fl">2.</span> `_(_, <span class="op">*</span>args, _)`: append to previous <span class="kw">and</span> <span class="bu">next</span> output</span>
-<span id="cb1-424"><a href="#cb1-424" aria-hidden="true" tabindex="-1"></a>    <span class="fl">3.</span> `_(   <span class="op">*</span>args, _)`: append <span class="bu">next</span> output to this output</span>
-<span id="cb1-425"><a href="#cb1-425" aria-hidden="true" tabindex="-1"></a>    <span class="fl">4.</span> `_()`: disable append flag</span>
-<span id="cb1-426"><a href="#cb1-426" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-427"><a href="#cb1-427" aria-hidden="true" tabindex="-1"></a>    <span class="op">**</span>Monkey Patch `print()` Function<span class="op">**</span></span>
-<span id="cb1-428"><a href="#cb1-428" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-429"><a href="#cb1-429" aria-hidden="true" tabindex="-1"></a>    The `print()` function can be <span class="op">*</span>monkey patched<span class="op">*</span> using the following</span>
-<span id="cb1-430"><a href="#cb1-430" aria-hidden="true" tabindex="-1"></a>    statment <span class="kw">in</span> order to call the `_()` function instead.</span>
-<span id="cb1-431"><a href="#cb1-431" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-432"><a href="#cb1-432" aria-hidden="true" tabindex="-1"></a>    ```<span class="op">!</span></span>
-<span id="cb1-433"><a href="#cb1-433" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">&quot;Print&quot;</span>, <span class="st">&quot;to&quot;</span>,  <span class="st">&quot;console&quot;</span>, <span class="st">&quot;!&quot;</span>)</span>
-<span id="cb1-434"><a href="#cb1-434" aria-hidden="true" tabindex="-1"></a>        _(<span class="st">&quot;Print&quot;</span>, <span class="st">&quot;to&quot;</span>,  <span class="st">&quot;Markdown&quot;</span>, <span class="st">&quot;!&quot;</span>)</span>
-<span id="cb1-435"><a href="#cb1-435" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-436"><a href="#cb1-436" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span> <span class="op">=</span> _ <span class="co"># monkey patch</span></span>
-<span id="cb1-437"><a href="#cb1-437" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">&quot;Print&quot;</span>, <span class="st">&quot;to&quot;</span>,  <span class="st">&quot;Markdown&quot;</span>, <span class="st">&quot;!&quot;</span>)</span>
-<span id="cb1-438"><a href="#cb1-438" aria-hidden="true" tabindex="-1"></a>    ```</span>
-<span id="cb1-439"><a href="#cb1-439" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-440"><a href="#cb1-440" aria-hidden="true" tabindex="-1"></a>    <span class="op">**</span>Join Arguments using `sep`<span class="op">**</span></span>
-<span id="cb1-441"><a href="#cb1-441" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-442"><a href="#cb1-442" aria-hidden="true" tabindex="-1"></a>    The signature of the `_()` <span class="kw">is</span> `_(<span class="op">*</span>args, sep<span class="op">=</span><span class="st">&quot; &quot;</span>)`. `sep` <span class="kw">is</span> used to</span>
-<span id="cb1-443"><a href="#cb1-443" aria-hidden="true" tabindex="-1"></a>    join the arguments `<span class="op">*</span>args` into one string.</span>
-<span id="cb1-444"><a href="#cb1-444" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-445"><a href="#cb1-445" aria-hidden="true" tabindex="-1"></a>    ```<span class="op">!</span></span>
-<span id="cb1-446"><a href="#cb1-446" aria-hidden="true" tabindex="-1"></a>        _(<span class="st">&quot;The first five natural numbers are:&quot;</span>)</span>
-<span id="cb1-447"><a href="#cb1-447" aria-hidden="true" tabindex="-1"></a>        _(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, sep<span class="op">=</span><span class="st">&quot;, &quot;</span>)</span>
-<span id="cb1-448"><a href="#cb1-448" aria-hidden="true" tabindex="-1"></a>    ```</span>
-<span id="cb1-449"><a href="#cb1-449" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-450"><a href="#cb1-450" aria-hidden="true" tabindex="-1"></a>    <span class="op">**</span>Generate a Table <span class="cf">with</span> Appending<span class="op">**</span></span>
-<span id="cb1-451"><a href="#cb1-451" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-452"><a href="#cb1-452" aria-hidden="true" tabindex="-1"></a>    The append feature <span class="kw">is</span> used to create a table.</span>
-<span id="cb1-453"><a href="#cb1-453" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-454"><a href="#cb1-454" aria-hidden="true" tabindex="-1"></a>    ```<span class="op">!</span></span>
-<span id="cb1-455"><a href="#cb1-455" aria-hidden="true" tabindex="-1"></a>        _(<span class="st">&quot;Column 1&quot;</span>, _)</span>
-<span id="cb1-456"><a href="#cb1-456" aria-hidden="true" tabindex="-1"></a>        _(<span class="st">&quot;|Column 2&quot;</span>, _)</span>
-<span id="cb1-457"><a href="#cb1-457" aria-hidden="true" tabindex="-1"></a>        _(<span class="st">&quot;|Column 3&quot;</span>, _)</span>
-<span id="cb1-458"><a href="#cb1-458" aria-hidden="true" tabindex="-1"></a>        _()</span>
-<span id="cb1-459"><a href="#cb1-459" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-460"><a href="#cb1-460" aria-hidden="true" tabindex="-1"></a>        _(<span class="st">&quot;|&quot;</span>.join([<span class="st">&quot;--------&quot;</span>]<span class="op">*</span><span class="dv">3</span>))</span>
-<span id="cb1-461"><a href="#cb1-461" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-462"><a href="#cb1-462" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">5</span>):</span>
-<span id="cb1-463"><a href="#cb1-463" aria-hidden="true" tabindex="-1"></a>            _(<span class="st">&quot;</span><span class="sc">% 8d</span><span class="st">&quot;</span> <span class="op">%</span> (i<span class="op">*</span><span class="dv">3</span>))</span>
-<span id="cb1-464"><a href="#cb1-464" aria-hidden="true" tabindex="-1"></a>            <span class="cf">for</span> j <span class="kw">in</span> [<span class="dv">1</span>, <span class="dv">2</span>]:</span>
-<span id="cb1-465"><a href="#cb1-465" aria-hidden="true" tabindex="-1"></a>                _(_, <span class="st">&quot;|</span><span class="sc">% 8d</span><span class="st">&quot;</span> <span class="op">%</span> (i<span class="op">*</span><span class="dv">3</span><span class="op">+</span>j))</span>
-<span id="cb1-466"><a href="#cb1-466" aria-hidden="true" tabindex="-1"></a>    ```</span>
-<span id="cb1-467"><a href="#cb1-467" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-468"><a href="#cb1-468" aria-hidden="true" tabindex="-1"></a>    The algorithm produces the following Markdown text.</span>
-<span id="cb1-469"><a href="#cb1-469" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-470"><a href="#cb1-470" aria-hidden="true" tabindex="-1"></a>    ```md</span>
-<span id="cb1-471"><a href="#cb1-471" aria-hidden="true" tabindex="-1"></a>    Column <span class="dv">1</span><span class="op">|</span>Column <span class="dv">2</span><span class="op">|</span>Column <span class="dv">3</span></span>
-<span id="cb1-472"><a href="#cb1-472" aria-hidden="true" tabindex="-1"></a>    <span class="op">--------|--------|--------</span></span>
-<span id="cb1-473"><a href="#cb1-473" aria-hidden="true" tabindex="-1"></a>           <span class="dv">0</span><span class="op">|</span>       <span class="dv">1</span><span class="op">|</span>       <span class="dv">2</span></span>
-<span id="cb1-474"><a href="#cb1-474" aria-hidden="true" tabindex="-1"></a>           <span class="dv">3</span><span class="op">|</span>       <span class="dv">4</span><span class="op">|</span>       <span class="dv">5</span></span>
-<span id="cb1-475"><a href="#cb1-475" aria-hidden="true" tabindex="-1"></a>           <span class="dv">6</span><span class="op">|</span>       <span class="dv">7</span><span class="op">|</span>       <span class="dv">8</span></span>
-<span id="cb1-476"><a href="#cb1-476" aria-hidden="true" tabindex="-1"></a>           <span class="dv">9</span><span class="op">|</span>      <span class="dv">10</span><span class="op">|</span>      <span class="dv">11</span></span>
-<span id="cb1-477"><a href="#cb1-477" aria-hidden="true" tabindex="-1"></a>          <span class="dv">12</span><span class="op">|</span>      <span class="dv">13</span><span class="op">|</span>      <span class="dv">14</span></span>
-<span id="cb1-478"><a href="#cb1-478" aria-hidden="true" tabindex="-1"></a>    ```</span>
-<span id="cb1-479"><a href="#cb1-479" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-480"><a href="#cb1-480" aria-hidden="true" tabindex="-1"></a>    <span class="co">## The `__()` Function</span></span>
-<span id="cb1-481"><a href="#cb1-481" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-482"><a href="#cb1-482" aria-hidden="true" tabindex="-1"></a>    Compared to the `_()` function, the `__()` function only takes one</span>
-<span id="cb1-483"><a href="#cb1-483" aria-hidden="true" tabindex="-1"></a>    argument <span class="kw">and</span> its purpose <span class="kw">is</span> to output a formatted paragraph <span class="cf">with</span></span>
-<span id="cb1-484"><a href="#cb1-484" aria-hidden="true" tabindex="-1"></a>    indentation. The signature of the `__()` function <span class="kw">is</span> `_(arg, crop<span class="op">=</span><span class="va">True</span>)`.</span>
-<span id="cb1-485"><a href="#cb1-485" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-486"><a href="#cb1-486" aria-hidden="true" tabindex="-1"></a>    <span class="op">**</span>Generate a Paragraph <span class="cf">with</span> `f`<span class="op">-</span>Strings<span class="op">**</span></span>
-<span id="cb1-487"><a href="#cb1-487" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-488"><a href="#cb1-488" aria-hidden="true" tabindex="-1"></a>    The `__()` function can be combined <span class="cf">with</span> triple quoted block strings</span>
-<span id="cb1-489"><a href="#cb1-489" aria-hidden="true" tabindex="-1"></a>    <span class="kw">and</span> the python <span class="dv">3</span> `f`<span class="op">-</span>strings <span class="kw">or</span> `<span class="ss">f&quot;...&quot;</span>` string interpolation, refer to</span>
-<span id="cb1-490"><a href="#cb1-490" aria-hidden="true" tabindex="-1"></a>    [`f`<span class="op">-</span>strings](https:<span class="op">//</span>docs.python.org<span class="op">/</span><span class="dv">3</span><span class="op">/</span>reference<span class="op">/</span>lexical_analysis.html<span class="co">#f-strings).</span></span>
-<span id="cb1-491"><a href="#cb1-491" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-492"><a href="#cb1-492" aria-hidden="true" tabindex="-1"></a>    ```<span class="op">!</span></span>
-<span id="cb1-493"><a href="#cb1-493" aria-hidden="true" tabindex="-1"></a>        <span class="im">import</span> random</span>
-<span id="cb1-494"><a href="#cb1-494" aria-hidden="true" tabindex="-1"></a>        s <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb1-495"><a href="#cb1-495" aria-hidden="true" tabindex="-1"></a>        random.seed(s)</span>
-<span id="cb1-496"><a href="#cb1-496" aria-hidden="true" tabindex="-1"></a>        p <span class="op">=</span> [random.random() <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">3</span>)]</span>
-<span id="cb1-497"><a href="#cb1-497" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-498"><a href="#cb1-498" aria-hidden="true" tabindex="-1"></a>        __(<span class="ss">f&quot;&quot;&quot;</span></span>
-<span id="cb1-499"><a href="#cb1-499" aria-hidden="true" tabindex="-1"></a><span class="ss">            Parameter one is </span><span class="sc">{p</span>[<span class="dv">0</span>]<span class="sc">:.3f}</span><span class="ss"> and the value depends on the seed</span></span>
-<span id="cb1-500"><a href="#cb1-500" aria-hidden="true" tabindex="-1"></a><span class="ss">            of the pseudo random number generator, which was chosen</span></span>
-<span id="cb1-501"><a href="#cb1-501" aria-hidden="true" tabindex="-1"></a><span class="ss">            to be </span><span class="sc">{s}</span><span class="ss">. For the same seed always the same random numbers</span></span>
-<span id="cb1-502"><a href="#cb1-502" aria-hidden="true" tabindex="-1"></a><span class="ss">            are created. The next two numbers are </span><span class="sc">{p</span>[<span class="dv">1</span>]<span class="sc">:.3f}</span><span class="ss"> and </span><span class="sc">{p</span>[<span class="dv">2</span>]<span class="sc">:.3f}</span><span class="ss">.</span></span>
-<span id="cb1-503"><a href="#cb1-503" aria-hidden="true" tabindex="-1"></a><span class="ss">            The sum of the three numbers is </span><span class="sc">{</span><span class="bu">sum</span>(p)<span class="sc">:.3f}</span><span class="ss"> and it is</span></span>
-<span id="cb1-504"><a href="#cb1-504" aria-hidden="true" tabindex="-1"></a><span class="ss">            </span><span class="sc">{</span><span class="st">&#39;greater&#39;</span> <span class="cf">if</span> <span class="bu">sum</span>(p) <span class="op">&gt;</span> <span class="fl">2.</span> <span class="cf">else</span> <span class="st">&#39;lesser or equal&#39;</span><span class="sc">}</span><span class="ss"> than two.</span></span>
-<span id="cb1-505"><a href="#cb1-505" aria-hidden="true" tabindex="-1"></a><span class="ss">        &quot;&quot;&quot;</span>)</span>
-<span id="cb1-506"><a href="#cb1-506" aria-hidden="true" tabindex="-1"></a>    ```</span>
-<span id="cb1-507"><a href="#cb1-507" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-508"><a href="#cb1-508" aria-hidden="true" tabindex="-1"></a>    <span class="op">**</span>Cropping <span class="kw">and</span> Indentation of Output<span class="op">**</span></span>
-<span id="cb1-509"><a href="#cb1-509" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-510"><a href="#cb1-510" aria-hidden="true" tabindex="-1"></a>    Before the text generated by the `__()` function <span class="kw">is</span> printed into the</span>
-<span id="cb1-511"><a href="#cb1-511" aria-hidden="true" tabindex="-1"></a>    document. The text <span class="kw">is</span> cropped according to the leading white space</span>
-<span id="cb1-512"><a href="#cb1-512" aria-hidden="true" tabindex="-1"></a>    of the first non<span class="op">-</span>empty line. The leading white space of the first</span>
-<span id="cb1-513"><a href="#cb1-513" aria-hidden="true" tabindex="-1"></a>    non<span class="op">-</span>empty line <span class="kw">is</span> removed <span class="im">from</span> <span class="bu">all</span> other lines of the output.</span>
-<span id="cb1-514"><a href="#cb1-514" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-515"><a href="#cb1-515" aria-hidden="true" tabindex="-1"></a>    ```<span class="op">!</span></span>
-<span id="cb1-516"><a href="#cb1-516" aria-hidden="true" tabindex="-1"></a>        __(<span class="st">&quot;&quot;&quot;</span></span>
-<span id="cb1-517"><a href="#cb1-517" aria-hidden="true" tabindex="-1"></a><span class="st">            * List Level 1</span></span>
-<span id="cb1-518"><a href="#cb1-518" aria-hidden="true" tabindex="-1"></a><span class="st">                * List Level 2</span></span>
+<span id="cb1-404"><a href="#cb1-404" aria-hidden="true" tabindex="-1"></a>    `<span class="op">!</span>sq.get_x()`<span class="op">|</span>`<span class="op">!</span>sq.next_y()`</span>
+<span id="cb1-405"><a href="#cb1-405" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-406"><a href="#cb1-406" aria-hidden="true" tabindex="-1"></a>    <span class="op">---</span></span>
+<span id="cb1-407"><a href="#cb1-407" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-408"><a href="#cb1-408" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Generate Markdown Text</span></span>
+<span id="cb1-409"><a href="#cb1-409" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-410"><a href="#cb1-410" aria-hidden="true" tabindex="-1"></a>    Markdown text can be produced algorithmically <span class="im">from</span> a python algorithm</span>
+<span id="cb1-411"><a href="#cb1-411" aria-hidden="true" tabindex="-1"></a>    using the `_()` <span class="kw">and</span> `__()` function. The `_()` <span class="kw">and</span> `__()` function are</span>
+<span id="cb1-412"><a href="#cb1-412" aria-hidden="true" tabindex="-1"></a>    special names which are reserved by `marky`. (refer to Generation of</span>
+<span id="cb1-413"><a href="#cb1-413" aria-hidden="true" tabindex="-1"></a>    Markdown Text, [`marky` documentation](marky.html) <span class="cf">for</span> <span class="kw">in</span><span class="op">-</span>depth</span>
+<span id="cb1-414"><a href="#cb1-414" aria-hidden="true" tabindex="-1"></a>    explanation).</span>
+<span id="cb1-415"><a href="#cb1-415" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-416"><a href="#cb1-416" aria-hidden="true" tabindex="-1"></a>    <span class="co">## The `_()` Function</span></span>
+<span id="cb1-417"><a href="#cb1-417" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-418"><a href="#cb1-418" aria-hidden="true" tabindex="-1"></a>     The `_()` function basicly resembled the python `print()` function.</span>
+<span id="cb1-419"><a href="#cb1-419" aria-hidden="true" tabindex="-1"></a>    `marky` does <span class="kw">not</span> patch the standard `print()` function which still</span>
+<span id="cb1-420"><a href="#cb1-420" aria-hidden="true" tabindex="-1"></a>    displays text <span class="kw">in</span> the console <span class="kw">and</span> <span class="kw">not</span> <span class="kw">in</span> the Markdown text.</span>
+<span id="cb1-421"><a href="#cb1-421" aria-hidden="true" tabindex="-1"></a>    The `_()` function supports appending text to the previous <span class="kw">and</span> the <span class="bu">next</span></span>
+<span id="cb1-422"><a href="#cb1-422" aria-hidden="true" tabindex="-1"></a>    line of output by using `_` <span class="im">as</span> the fist <span class="kw">or</span> last parameter.</span>
+<span id="cb1-423"><a href="#cb1-423" aria-hidden="true" tabindex="-1"></a>    <span class="fl">1.</span> `_(_, <span class="op">*</span>args   )`: append this output to previous output</span>
+<span id="cb1-424"><a href="#cb1-424" aria-hidden="true" tabindex="-1"></a>    <span class="fl">2.</span> `_(_, <span class="op">*</span>args, _)`: append to previous <span class="kw">and</span> <span class="bu">next</span> output</span>
+<span id="cb1-425"><a href="#cb1-425" aria-hidden="true" tabindex="-1"></a>    <span class="fl">3.</span> `_(   <span class="op">*</span>args, _)`: append <span class="bu">next</span> output to this output</span>
+<span id="cb1-426"><a href="#cb1-426" aria-hidden="true" tabindex="-1"></a>    <span class="fl">4.</span> `_()`: disable append flag</span>
+<span id="cb1-427"><a href="#cb1-427" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-428"><a href="#cb1-428" aria-hidden="true" tabindex="-1"></a>    <span class="op">**</span>Monkey Patch `print()` Function<span class="op">**</span></span>
+<span id="cb1-429"><a href="#cb1-429" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-430"><a href="#cb1-430" aria-hidden="true" tabindex="-1"></a>    The `print()` function can be <span class="op">*</span>monkey patched<span class="op">*</span> using the following</span>
+<span id="cb1-431"><a href="#cb1-431" aria-hidden="true" tabindex="-1"></a>    statment <span class="kw">in</span> order to call the `_()` function instead.</span>
+<span id="cb1-432"><a href="#cb1-432" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-433"><a href="#cb1-433" aria-hidden="true" tabindex="-1"></a>    ```<span class="op">!</span></span>
+<span id="cb1-434"><a href="#cb1-434" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">&quot;Print&quot;</span>, <span class="st">&quot;to&quot;</span>,  <span class="st">&quot;console&quot;</span>, <span class="st">&quot;!&quot;</span>)</span>
+<span id="cb1-435"><a href="#cb1-435" aria-hidden="true" tabindex="-1"></a>        _(<span class="st">&quot;Print&quot;</span>, <span class="st">&quot;to&quot;</span>,  <span class="st">&quot;Markdown&quot;</span>, <span class="st">&quot;!&quot;</span>)</span>
+<span id="cb1-436"><a href="#cb1-436" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-437"><a href="#cb1-437" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span> <span class="op">=</span> _ <span class="co"># monkey patch</span></span>
+<span id="cb1-438"><a href="#cb1-438" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">&quot;Print&quot;</span>, <span class="st">&quot;to&quot;</span>,  <span class="st">&quot;Markdown&quot;</span>, <span class="st">&quot;!&quot;</span>)</span>
+<span id="cb1-439"><a href="#cb1-439" aria-hidden="true" tabindex="-1"></a>    ```</span>
+<span id="cb1-440"><a href="#cb1-440" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-441"><a href="#cb1-441" aria-hidden="true" tabindex="-1"></a>    <span class="op">**</span>Join Arguments using `sep`<span class="op">**</span></span>
+<span id="cb1-442"><a href="#cb1-442" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-443"><a href="#cb1-443" aria-hidden="true" tabindex="-1"></a>    The signature of the `_()` <span class="kw">is</span> `_(<span class="op">*</span>args, sep<span class="op">=</span><span class="st">&quot; &quot;</span>)`. `sep` <span class="kw">is</span> used to</span>
+<span id="cb1-444"><a href="#cb1-444" aria-hidden="true" tabindex="-1"></a>    join the arguments `<span class="op">*</span>args` into one string.</span>
+<span id="cb1-445"><a href="#cb1-445" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-446"><a href="#cb1-446" aria-hidden="true" tabindex="-1"></a>    ```<span class="op">!</span></span>
+<span id="cb1-447"><a href="#cb1-447" aria-hidden="true" tabindex="-1"></a>        _(<span class="st">&quot;The first five natural numbers are:&quot;</span>)</span>
+<span id="cb1-448"><a href="#cb1-448" aria-hidden="true" tabindex="-1"></a>        _(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, sep<span class="op">=</span><span class="st">&quot;, &quot;</span>)</span>
+<span id="cb1-449"><a href="#cb1-449" aria-hidden="true" tabindex="-1"></a>    ```</span>
+<span id="cb1-450"><a href="#cb1-450" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-451"><a href="#cb1-451" aria-hidden="true" tabindex="-1"></a>    <span class="op">**</span>Generate a Table <span class="cf">with</span> Appending<span class="op">**</span></span>
+<span id="cb1-452"><a href="#cb1-452" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-453"><a href="#cb1-453" aria-hidden="true" tabindex="-1"></a>    The append feature <span class="kw">is</span> used to create a table.</span>
+<span id="cb1-454"><a href="#cb1-454" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-455"><a href="#cb1-455" aria-hidden="true" tabindex="-1"></a>    ```<span class="op">!</span></span>
+<span id="cb1-456"><a href="#cb1-456" aria-hidden="true" tabindex="-1"></a>        _(<span class="st">&quot;Column 1&quot;</span>, _)</span>
+<span id="cb1-457"><a href="#cb1-457" aria-hidden="true" tabindex="-1"></a>        _(<span class="st">&quot;|Column 2&quot;</span>, _)</span>
+<span id="cb1-458"><a href="#cb1-458" aria-hidden="true" tabindex="-1"></a>        _(<span class="st">&quot;|Column 3&quot;</span>, _)</span>
+<span id="cb1-459"><a href="#cb1-459" aria-hidden="true" tabindex="-1"></a>        _()</span>
+<span id="cb1-460"><a href="#cb1-460" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-461"><a href="#cb1-461" aria-hidden="true" tabindex="-1"></a>        _(<span class="st">&quot;|&quot;</span>.join([<span class="st">&quot;--------&quot;</span>]<span class="op">*</span><span class="dv">3</span>))</span>
+<span id="cb1-462"><a href="#cb1-462" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-463"><a href="#cb1-463" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">5</span>):</span>
+<span id="cb1-464"><a href="#cb1-464" aria-hidden="true" tabindex="-1"></a>            _(<span class="st">&quot;</span><span class="sc">% 8d</span><span class="st">&quot;</span> <span class="op">%</span> (i<span class="op">*</span><span class="dv">3</span>))</span>
+<span id="cb1-465"><a href="#cb1-465" aria-hidden="true" tabindex="-1"></a>            <span class="cf">for</span> j <span class="kw">in</span> [<span class="dv">1</span>, <span class="dv">2</span>]:</span>
+<span id="cb1-466"><a href="#cb1-466" aria-hidden="true" tabindex="-1"></a>                _(_, <span class="st">&quot;|</span><span class="sc">% 8d</span><span class="st">&quot;</span> <span class="op">%</span> (i<span class="op">*</span><span class="dv">3</span><span class="op">+</span>j))</span>
+<span id="cb1-467"><a href="#cb1-467" aria-hidden="true" tabindex="-1"></a>    ```</span>
+<span id="cb1-468"><a href="#cb1-468" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-469"><a href="#cb1-469" aria-hidden="true" tabindex="-1"></a>    The algorithm produces the following Markdown text.</span>
+<span id="cb1-470"><a href="#cb1-470" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-471"><a href="#cb1-471" aria-hidden="true" tabindex="-1"></a>    ```md</span>
+<span id="cb1-472"><a href="#cb1-472" aria-hidden="true" tabindex="-1"></a>    Column <span class="dv">1</span><span class="op">|</span>Column <span class="dv">2</span><span class="op">|</span>Column <span class="dv">3</span></span>
+<span id="cb1-473"><a href="#cb1-473" aria-hidden="true" tabindex="-1"></a>    <span class="op">--------|--------|--------</span></span>
+<span id="cb1-474"><a href="#cb1-474" aria-hidden="true" tabindex="-1"></a>           <span class="dv">0</span><span class="op">|</span>       <span class="dv">1</span><span class="op">|</span>       <span class="dv">2</span></span>
+<span id="cb1-475"><a href="#cb1-475" aria-hidden="true" tabindex="-1"></a>           <span class="dv">3</span><span class="op">|</span>       <span class="dv">4</span><span class="op">|</span>       <span class="dv">5</span></span>
+<span id="cb1-476"><a href="#cb1-476" aria-hidden="true" tabindex="-1"></a>           <span class="dv">6</span><span class="op">|</span>       <span class="dv">7</span><span class="op">|</span>       <span class="dv">8</span></span>
+<span id="cb1-477"><a href="#cb1-477" aria-hidden="true" tabindex="-1"></a>           <span class="dv">9</span><span class="op">|</span>      <span class="dv">10</span><span class="op">|</span>      <span class="dv">11</span></span>
+<span id="cb1-478"><a href="#cb1-478" aria-hidden="true" tabindex="-1"></a>          <span class="dv">12</span><span class="op">|</span>      <span class="dv">13</span><span class="op">|</span>      <span class="dv">14</span></span>
+<span id="cb1-479"><a href="#cb1-479" aria-hidden="true" tabindex="-1"></a>    ```</span>
+<span id="cb1-480"><a href="#cb1-480" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-481"><a href="#cb1-481" aria-hidden="true" tabindex="-1"></a>    <span class="co">## The `__()` Function</span></span>
+<span id="cb1-482"><a href="#cb1-482" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-483"><a href="#cb1-483" aria-hidden="true" tabindex="-1"></a>    Compared to the `_()` function, the `__()` function only takes one</span>
+<span id="cb1-484"><a href="#cb1-484" aria-hidden="true" tabindex="-1"></a>    argument <span class="kw">and</span> its purpose <span class="kw">is</span> to output a formatted paragraph <span class="cf">with</span></span>
+<span id="cb1-485"><a href="#cb1-485" aria-hidden="true" tabindex="-1"></a>    indentation. The signature of the `__()` function <span class="kw">is</span> `_(arg, crop<span class="op">=</span><span class="va">True</span>)`.</span>
+<span id="cb1-486"><a href="#cb1-486" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-487"><a href="#cb1-487" aria-hidden="true" tabindex="-1"></a>    <span class="op">**</span>Generate a Paragraph <span class="cf">with</span> `f`<span class="op">-</span>Strings<span class="op">**</span></span>
+<span id="cb1-488"><a href="#cb1-488" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-489"><a href="#cb1-489" aria-hidden="true" tabindex="-1"></a>    The `__()` function can be combined <span class="cf">with</span> triple quoted block strings</span>
+<span id="cb1-490"><a href="#cb1-490" aria-hidden="true" tabindex="-1"></a>    <span class="kw">and</span> the python <span class="dv">3</span> `f`<span class="op">-</span>strings <span class="kw">or</span> `<span class="ss">f&quot;...&quot;</span>` string interpolation, refer to</span>
+<span id="cb1-491"><a href="#cb1-491" aria-hidden="true" tabindex="-1"></a>    [`f`<span class="op">-</span>strings](https:<span class="op">//</span>docs.python.org<span class="op">/</span><span class="dv">3</span><span class="op">/</span>reference<span class="op">/</span>lexical_analysis.html<span class="co">#f-strings).</span></span>
+<span id="cb1-492"><a href="#cb1-492" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-493"><a href="#cb1-493" aria-hidden="true" tabindex="-1"></a>    ```<span class="op">!</span></span>
+<span id="cb1-494"><a href="#cb1-494" aria-hidden="true" tabindex="-1"></a>        <span class="im">import</span> random</span>
+<span id="cb1-495"><a href="#cb1-495" aria-hidden="true" tabindex="-1"></a>        s <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb1-496"><a href="#cb1-496" aria-hidden="true" tabindex="-1"></a>        random.seed(s)</span>
+<span id="cb1-497"><a href="#cb1-497" aria-hidden="true" tabindex="-1"></a>        p <span class="op">=</span> [random.random() <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">3</span>)]</span>
+<span id="cb1-498"><a href="#cb1-498" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-499"><a href="#cb1-499" aria-hidden="true" tabindex="-1"></a>        __(<span class="ss">f&quot;&quot;&quot;</span></span>
+<span id="cb1-500"><a href="#cb1-500" aria-hidden="true" tabindex="-1"></a><span class="ss">            Parameter one is </span><span class="sc">{p</span>[<span class="dv">0</span>]<span class="sc">:.3f}</span><span class="ss"> and the value depends on the seed</span></span>
+<span id="cb1-501"><a href="#cb1-501" aria-hidden="true" tabindex="-1"></a><span class="ss">            of the pseudo random number generator, which was chosen</span></span>
+<span id="cb1-502"><a href="#cb1-502" aria-hidden="true" tabindex="-1"></a><span class="ss">            to be </span><span class="sc">{s}</span><span class="ss">. For the same seed always the same random numbers</span></span>
+<span id="cb1-503"><a href="#cb1-503" aria-hidden="true" tabindex="-1"></a><span class="ss">            are created. The next two numbers are </span><span class="sc">{p</span>[<span class="dv">1</span>]<span class="sc">:.3f}</span><span class="ss"> and </span><span class="sc">{p</span>[<span class="dv">2</span>]<span class="sc">:.3f}</span><span class="ss">.</span></span>
+<span id="cb1-504"><a href="#cb1-504" aria-hidden="true" tabindex="-1"></a><span class="ss">            The sum of the three numbers is </span><span class="sc">{</span><span class="bu">sum</span>(p)<span class="sc">:.3f}</span><span class="ss"> and it is</span></span>
+<span id="cb1-505"><a href="#cb1-505" aria-hidden="true" tabindex="-1"></a><span class="ss">            </span><span class="sc">{</span><span class="st">&#39;greater&#39;</span> <span class="cf">if</span> <span class="bu">sum</span>(p) <span class="op">&gt;</span> <span class="fl">2.</span> <span class="cf">else</span> <span class="st">&#39;lesser or equal&#39;</span><span class="sc">}</span><span class="ss"> than two.</span></span>
+<span id="cb1-506"><a href="#cb1-506" aria-hidden="true" tabindex="-1"></a><span class="ss">        &quot;&quot;&quot;</span>)</span>
+<span id="cb1-507"><a href="#cb1-507" aria-hidden="true" tabindex="-1"></a>    ```</span>
+<span id="cb1-508"><a href="#cb1-508" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-509"><a href="#cb1-509" aria-hidden="true" tabindex="-1"></a>    <span class="op">**</span>Cropping <span class="kw">and</span> Indentation of Output<span class="op">**</span></span>
+<span id="cb1-510"><a href="#cb1-510" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-511"><a href="#cb1-511" aria-hidden="true" tabindex="-1"></a>    Before the text generated by the `__()` function <span class="kw">is</span> printed into the</span>
+<span id="cb1-512"><a href="#cb1-512" aria-hidden="true" tabindex="-1"></a>    document. The text <span class="kw">is</span> cropped according to the leading white space</span>
+<span id="cb1-513"><a href="#cb1-513" aria-hidden="true" tabindex="-1"></a>    of the first non<span class="op">-</span>empty line. The leading white space of the first</span>
+<span id="cb1-514"><a href="#cb1-514" aria-hidden="true" tabindex="-1"></a>    non<span class="op">-</span>empty line <span class="kw">is</span> removed <span class="im">from</span> <span class="bu">all</span> other lines of the output.</span>
+<span id="cb1-515"><a href="#cb1-515" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-516"><a href="#cb1-516" aria-hidden="true" tabindex="-1"></a>    ```<span class="op">!</span></span>
+<span id="cb1-517"><a href="#cb1-517" aria-hidden="true" tabindex="-1"></a>        __(<span class="st">&quot;&quot;&quot;</span></span>
+<span id="cb1-518"><a href="#cb1-518" aria-hidden="true" tabindex="-1"></a><span class="st">            * List Level 1</span></span>
 <span id="cb1-519"><a href="#cb1-519" aria-hidden="true" tabindex="-1"></a><span class="st">                * List Level 2</span></span>
-<span id="cb1-520"><a href="#cb1-520" aria-hidden="true" tabindex="-1"></a><span class="st">                    * List Level 3</span></span>
-<span id="cb1-521"><a href="#cb1-521" aria-hidden="true" tabindex="-1"></a><span class="st">                * List Level 2</span></span>
-<span id="cb1-522"><a href="#cb1-522" aria-hidden="true" tabindex="-1"></a><span class="st">            * List Level 1</span></span>
+<span id="cb1-520"><a href="#cb1-520" aria-hidden="true" tabindex="-1"></a><span class="st">                * List Level 2</span></span>
+<span id="cb1-521"><a href="#cb1-521" aria-hidden="true" tabindex="-1"></a><span class="st">                    * List Level 3</span></span>
+<span id="cb1-522"><a href="#cb1-522" aria-hidden="true" tabindex="-1"></a><span class="st">                * List Level 2</span></span>
 <span id="cb1-523"><a href="#cb1-523" aria-hidden="true" tabindex="-1"></a><span class="st">            * List Level 1</span></span>
-<span id="cb1-524"><a href="#cb1-524" aria-hidden="true" tabindex="-1"></a><span class="st">        &quot;&quot;&quot;</span>)</span>
-<span id="cb1-525"><a href="#cb1-525" aria-hidden="true" tabindex="-1"></a>    ```</span>
-<span id="cb1-526"><a href="#cb1-526" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-527"><a href="#cb1-527" aria-hidden="true" tabindex="-1"></a>    The code block produces the following output.</span>
-<span id="cb1-528"><a href="#cb1-528" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-529"><a href="#cb1-529" aria-hidden="true" tabindex="-1"></a>    ```md</span>
-<span id="cb1-530"><a href="#cb1-530" aria-hidden="true" tabindex="-1"></a>    <span class="op">*</span> List Level <span class="dv">1</span></span>
-<span id="cb1-531"><a href="#cb1-531" aria-hidden="true" tabindex="-1"></a>        <span class="op">*</span> List Level <span class="dv">2</span></span>
+<span id="cb1-524"><a href="#cb1-524" aria-hidden="true" tabindex="-1"></a><span class="st">            * List Level 1</span></span>
+<span id="cb1-525"><a href="#cb1-525" aria-hidden="true" tabindex="-1"></a><span class="st">        &quot;&quot;&quot;</span>)</span>
+<span id="cb1-526"><a href="#cb1-526" aria-hidden="true" tabindex="-1"></a>    ```</span>
+<span id="cb1-527"><a href="#cb1-527" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-528"><a href="#cb1-528" aria-hidden="true" tabindex="-1"></a>    The code block produces the following output.</span>
+<span id="cb1-529"><a href="#cb1-529" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-530"><a href="#cb1-530" aria-hidden="true" tabindex="-1"></a>    ```md</span>
+<span id="cb1-531"><a href="#cb1-531" aria-hidden="true" tabindex="-1"></a>    <span class="op">*</span> List Level <span class="dv">1</span></span>
 <span id="cb1-532"><a href="#cb1-532" aria-hidden="true" tabindex="-1"></a>        <span class="op">*</span> List Level <span class="dv">2</span></span>
-<span id="cb1-533"><a href="#cb1-533" aria-hidden="true" tabindex="-1"></a>            <span class="op">*</span> List Level <span class="dv">3</span></span>
-<span id="cb1-534"><a href="#cb1-534" aria-hidden="true" tabindex="-1"></a>        <span class="op">*</span> List Level <span class="dv">2</span></span>
-<span id="cb1-535"><a href="#cb1-535" aria-hidden="true" tabindex="-1"></a>    <span class="op">*</span> List Level <span class="dv">1</span></span>
+<span id="cb1-533"><a href="#cb1-533" aria-hidden="true" tabindex="-1"></a>        <span class="op">*</span> List Level <span class="dv">2</span></span>
+<span id="cb1-534"><a href="#cb1-534" aria-hidden="true" tabindex="-1"></a>            <span class="op">*</span> List Level <span class="dv">3</span></span>
+<span id="cb1-535"><a href="#cb1-535" aria-hidden="true" tabindex="-1"></a>        <span class="op">*</span> List Level <span class="dv">2</span></span>
 <span id="cb1-536"><a href="#cb1-536" aria-hidden="true" tabindex="-1"></a>    <span class="op">*</span> List Level <span class="dv">1</span></span>
-<span id="cb1-537"><a href="#cb1-537" aria-hidden="true" tabindex="-1"></a>    ```</span>
-<span id="cb1-538"><a href="#cb1-538" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-539"><a href="#cb1-539" aria-hidden="true" tabindex="-1"></a>    <span class="op">**</span>Disable Cropping of Output<span class="op">**</span></span>
-<span id="cb1-540"><a href="#cb1-540" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-541"><a href="#cb1-541" aria-hidden="true" tabindex="-1"></a>    The cropping <span class="kw">is</span> disabled using the keyword `__(text, crop<span class="op">=</span><span class="va">False</span>)`.</span>
-<span id="cb1-542"><a href="#cb1-542" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-543"><a href="#cb1-543" aria-hidden="true" tabindex="-1"></a>    ```<span class="op">!</span></span>
-<span id="cb1-544"><a href="#cb1-544" aria-hidden="true" tabindex="-1"></a>        __(<span class="st">&quot;&quot;&quot;</span></span>
-<span id="cb1-545"><a href="#cb1-545" aria-hidden="true" tabindex="-1"></a><span class="st">            * List Level 1</span></span>
-<span id="cb1-546"><a href="#cb1-546" aria-hidden="true" tabindex="-1"></a><span class="st">        &quot;&quot;&quot;</span>, crop<span class="op">=</span><span class="va">True</span>)</span>
-<span id="cb1-547"><a href="#cb1-547" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-548"><a href="#cb1-548" aria-hidden="true" tabindex="-1"></a>        __(<span class="st">&quot;&quot;&quot;</span></span>
-<span id="cb1-549"><a href="#cb1-549" aria-hidden="true" tabindex="-1"></a><span class="st">            * List Level 2</span></span>
-<span id="cb1-550"><a href="#cb1-550" aria-hidden="true" tabindex="-1"></a><span class="st">        &quot;&quot;&quot;</span>, crop<span class="op">=</span><span class="va">False</span>)</span>
-<span id="cb1-551"><a href="#cb1-551" aria-hidden="true" tabindex="-1"></a>    ```</span>
-<span id="cb1-552"><a href="#cb1-552" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-553"><a href="#cb1-553" aria-hidden="true" tabindex="-1"></a>    The code block produces the following output.</span>
-<span id="cb1-554"><a href="#cb1-554" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-555"><a href="#cb1-555" aria-hidden="true" tabindex="-1"></a>    ```md</span>
-<span id="cb1-556"><a href="#cb1-556" aria-hidden="true" tabindex="-1"></a>    <span class="op">*</span> List Level <span class="dv">1</span></span>
-<span id="cb1-557"><a href="#cb1-557" aria-hidden="true" tabindex="-1"></a>            <span class="op">*</span> List Level <span class="dv">2</span></span>
-<span id="cb1-558"><a href="#cb1-558" aria-hidden="true" tabindex="-1"></a>    ```</span>
-<span id="cb1-559"><a href="#cb1-559" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-560"><a href="#cb1-560" aria-hidden="true" tabindex="-1"></a>    <span class="op">---</span></span>
-<span id="cb1-561"><a href="#cb1-561" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-562"><a href="#cb1-562" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Format Dependent Links</span></span>
-<span id="cb1-563"><a href="#cb1-563" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-564"><a href="#cb1-564" aria-hidden="true" tabindex="-1"></a>    When writing several Markdown documents often documents are linked</span>
-<span id="cb1-565"><a href="#cb1-565" aria-hidden="true" tabindex="-1"></a>    between each other using the Markdown link statement</span>
-<span id="cb1-566"><a href="#cb1-566" aria-hidden="true" tabindex="-1"></a>    `[Link Name](<span class="bu">file</span>.html)` <span class="kw">or</span> `[Link Name](<span class="bu">file</span>.pdf)`.</span>
-<span id="cb1-567"><a href="#cb1-567" aria-hidden="true" tabindex="-1"></a>    However, when rendering documents <span class="cf">with</span> links into `html` <span class="kw">and</span> `pdf`</span>
-<span id="cb1-568"><a href="#cb1-568" aria-hidden="true" tabindex="-1"></a>    the <span class="bu">file</span> extension often must be adjusted according to the output <span class="bu">format</span>.</span>
-<span id="cb1-569"><a href="#cb1-569" aria-hidden="true" tabindex="-1"></a>    `marky` supports the `.???` statement, which will be replaced by</span>
-<span id="cb1-570"><a href="#cb1-570" aria-hidden="true" tabindex="-1"></a>    `.html` <span class="kw">or</span> `.pdf` depending on the output <span class="bu">format</span>.</span>
-<span id="cb1-571"><a href="#cb1-571" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-572"><a href="#cb1-572" aria-hidden="true" tabindex="-1"></a>    ```md</span>
-<span id="cb1-573"><a href="#cb1-573" aria-hidden="true" tabindex="-1"></a>    [Link to document](<span class="bu">file</span>.???)</span>
-<span id="cb1-574"><a href="#cb1-574" aria-hidden="true" tabindex="-1"></a>    ```</span>
-<span id="cb1-575"><a href="#cb1-575" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-576"><a href="#cb1-576" aria-hidden="true" tabindex="-1"></a>    will be proprocessed into the following text:</span>
-<span id="cb1-577"><a href="#cb1-577" aria-hidden="true" tabindex="-1"></a>    <span class="op">*</span> <span class="cf">for</span> `html`: `[Link to document](<span class="bu">file</span>.html)`</span>
-<span id="cb1-578"><a href="#cb1-578" aria-hidden="true" tabindex="-1"></a>    <span class="op">*</span> <span class="cf">for</span> `pdf`: `[Link to document](<span class="bu">file</span>.pdf)`</span>
-<span id="cb1-579"><a href="#cb1-579" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-580"><a href="#cb1-580" aria-hidden="true" tabindex="-1"></a>    [Link to this document](quickstart.html)</span>
-<span id="cb1-581"><a href="#cb1-581" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-582"><a href="#cb1-582" aria-hidden="true" tabindex="-1"></a>    <span class="op">---</span></span>
-<span id="cb1-583"><a href="#cb1-583" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-584"><a href="#cb1-584" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Format Dependent Code</span></span>
-<span id="cb1-585"><a href="#cb1-585" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-586"><a href="#cb1-586" aria-hidden="true" tabindex="-1"></a>    `pandoc` Markdown allows to write <span class="bu">format</span> specific code within Markdown</span>
-<span id="cb1-587"><a href="#cb1-587" aria-hidden="true" tabindex="-1"></a>    using `html` <span class="kw">and</span> <span class="op">*</span>tex<span class="op">*</span> <span class="cf">for</span> `pdf` documents. However, when inserting</span>
-<span id="cb1-588"><a href="#cb1-588" aria-hidden="true" tabindex="-1"></a>    raw `html` <span class="kw">or</span> raw <span class="op">*</span>tex<span class="op">*</span> code, the document only can be rendered into</span>
-<span id="cb1-589"><a href="#cb1-589" aria-hidden="true" tabindex="-1"></a>    `html` <span class="kw">or</span> `pdf` accordingly.</span>
-<span id="cb1-590"><a href="#cb1-590" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-591"><a href="#cb1-591" aria-hidden="true" tabindex="-1"></a>    `marky` introduces <span class="bu">format</span> codes, which are applied during linking</span>
-<span id="cb1-592"><a href="#cb1-592" aria-hidden="true" tabindex="-1"></a>    after preprocessing. During linking <span class="bu">format</span> specific codes <span class="cf">for</span> `html`</span>
-<span id="cb1-593"><a href="#cb1-593" aria-hidden="true" tabindex="-1"></a>    <span class="kw">and</span> `pdf` are applied <span class="kw">in</span> a consistent manner, resulting <span class="kw">in</span> documents</span>
-<span id="cb1-594"><a href="#cb1-594" aria-hidden="true" tabindex="-1"></a>    <span class="cf">with</span> Markdown <span class="kw">and</span> `html` <span class="kw">or</span> Markdown <span class="kw">and</span> <span class="op">*</span>tex<span class="op">*</span> only. Using this</span>
-<span id="cb1-595"><a href="#cb1-595" aria-hidden="true" tabindex="-1"></a>    pattern `marky` documents contain regular Markdown, which can be</span>
-<span id="cb1-596"><a href="#cb1-596" aria-hidden="true" tabindex="-1"></a>    rendered into `html` <span class="kw">and</span> `pdf`, <span class="im">as</span> well <span class="im">as</span> <span class="bu">format</span> specific codes</span>
-<span id="cb1-597"><a href="#cb1-597" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> tweaking <span class="kw">or</span> polishing `html` <span class="kw">and</span> `pdf` output.</span>
-<span id="cb1-598"><a href="#cb1-598" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-599"><a href="#cb1-599" aria-hidden="true" tabindex="-1"></a>    Format codes are specified <span class="kw">in</span> code blocks <span class="kw">and</span> called using the</span>
-<span id="cb1-600"><a href="#cb1-600" aria-hidden="true" tabindex="-1"></a>    inline syntax `` `<span class="op">\!</span>FMTCODE(ARGS)` ``, which <span class="kw">is</span> translated into the two</span>
-<span id="cb1-601"><a href="#cb1-601" aria-hidden="true" tabindex="-1"></a>    following pyhon function calls.</span>
-<span id="cb1-602"><a href="#cb1-602" aria-hidden="true" tabindex="-1"></a>    <span class="fl">1.</span> `FMTCODE_html(ARGS)`: called when linked <span class="cf">for</span> `html`.</span>
-<span id="cb1-603"><a href="#cb1-603" aria-hidden="true" tabindex="-1"></a>    <span class="fl">2.</span> `FMTCODE_pdf(ARGS)`: called when linked <span class="cf">for</span> `pdf`.</span>
-<span id="cb1-604"><a href="#cb1-604" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-605"><a href="#cb1-605" aria-hidden="true" tabindex="-1"></a>    Assuming preprocessing the <span class="bu">file</span> `md<span class="op">/</span>marky.md`, linking <span class="bu">format</span> codes</span>
-<span id="cb1-606"><a href="#cb1-606" aria-hidden="true" tabindex="-1"></a>    results <span class="kw">in</span> the two following output files.</span>
-<span id="cb1-607"><a href="#cb1-607" aria-hidden="true" tabindex="-1"></a>    <span class="fl">1.</span> `build<span class="op">/</span>marky.html.md`: contains output of `html` <span class="bu">format</span> codes.</span>
-<span id="cb1-608"><a href="#cb1-608" aria-hidden="true" tabindex="-1"></a>    <span class="fl">2.</span> `build<span class="op">/</span>marky.pdf.md`: contains output of `pdf` <span class="bu">format</span> codes.</span>
-<span id="cb1-609"><a href="#cb1-609" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-610"><a href="#cb1-610" aria-hidden="true" tabindex="-1"></a>    <span class="op">**</span>Example Multi<span class="op">-</span>Column Text <span class="kw">in</span> `pdf` <span class="kw">and</span> `html`<span class="op">**</span></span>
-<span id="cb1-611"><a href="#cb1-611" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-612"><a href="#cb1-612" aria-hidden="true" tabindex="-1"></a>    Defnition of two <span class="bu">format</span> codes `mcol_begin` <span class="kw">and</span> `mcol_end`, one <span class="cf">for</span> the</span>
-<span id="cb1-613"><a href="#cb1-613" aria-hidden="true" tabindex="-1"></a>    begin of multi column <span class="kw">and</span> another <span class="cf">for</span> the end of the multi column</span>
-<span id="cb1-614"><a href="#cb1-614" aria-hidden="true" tabindex="-1"></a>    section. The <span class="bu">format</span> codes are appended <span class="cf">with</span> `_html` <span class="kw">and</span> `_pdf`</span>
-<span id="cb1-615"><a href="#cb1-615" aria-hidden="true" tabindex="-1"></a>    respectively.</span>
-<span id="cb1-616"><a href="#cb1-616" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-617"><a href="#cb1-617" aria-hidden="true" tabindex="-1"></a>    ```<span class="op">!</span></span>
-<span id="cb1-618"><a href="#cb1-618" aria-hidden="true" tabindex="-1"></a>        <span class="kw">def</span> mcol_begin_pdf(): <span class="cf">return</span> <span class="vs">r&quot;\begin</span><span class="sc">{multicols}{2}</span><span class="vs">&quot;</span></span>
-<span id="cb1-619"><a href="#cb1-619" aria-hidden="true" tabindex="-1"></a>        <span class="kw">def</span> mcol_end_pdf(): <span class="cf">return</span> <span class="vs">r&quot;\end</span><span class="sc">{multicols}</span><span class="vs">&quot;</span></span>
-<span id="cb1-620"><a href="#cb1-620" aria-hidden="true" tabindex="-1"></a>        <span class="kw">def</span> mcol_begin_html(): <span class="cf">return</span> <span class="vs">r&quot;&lt;div style=&#39;column-count: 2;&#39;&gt;&quot;</span></span>
-<span id="cb1-621"><a href="#cb1-621" aria-hidden="true" tabindex="-1"></a>        <span class="kw">def</span> mcol_end_html(): <span class="cf">return</span> <span class="vs">r&quot;&lt;/div&gt;&quot;</span></span>
-<span id="cb1-622"><a href="#cb1-622" aria-hidden="true" tabindex="-1"></a>    ```</span>
-<span id="cb1-623"><a href="#cb1-623" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-624"><a href="#cb1-624" aria-hidden="true" tabindex="-1"></a>    <span class="op">&gt;</span> (The `column<span class="op">-</span>count` CSS <span class="bu">property</span> requires Internet Explorer<span class="op">&gt;=</span><span class="dv">10</span>,</span>
-<span id="cb1-625"><a href="#cb1-625" aria-hidden="true" tabindex="-1"></a>    <span class="op">&gt;</span> Firefox<span class="op">&gt;=</span><span class="dv">52</span>, Safari<span class="op">&gt;=</span><span class="dv">9</span>, Opera<span class="op">&gt;=</span><span class="dv">37</span> <span class="kw">or</span> Chrome<span class="op">&gt;=</span><span class="dv">50</span>, refer to</span>
-<span id="cb1-626"><a href="#cb1-626" aria-hidden="true" tabindex="-1"></a>    <span class="op">&gt;</span> [w3schools](https:<span class="op">//</span>www.w3schools.com<span class="op">/</span>css<span class="op">/</span>css3_multiple_columns.asp).)</span>
-<span id="cb1-627"><a href="#cb1-627" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-628"><a href="#cb1-628" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-629"><a href="#cb1-629" aria-hidden="true" tabindex="-1"></a>    In order to use the `multicol` <span class="op">*</span>tex<span class="op">*</span> package, the statement</span>
-<span id="cb1-630"><a href="#cb1-630" aria-hidden="true" tabindex="-1"></a>    `<span class="op">\</span>usepackage{multicol}` has to be included <span class="kw">in</span> the yaml meta data</span>
+<span id="cb1-537"><a href="#cb1-537" aria-hidden="true" tabindex="-1"></a>    <span class="op">*</span> List Level <span class="dv">1</span></span>
+<span id="cb1-538"><a href="#cb1-538" aria-hidden="true" tabindex="-1"></a>    ```</span>
+<span id="cb1-539"><a href="#cb1-539" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-540"><a href="#cb1-540" aria-hidden="true" tabindex="-1"></a>    <span class="op">**</span>Disable Cropping of Output<span class="op">**</span></span>
+<span id="cb1-541"><a href="#cb1-541" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-542"><a href="#cb1-542" aria-hidden="true" tabindex="-1"></a>    The cropping <span class="kw">is</span> disabled using the keyword `__(text, crop<span class="op">=</span><span class="va">False</span>)`.</span>
+<span id="cb1-543"><a href="#cb1-543" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-544"><a href="#cb1-544" aria-hidden="true" tabindex="-1"></a>    ```<span class="op">!</span></span>
+<span id="cb1-545"><a href="#cb1-545" aria-hidden="true" tabindex="-1"></a>        __(<span class="st">&quot;&quot;&quot;</span></span>
+<span id="cb1-546"><a href="#cb1-546" aria-hidden="true" tabindex="-1"></a><span class="st">            * List Level 1</span></span>
+<span id="cb1-547"><a href="#cb1-547" aria-hidden="true" tabindex="-1"></a><span class="st">        &quot;&quot;&quot;</span>, crop<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb1-548"><a href="#cb1-548" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-549"><a href="#cb1-549" aria-hidden="true" tabindex="-1"></a>        __(<span class="st">&quot;&quot;&quot;</span></span>
+<span id="cb1-550"><a href="#cb1-550" aria-hidden="true" tabindex="-1"></a><span class="st">            * List Level 2</span></span>
+<span id="cb1-551"><a href="#cb1-551" aria-hidden="true" tabindex="-1"></a><span class="st">        &quot;&quot;&quot;</span>, crop<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb1-552"><a href="#cb1-552" aria-hidden="true" tabindex="-1"></a>    ```</span>
+<span id="cb1-553"><a href="#cb1-553" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-554"><a href="#cb1-554" aria-hidden="true" tabindex="-1"></a>    The code block produces the following output.</span>
+<span id="cb1-555"><a href="#cb1-555" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-556"><a href="#cb1-556" aria-hidden="true" tabindex="-1"></a>    ```md</span>
+<span id="cb1-557"><a href="#cb1-557" aria-hidden="true" tabindex="-1"></a>    <span class="op">*</span> List Level <span class="dv">1</span></span>
+<span id="cb1-558"><a href="#cb1-558" aria-hidden="true" tabindex="-1"></a>            <span class="op">*</span> List Level <span class="dv">2</span></span>
+<span id="cb1-559"><a href="#cb1-559" aria-hidden="true" tabindex="-1"></a>    ```</span>
+<span id="cb1-560"><a href="#cb1-560" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-561"><a href="#cb1-561" aria-hidden="true" tabindex="-1"></a>    <span class="op">---</span></span>
+<span id="cb1-562"><a href="#cb1-562" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-563"><a href="#cb1-563" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Format Dependent Links</span></span>
+<span id="cb1-564"><a href="#cb1-564" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-565"><a href="#cb1-565" aria-hidden="true" tabindex="-1"></a>    When writing several Markdown documents often documents are linked</span>
+<span id="cb1-566"><a href="#cb1-566" aria-hidden="true" tabindex="-1"></a>    between each other using the Markdown link statement</span>
+<span id="cb1-567"><a href="#cb1-567" aria-hidden="true" tabindex="-1"></a>    `[Link Name](<span class="bu">file</span>.html)` <span class="kw">or</span> `[Link Name](<span class="bu">file</span>.pdf)`.</span>
+<span id="cb1-568"><a href="#cb1-568" aria-hidden="true" tabindex="-1"></a>    However, when rendering documents <span class="cf">with</span> links into `html` <span class="kw">and</span> `pdf`</span>
+<span id="cb1-569"><a href="#cb1-569" aria-hidden="true" tabindex="-1"></a>    the <span class="bu">file</span> extension often must be adjusted according to the output <span class="bu">format</span>.</span>
+<span id="cb1-570"><a href="#cb1-570" aria-hidden="true" tabindex="-1"></a>    `marky` supports the `.???` statement, which will be replaced by</span>
+<span id="cb1-571"><a href="#cb1-571" aria-hidden="true" tabindex="-1"></a>    `.html` <span class="kw">or</span> `.pdf` depending on the output <span class="bu">format</span>.</span>
+<span id="cb1-572"><a href="#cb1-572" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-573"><a href="#cb1-573" aria-hidden="true" tabindex="-1"></a>    ```md</span>
+<span id="cb1-574"><a href="#cb1-574" aria-hidden="true" tabindex="-1"></a>    [Link to document](<span class="bu">file</span>.???)</span>
+<span id="cb1-575"><a href="#cb1-575" aria-hidden="true" tabindex="-1"></a>    ```</span>
+<span id="cb1-576"><a href="#cb1-576" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-577"><a href="#cb1-577" aria-hidden="true" tabindex="-1"></a>    will be proprocessed into the following text:</span>
+<span id="cb1-578"><a href="#cb1-578" aria-hidden="true" tabindex="-1"></a>    <span class="op">*</span> <span class="cf">for</span> `html`: `[Link to document](<span class="bu">file</span>.html)`</span>
+<span id="cb1-579"><a href="#cb1-579" aria-hidden="true" tabindex="-1"></a>    <span class="op">*</span> <span class="cf">for</span> `pdf`: `[Link to document](<span class="bu">file</span>.pdf)`</span>
+<span id="cb1-580"><a href="#cb1-580" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-581"><a href="#cb1-581" aria-hidden="true" tabindex="-1"></a>    [Link to this document](quickstart.html)</span>
+<span id="cb1-582"><a href="#cb1-582" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-583"><a href="#cb1-583" aria-hidden="true" tabindex="-1"></a>    <span class="op">---</span></span>
+<span id="cb1-584"><a href="#cb1-584" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-585"><a href="#cb1-585" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Format Dependent Code</span></span>
+<span id="cb1-586"><a href="#cb1-586" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-587"><a href="#cb1-587" aria-hidden="true" tabindex="-1"></a>    `pandoc` Markdown allows to write <span class="bu">format</span> specific code within Markdown</span>
+<span id="cb1-588"><a href="#cb1-588" aria-hidden="true" tabindex="-1"></a>    using `html` <span class="kw">and</span> <span class="op">*</span>tex<span class="op">*</span> <span class="cf">for</span> `pdf` documents. However, when inserting</span>
+<span id="cb1-589"><a href="#cb1-589" aria-hidden="true" tabindex="-1"></a>    raw `html` <span class="kw">or</span> raw <span class="op">*</span>tex<span class="op">*</span> code, the document only can be rendered into</span>
+<span id="cb1-590"><a href="#cb1-590" aria-hidden="true" tabindex="-1"></a>    `html` <span class="kw">or</span> `pdf` accordingly.</span>
+<span id="cb1-591"><a href="#cb1-591" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-592"><a href="#cb1-592" aria-hidden="true" tabindex="-1"></a>    `marky` introduces <span class="bu">format</span> codes, which are applied during linking</span>
+<span id="cb1-593"><a href="#cb1-593" aria-hidden="true" tabindex="-1"></a>    after preprocessing. During linking <span class="bu">format</span> specific codes <span class="cf">for</span> `html`</span>
+<span id="cb1-594"><a href="#cb1-594" aria-hidden="true" tabindex="-1"></a>    <span class="kw">and</span> `pdf` are applied <span class="kw">in</span> a consistent manner, resulting <span class="kw">in</span> documents</span>
+<span id="cb1-595"><a href="#cb1-595" aria-hidden="true" tabindex="-1"></a>    <span class="cf">with</span> Markdown <span class="kw">and</span> `html` <span class="kw">or</span> Markdown <span class="kw">and</span> <span class="op">*</span>tex<span class="op">*</span> only. Using this</span>
+<span id="cb1-596"><a href="#cb1-596" aria-hidden="true" tabindex="-1"></a>    pattern `marky` documents contain regular Markdown, which can be</span>
+<span id="cb1-597"><a href="#cb1-597" aria-hidden="true" tabindex="-1"></a>    rendered into `html` <span class="kw">and</span> `pdf`, <span class="im">as</span> well <span class="im">as</span> <span class="bu">format</span> specific codes</span>
+<span id="cb1-598"><a href="#cb1-598" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> tweaking <span class="kw">or</span> polishing `html` <span class="kw">and</span> `pdf` output.</span>
+<span id="cb1-599"><a href="#cb1-599" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-600"><a href="#cb1-600" aria-hidden="true" tabindex="-1"></a>    Format codes are specified <span class="kw">in</span> code blocks <span class="kw">and</span> called using the</span>
+<span id="cb1-601"><a href="#cb1-601" aria-hidden="true" tabindex="-1"></a>    inline syntax `` `<span class="op">\</span>?FMTCODE(ARGS)` ``, which <span class="kw">is</span> translated into the two</span>
+<span id="cb1-602"><a href="#cb1-602" aria-hidden="true" tabindex="-1"></a>    following pyhon function calls.</span>
+<span id="cb1-603"><a href="#cb1-603" aria-hidden="true" tabindex="-1"></a>    <span class="fl">1.</span> `FMTCODE_html(ARGS)`: called when linked <span class="cf">for</span> `html`.</span>
+<span id="cb1-604"><a href="#cb1-604" aria-hidden="true" tabindex="-1"></a>    <span class="fl">2.</span> `FMTCODE_pdf(ARGS)`: called when linked <span class="cf">for</span> `pdf`.</span>
+<span id="cb1-605"><a href="#cb1-605" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-606"><a href="#cb1-606" aria-hidden="true" tabindex="-1"></a>    Assuming preprocessing the <span class="bu">file</span> `md<span class="op">/</span>marky.md`, linking <span class="bu">format</span> codes</span>
+<span id="cb1-607"><a href="#cb1-607" aria-hidden="true" tabindex="-1"></a>    results <span class="kw">in</span> the two following output files.</span>
+<span id="cb1-608"><a href="#cb1-608" aria-hidden="true" tabindex="-1"></a>    <span class="fl">1.</span> `build<span class="op">/</span>marky.html.md`: contains output of `html` <span class="bu">format</span> codes.</span>
+<span id="cb1-609"><a href="#cb1-609" aria-hidden="true" tabindex="-1"></a>    <span class="fl">2.</span> `build<span class="op">/</span>marky.pdf.md`: contains output of `pdf` <span class="bu">format</span> codes.</span>
+<span id="cb1-610"><a href="#cb1-610" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-611"><a href="#cb1-611" aria-hidden="true" tabindex="-1"></a>    <span class="op">**</span>Example Multi<span class="op">-</span>Column Text <span class="kw">in</span> `pdf` <span class="kw">and</span> `html`<span class="op">**</span></span>
+<span id="cb1-612"><a href="#cb1-612" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-613"><a href="#cb1-613" aria-hidden="true" tabindex="-1"></a>    Defnition of two <span class="bu">format</span> codes `mcol_begin` <span class="kw">and</span> `mcol_end`, one <span class="cf">for</span> the</span>
+<span id="cb1-614"><a href="#cb1-614" aria-hidden="true" tabindex="-1"></a>    begin of multi column <span class="kw">and</span> another <span class="cf">for</span> the end of the multi column</span>
+<span id="cb1-615"><a href="#cb1-615" aria-hidden="true" tabindex="-1"></a>    section. The <span class="bu">format</span> codes are appended <span class="cf">with</span> `_html` <span class="kw">and</span> `_pdf`</span>
+<span id="cb1-616"><a href="#cb1-616" aria-hidden="true" tabindex="-1"></a>    respectively.</span>
+<span id="cb1-617"><a href="#cb1-617" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-618"><a href="#cb1-618" aria-hidden="true" tabindex="-1"></a>    ```<span class="op">!</span></span>
+<span id="cb1-619"><a href="#cb1-619" aria-hidden="true" tabindex="-1"></a>        <span class="kw">def</span> mcol_begin_pdf(): <span class="cf">return</span> <span class="vs">r&quot;\begin</span><span class="sc">{multicols}{2}</span><span class="vs">&quot;</span></span>
+<span id="cb1-620"><a href="#cb1-620" aria-hidden="true" tabindex="-1"></a>        <span class="kw">def</span> mcol_end_pdf(): <span class="cf">return</span> <span class="vs">r&quot;\end</span><span class="sc">{multicols}</span><span class="vs">&quot;</span></span>
+<span id="cb1-621"><a href="#cb1-621" aria-hidden="true" tabindex="-1"></a>        <span class="kw">def</span> mcol_begin_html(): <span class="cf">return</span> <span class="vs">r&quot;&lt;div style=&#39;column-count: 2;&#39;&gt;&quot;</span></span>
+<span id="cb1-622"><a href="#cb1-622" aria-hidden="true" tabindex="-1"></a>        <span class="kw">def</span> mcol_end_html(): <span class="cf">return</span> <span class="vs">r&quot;&lt;/div&gt;&quot;</span></span>
+<span id="cb1-623"><a href="#cb1-623" aria-hidden="true" tabindex="-1"></a>    ```</span>
+<span id="cb1-624"><a href="#cb1-624" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-625"><a href="#cb1-625" aria-hidden="true" tabindex="-1"></a>    The `column<span class="op">-</span>count` CSS <span class="bu">property</span> requires Internet Explorer<span class="op">&gt;=</span><span class="dv">10</span>,</span>
+<span id="cb1-626"><a href="#cb1-626" aria-hidden="true" tabindex="-1"></a>    Firefox<span class="op">&gt;=</span><span class="dv">52</span>, Safari<span class="op">&gt;=</span><span class="dv">9</span>, Opera<span class="op">&gt;=</span><span class="dv">37</span> <span class="kw">or</span> Chrome<span class="op">&gt;=</span><span class="dv">50</span>, refer to</span>
+<span id="cb1-627"><a href="#cb1-627" aria-hidden="true" tabindex="-1"></a>    [w3schools](https:<span class="op">//</span>www.w3schools.com<span class="op">/</span>css<span class="op">/</span>css3_multiple_columns.asp).</span>
+<span id="cb1-628"><a href="#cb1-628" aria-hidden="true" tabindex="-1"></a>    In order to use the `multicol` <span class="op">*</span>tex<span class="op">*</span> package, the statement</span>
+<span id="cb1-629"><a href="#cb1-629" aria-hidden="true" tabindex="-1"></a>    `<span class="op">\</span>usepackage{multicol}` has to be included <span class="kw">in</span> the yaml meta data</span>
+<span id="cb1-630"><a href="#cb1-630" aria-hidden="true" tabindex="-1"></a>    <span class="kw">in</span> the front matter of the Markdown document.</span>
 <span id="cb1-631"><a href="#cb1-631" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-632"><a href="#cb1-632" aria-hidden="true" tabindex="-1"></a>    `?mcol_begin()`</span>
-<span id="cb1-633"><a href="#cb1-633" aria-hidden="true" tabindex="-1"></a>    Text Text Text Text Text Text Text Text Text Text Text Text Text Text</span>
-<span id="cb1-634"><a href="#cb1-634" aria-hidden="true" tabindex="-1"></a>    Text Text Text Text Text Text Text Text Text Text Text Text Text Text</span>
-<span id="cb1-635"><a href="#cb1-635" aria-hidden="true" tabindex="-1"></a>    Text Text Text Text Text Text Text Text Text Text Text Text Text Text</span>
-<span id="cb1-636"><a href="#cb1-636" aria-hidden="true" tabindex="-1"></a>    Text Text Text Text Text Text Text Text Text Text Text Text Text Text</span>
-<span id="cb1-637"><a href="#cb1-637" aria-hidden="true" tabindex="-1"></a>    Text Text Text Text Text Text Text Text Text Text Text Text Text Text</span>
-<span id="cb1-638"><a href="#cb1-638" aria-hidden="true" tabindex="-1"></a>    Text Text Text Text Text Text Text Text Text Text Text Text Text Text</span>
-<span id="cb1-639"><a href="#cb1-639" aria-hidden="true" tabindex="-1"></a>    Text Text Text Text Text Text Text Text Text Text Text Text Text Text</span>
-<span id="cb1-640"><a href="#cb1-640" aria-hidden="true" tabindex="-1"></a>    Text Text Text Text Text Text Text Text Text Text Text Text Text Text</span>
-<span id="cb1-641"><a href="#cb1-641" aria-hidden="true" tabindex="-1"></a>    Text Text Text Text Text Text Text Text Text Text Text Text Text Text</span>
-<span id="cb1-642"><a href="#cb1-642" aria-hidden="true" tabindex="-1"></a>    Text Text Text Text Text Text Text Text Text Text Text Text Text Text</span>
-<span id="cb1-643"><a href="#cb1-643" aria-hidden="true" tabindex="-1"></a>    Text Text Text Text Text Text Text Text Text Text Text Text Text Text</span>
-<span id="cb1-644"><a href="#cb1-644" aria-hidden="true" tabindex="-1"></a>    Text Text Text Text Text Text Text Text Text Text Text Text Text Text</span>
-<span id="cb1-645"><a href="#cb1-645" aria-hidden="true" tabindex="-1"></a>    Text Text Text Text Text Text Text Text Text Text Text Text Text Text</span>
-<span id="cb1-646"><a href="#cb1-646" aria-hidden="true" tabindex="-1"></a>    `?mcol_end()`</span>
-<span id="cb1-647"><a href="#cb1-647" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-648"><a href="#cb1-648" aria-hidden="true" tabindex="-1"></a>    <span class="op">---</span></span>
-<span id="cb1-649"><a href="#cb1-649" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-650"><a href="#cb1-650" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Include Statement</span></span>
-<span id="cb1-651"><a href="#cb1-651" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-652"><a href="#cb1-652" aria-hidden="true" tabindex="-1"></a>    `marky` allows to include other Markdown text using the `<span class="op">\!!!</span>` statement.</span>
-<span id="cb1-653"><a href="#cb1-653" aria-hidden="true" tabindex="-1"></a>    Please refer to the `marky` documentation <span class="cf">for</span> complete description</span>
-<span id="cb1-654"><a href="#cb1-654" aria-hidden="true" tabindex="-1"></a>    of the `<span class="op">\!!!</span>` statement. During rendering `marky` keeps track of</span>
-<span id="cb1-655"><a href="#cb1-655" aria-hidden="true" tabindex="-1"></a>    included files <span class="kw">and</span> creates Makefile rules <span class="cf">for</span> dependent make.</span>
-<span id="cb1-656"><a href="#cb1-656" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-657"><a href="#cb1-657" aria-hidden="true" tabindex="-1"></a>    ```md</span>
-<span id="cb1-658"><a href="#cb1-658" aria-hidden="true" tabindex="-1"></a>        <span class="op">!!!</span> <span class="bu">file</span>.mdi</span>
-<span id="cb1-659"><a href="#cb1-659" aria-hidden="true" tabindex="-1"></a>    ```</span>
-<span id="cb1-660"><a href="#cb1-660" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-661"><a href="#cb1-661" aria-hidden="true" tabindex="-1"></a>    <span class="op">---</span></span>
-<span id="cb1-662"><a href="#cb1-662" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-663"><a href="#cb1-663" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Meta Data</span></span>
-<span id="cb1-664"><a href="#cb1-664" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-665"><a href="#cb1-665" aria-hidden="true" tabindex="-1"></a>    `marky` supports document meta data <span class="kw">in</span> Markdown front matter.</span>
-<span id="cb1-666"><a href="#cb1-666" aria-hidden="true" tabindex="-1"></a>    This feature <span class="kw">is</span> <span class="kw">not</span> explained <span class="kw">in</span> the quickstart. Please refer</span>
-<span id="cb1-667"><a href="#cb1-667" aria-hidden="true" tabindex="-1"></a>    to the `marky` documentation <span class="cf">for</span> explanation.</span>
-<span id="cb1-668"><a href="#cb1-668" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-669"><a href="#cb1-669" aria-hidden="true" tabindex="-1"></a>    ```md</span>
-<span id="cb1-670"><a href="#cb1-670" aria-hidden="true" tabindex="-1"></a>        <span class="op">---</span></span>
-<span id="cb1-671"><a href="#cb1-671" aria-hidden="true" tabindex="-1"></a>        META_DATA</span>
-<span id="cb1-672"><a href="#cb1-672" aria-hidden="true" tabindex="-1"></a>        <span class="op">---</span></span>
-<span id="cb1-673"><a href="#cb1-673" aria-hidden="true" tabindex="-1"></a>        MARKDOWN</span>
-<span id="cb1-674"><a href="#cb1-674" aria-hidden="true" tabindex="-1"></a>    ```</span>
-<span id="cb1-675"><a href="#cb1-675" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-676"><a href="#cb1-676" aria-hidden="true" tabindex="-1"></a>    <span class="op">---</span></span>
-<span id="cb1-677"><a href="#cb1-677" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-678"><a href="#cb1-678" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Escape Markup</span></span>
-<span id="cb1-679"><a href="#cb1-679" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-680"><a href="#cb1-680" aria-hidden="true" tabindex="-1"></a>    The `marky` markup can be escaped. When markup <span class="kw">is</span> escaped</span>
-<span id="cb1-681"><a href="#cb1-681" aria-hidden="true" tabindex="-1"></a>    `marky` removes the escape sequence <span class="kw">and</span> prints out the</span>
-<span id="cb1-682"><a href="#cb1-682" aria-hidden="true" tabindex="-1"></a>    unescaped statement.</span>
-<span id="cb1-683"><a href="#cb1-683" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-684"><a href="#cb1-684" aria-hidden="true" tabindex="-1"></a>    Markup           <span class="op">|</span>Escape Sequence</span>
-<span id="cb1-685"><a href="#cb1-685" aria-hidden="true" tabindex="-1"></a>    <span class="op">-----------------|---------------</span></span>
-<span id="cb1-686"><a href="#cb1-686" aria-hidden="true" tabindex="-1"></a>    code block hidden<span class="op">|</span>`` ```<span class="op">\!!</span> ``</span>
-<span id="cb1-687"><a href="#cb1-687" aria-hidden="true" tabindex="-1"></a>    code block shown <span class="op">|</span>`` ```<span class="op">\!</span> ``</span>
-<span id="cb1-688"><a href="#cb1-688" aria-hidden="true" tabindex="-1"></a>    inline code      <span class="op">|</span>`` `<span class="op">\!</span>...` ``</span>
-<span id="cb1-689"><a href="#cb1-689" aria-hidden="true" tabindex="-1"></a>    <span class="bu">format</span> code      <span class="op">|</span>`` `<span class="op">\</span>?...` ``</span>
-<span id="cb1-690"><a href="#cb1-690" aria-hidden="true" tabindex="-1"></a>    include statement<span class="op">|</span>`<span class="op">\!!!</span>`</span>
-<span id="cb1-691"><a href="#cb1-691" aria-hidden="true" tabindex="-1"></a>    <span class="bu">format</span> link      <span class="op">|</span>`.???`</span>
-<span id="cb1-692"><a href="#cb1-692" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-693"><a href="#cb1-693" aria-hidden="true" tabindex="-1"></a>    <span class="op">---</span></span>
-<span id="cb1-694"><a href="#cb1-694" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-695"><a href="#cb1-695" aria-hidden="true" tabindex="-1"></a>    <span class="op">*</span>Thanks <span class="cf">for</span> reading, please <span class="cf">try</span> `marky`.<span class="op">*</span></span>
-<span id="cb1-696"><a href="#cb1-696" aria-hidden="true" tabindex="-1"></a>    </span></code></pre></div>
+<span id="cb1-632"><a href="#cb1-632" aria-hidden="true" tabindex="-1"></a>    `?mcol_begin()`Text Text Text Text Text Text Text Text Text Text</span>
+<span id="cb1-633"><a href="#cb1-633" aria-hidden="true" tabindex="-1"></a>    Text Text Text Text Text Text Text Text Text Text Text Text Text</span>
+<span id="cb1-634"><a href="#cb1-634" aria-hidden="true" tabindex="-1"></a>    Text Text Text Text Text Text Text Text Text Text Text Text Text</span>
+<span id="cb1-635"><a href="#cb1-635" aria-hidden="true" tabindex="-1"></a>    Text Text Text Text Text Text Text Text Text Text Text Text Text</span>
+<span id="cb1-636"><a href="#cb1-636" aria-hidden="true" tabindex="-1"></a>    Text Text Text Text Text Text Text Text Text Text Text Text Text</span>
+<span id="cb1-637"><a href="#cb1-637" aria-hidden="true" tabindex="-1"></a>    Text Text Text Text Text Text Text Text Text Text Text Text Text</span>
+<span id="cb1-638"><a href="#cb1-638" aria-hidden="true" tabindex="-1"></a>    Text Text Text Text Text Text Text Text Text Text Text Text Text</span>
+<span id="cb1-639"><a href="#cb1-639" aria-hidden="true" tabindex="-1"></a>    Text Text Text Text Text Text Text Text Text Text Text Text Text</span>
+<span id="cb1-640"><a href="#cb1-640" aria-hidden="true" tabindex="-1"></a>    Text Text Text Text Text Text Text Text Text Text Text Text Text</span>
+<span id="cb1-641"><a href="#cb1-641" aria-hidden="true" tabindex="-1"></a>    Text Text Text Text Text Text Text Text Text Text Text Text Text</span>
+<span id="cb1-642"><a href="#cb1-642" aria-hidden="true" tabindex="-1"></a>    Text Text Text Text Text Text Text Text Text Text Text Text Text</span>
+<span id="cb1-643"><a href="#cb1-643" aria-hidden="true" tabindex="-1"></a>    Text Text Text Text Text Text Text Text Text Text Text Text Text</span>
+<span id="cb1-644"><a href="#cb1-644" aria-hidden="true" tabindex="-1"></a>    Text Text Text Text Text Text Text Text Text Text Text Text Text</span>
+<span id="cb1-645"><a href="#cb1-645" aria-hidden="true" tabindex="-1"></a>    `?mcol_end()`</span>
+<span id="cb1-646"><a href="#cb1-646" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-647"><a href="#cb1-647" aria-hidden="true" tabindex="-1"></a>    <span class="op">---</span></span>
+<span id="cb1-648"><a href="#cb1-648" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-649"><a href="#cb1-649" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Include Statement</span></span>
+<span id="cb1-650"><a href="#cb1-650" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-651"><a href="#cb1-651" aria-hidden="true" tabindex="-1"></a>    `marky` allows to include other Markdown text using the `<span class="op">\!!!</span>` statement.</span>
+<span id="cb1-652"><a href="#cb1-652" aria-hidden="true" tabindex="-1"></a>    Please refer to the `marky` documentation <span class="cf">for</span> complete description</span>
+<span id="cb1-653"><a href="#cb1-653" aria-hidden="true" tabindex="-1"></a>    of the `<span class="op">\!!!</span>` statement. During rendering `marky` keeps track of</span>
+<span id="cb1-654"><a href="#cb1-654" aria-hidden="true" tabindex="-1"></a>    included files <span class="kw">and</span> creates Makefile rules <span class="cf">for</span> dependent make.</span>
+<span id="cb1-655"><a href="#cb1-655" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-656"><a href="#cb1-656" aria-hidden="true" tabindex="-1"></a>    ```md</span>
+<span id="cb1-657"><a href="#cb1-657" aria-hidden="true" tabindex="-1"></a>        <span class="op">!!!</span> <span class="bu">file</span>.mdi</span>
+<span id="cb1-658"><a href="#cb1-658" aria-hidden="true" tabindex="-1"></a>    ```</span>
+<span id="cb1-659"><a href="#cb1-659" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-660"><a href="#cb1-660" aria-hidden="true" tabindex="-1"></a>    <span class="op">---</span></span>
+<span id="cb1-661"><a href="#cb1-661" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-662"><a href="#cb1-662" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Meta Data</span></span>
+<span id="cb1-663"><a href="#cb1-663" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-664"><a href="#cb1-664" aria-hidden="true" tabindex="-1"></a>    `marky` supports document meta data <span class="kw">in</span> Markdown front matter.</span>
+<span id="cb1-665"><a href="#cb1-665" aria-hidden="true" tabindex="-1"></a>    This feature <span class="kw">is</span> <span class="kw">not</span> explained <span class="kw">in</span> the quickstart. Please refer</span>
+<span id="cb1-666"><a href="#cb1-666" aria-hidden="true" tabindex="-1"></a>    to the `marky` documentation <span class="cf">for</span> explanation.</span>
+<span id="cb1-667"><a href="#cb1-667" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-668"><a href="#cb1-668" aria-hidden="true" tabindex="-1"></a>    ```md</span>
+<span id="cb1-669"><a href="#cb1-669" aria-hidden="true" tabindex="-1"></a>        <span class="op">---</span></span>
+<span id="cb1-670"><a href="#cb1-670" aria-hidden="true" tabindex="-1"></a>        META_DATA</span>
+<span id="cb1-671"><a href="#cb1-671" aria-hidden="true" tabindex="-1"></a>        <span class="op">---</span></span>
+<span id="cb1-672"><a href="#cb1-672" aria-hidden="true" tabindex="-1"></a>        MARKDOWN</span>
+<span id="cb1-673"><a href="#cb1-673" aria-hidden="true" tabindex="-1"></a>    ```</span>
+<span id="cb1-674"><a href="#cb1-674" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-675"><a href="#cb1-675" aria-hidden="true" tabindex="-1"></a>    <span class="op">---</span></span>
+<span id="cb1-676"><a href="#cb1-676" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-677"><a href="#cb1-677" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Escape Markup</span></span>
+<span id="cb1-678"><a href="#cb1-678" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-679"><a href="#cb1-679" aria-hidden="true" tabindex="-1"></a>    The `marky` markup can be escaped. When markup <span class="kw">is</span> escaped</span>
+<span id="cb1-680"><a href="#cb1-680" aria-hidden="true" tabindex="-1"></a>    `marky` removes the escape sequence <span class="kw">and</span> prints out the</span>
+<span id="cb1-681"><a href="#cb1-681" aria-hidden="true" tabindex="-1"></a>    unescaped statement.</span>
+<span id="cb1-682"><a href="#cb1-682" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-683"><a href="#cb1-683" aria-hidden="true" tabindex="-1"></a>    Markup           <span class="op">|</span>Escape Sequence</span>
+<span id="cb1-684"><a href="#cb1-684" aria-hidden="true" tabindex="-1"></a>    <span class="op">-----------------|---------------</span></span>
+<span id="cb1-685"><a href="#cb1-685" aria-hidden="true" tabindex="-1"></a>    code block hidden<span class="op">|</span>`` ```<span class="op">\\!!</span> ``</span>
+<span id="cb1-686"><a href="#cb1-686" aria-hidden="true" tabindex="-1"></a>    code block shown <span class="op">|</span>`` ```<span class="op">\\!</span> ``</span>
+<span id="cb1-687"><a href="#cb1-687" aria-hidden="true" tabindex="-1"></a>    inline code      <span class="op">|</span>`` `<span class="op">\\!</span>...` ``</span>
+<span id="cb1-688"><a href="#cb1-688" aria-hidden="true" tabindex="-1"></a>    <span class="bu">format</span> code      <span class="op">|</span>`` `<span class="op">\\</span>?...` ``</span>
+<span id="cb1-689"><a href="#cb1-689" aria-hidden="true" tabindex="-1"></a>    include statement<span class="op">|</span>`<span class="op">\\!!!</span>`</span>
+<span id="cb1-690"><a href="#cb1-690" aria-hidden="true" tabindex="-1"></a>    <span class="bu">format</span> link      <span class="op">|</span>`.<span class="op">\</span>???`</span>
+<span id="cb1-691"><a href="#cb1-691" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-692"><a href="#cb1-692" aria-hidden="true" tabindex="-1"></a>    <span class="op">---</span></span>
+<span id="cb1-693"><a href="#cb1-693" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-694"><a href="#cb1-694" aria-hidden="true" tabindex="-1"></a>    <span class="op">*</span>Thanks <span class="cf">for</span> reading, please <span class="cf">try</span> `marky`.<span class="op">*</span></span>
+<span id="cb1-695"><a href="#cb1-695" aria-hidden="true" tabindex="-1"></a>    </span></code></pre></div>
 </body>
 </html>
