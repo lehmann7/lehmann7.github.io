@@ -227,7 +227,7 @@
 <li><a href="#install-and-run-marky"><span class="toc-section-number">4</span> Install and Run <code>marky</code></a></li>
 <li><a href="#write-a-new-document"><span class="toc-section-number">5</span> Write A New Document</a></li>
 <li><a href="#code-blocks"><span class="toc-section-number">6</span> Code Blocks</a></li>
-<li><a href="#inline-expressions"><span class="toc-section-number">7</span> Inline Expressions</a></li>
+<li><a href="#inline-code"><span class="toc-section-number">7</span> Inline Code</a></li>
 <li><a href="#generate-markdown-text"><span class="toc-section-number">8</span> Generate Markdown Text</a>
 <ul>
 <li><a href="#the-_-function"><span class="toc-section-number">8.1</span> The <code>_()</code> Function</a></li>
@@ -235,6 +235,7 @@
 </ul></li>
 <li><a href="#format-dependent-links"><span class="toc-section-number">9</span> Format Dependent Links</a></li>
 <li><a href="#format-dependent-code"><span class="toc-section-number">10</span> Format Dependent Code</a></li>
+<li><a href="#include-statement"><span class="toc-section-number">11</span> Include Statement</a></li>
 </ul>
 </nav>
 <hr />
@@ -524,8 +525,8 @@
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>    sys.path.append(<span class="st">&quot;.&quot;</span>)</span>
 <span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>    <span class="co">#import module_in_working_directory</span></span></code></pre></div>
 <hr />
-<h1 data-number="7" id="inline-expressions"><span class="header-section-number">7</span> Inline Expressions</h1>
-<p>Inline statements are directly embedded into the text flow using expressions and variables with the corresponding syntax <code>`!EXPRESSION`</code> or <code>`!VARIABLE`</code>. The output of variables can be formatted using the <code>`!VARIABLE[:FORMAT]`</code> statement according to the python operator <code>{&lt;variable&gt;[:&lt;format&gt;]}</code> implemented in the <a href="https://docs.python.org/3/library/string.html#formatstrings"><code>str.format()</code></a> specification.</p>
+<h1 data-number="7" id="inline-code"><span class="header-section-number">7</span> Inline Code</h1>
+<p>Inline statements are directly embedded into the text flow using expressions and variables with the corresponding syntax <code>`!EXPRESSION`</code> or <code>`!VARIABLE`</code>. The output of variables can be formatted using the <code>`!VARIABLE[:FORMAT]`</code> statement according to the python operator <code>{&lt;variable&gt;[:&lt;format&gt;]}</code> implemented in the <a href="https://docs.python.org/3/library/string.html#formatstrings"><code>str.format()</code></a> specification and in <a href="https://docs.python.org/3/reference/lexical_analysis.html#f-strings"><code>f</code>-strings</a>.</p>
 <p><strong>Inline Formatted Output</strong></p>
 <p>The result of <span class="math inline">\(\sqrt{2}\)</span> is:</p>
 <ul>
@@ -809,6 +810,10 @@
 <div style="column-count: 2;">
 <p>Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text</p>
 </div>
+<hr />
+<h1 data-number="11" id="include-statement"><span class="header-section-number">11</span> Include Statement</h1>
+<p><code>marky</code> allows to include other Markdown text using the <code>!!!</code> statement. Please refer to the <code>marky</code> documentation for complete description of the <code>!!!</code> statement. During rendering <code>marky</code> keeps track of included files and creates Makefile rules for dependent make.</p>
+<div class="sourceCode" id="cb24"><pre class="sourceCode md"><code class="sourceCode markdown"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="in">    !!! file.mdi</span></span></code></pre></div>
 <hr />
 <p><em>Thanks for reading, please try <code>marky</code>.</em></p>
 </body>
