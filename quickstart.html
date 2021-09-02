@@ -4,7 +4,6 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <meta name="author" content="Henry Lehmann" />
   <title>marky Quickstart</title>
   <style>
     html {
@@ -216,8 +215,6 @@
 <body>
 <header id="title-block-header">
 <h1 class="title"><code>marky</code> Quickstart</h1>
-<p class="author">Henry Lehmann</p>
-<p class="date">1. August 2021</p>
 </header>
 <nav id="TOC" role="doc-toc">
 <ul>
@@ -242,11 +239,11 @@
 </nav>
 <hr />
 <blockquote>
-<p><strong>Abstract</strong> – This is a <code>marky</code> quickstart document for illustrating <code>marky</code> markup using simple examples. The <code>marky</code> source code of this document can be read <a href="quicksource.html">here</a>. For documentation and download please refer to the <a href="https://github.com/lehmann7/marky"><code>marky</code> repository</a>.</p>
+<p><strong>Abstract</strong> – This is a <code>marky</code> quickstart document for illustrating <code>marky</code> markup using simple examples. The <code>marky</code> source code of this document can be read <a href="quick-src.html">here</a>. For documentation and download please refer to the <a href="https://github.com/lehmann7/marky"><code>marky</code> repository</a>.</p>
 </blockquote>
 <hr />
 <h1 data-number="1" id="introduction"><span class="header-section-number">1</span> Introduction</h1>
-<p>This is a <code>marky</code> quickstart document for illustrating <code>marky</code> markup using simple examples. This document is the rendered version of the source code presented <a href="quicksource.html">here</a>. The <code>marky</code> markup is compatible with standard Markdown and can be read as-is. This document represents the output of <code>marky</code> after processing python code, which is embedded into the document itself. In order to understand the examples and see the complete <code>marky</code> syntax, the source code of this file can be read <a href="quicksource.html">here</a>. The complete documentation of <code>marky</code> is available <a href="marky.html">here</a></p>
+<p>This is a <code>marky</code> quickstart document for illustrating <code>marky</code> markup using simple examples. This document is the rendered version of the source code presented <a href="quick-src.html">here</a>. The <code>marky</code> markup is compatible with standard Markdown and can be read as-is. This document represents the output of <code>marky</code> after processing python code, which is embedded into the document itself. In order to understand the examples and see the complete <code>marky</code> syntax, the source code of this file can be read <a href="quick-src.html">here</a>. The complete documentation of <code>marky</code> is available <a href="marky.html">here</a></p>
 <hr />
 <h1 data-number="2" id="markdown"><span class="header-section-number">2</span> Markdown</h1>
 <p><code>marky</code> is a Markdown preprocessor allowing to transform Markdown text using python. The preprocessed Markdown text is rendered to <code>pdf</code> and <code>html</code> (other formats using <code>pandoc</code>). <code>pandoc</code> has a powerful set of Markdown extensions supporting structured writing as well as bibliography, figure referencing, table referencing, tex-style equations with referencing etc. (refer to Scientific Writing in Markdown, <a href="marky.html"><code>marky</code> Documentation</a>).</p>
@@ -326,11 +323,11 @@
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="ex">./marky.py</span> <span class="at">--init</span></span>
 <span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="ex">WRITE</span> ./md/marky.md</span>
 <span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="ex">WRITE</span> ./md/marky.mdi</span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="ex">WRITE</span> ./md/markysource.md</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="ex">WRITE</span> ./md/marky-src.md</span>
 <span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="ex">WRITE</span> ./md/quickstart.md</span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="ex">WRITE</span> ./md/quicksource.md</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="ex">WRITE</span> ./md/quick-src.md</span>
 <span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="ex">WRITE</span> ./md/example.md</span>
-<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a><span class="ex">WRITE</span> ./md/examplesource.md</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a><span class="ex">WRITE</span> ./md/example-src.md</span>
 <span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="ex">WRITE</span> ./data/marky.bib</span>
 <span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a><span class="ex">USAGE</span></span>
 <span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a><span class="ex">1.</span> <span class="kw">`</span><span class="fu">make</span> help<span class="kw">`</span></span>
@@ -411,7 +408,7 @@
 <span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a><span class="at">    </span></span>
 <span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a><span class="at">    &gt; **Abstract** -- This is a `marky` example document for</span></span>
 <span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a><span class="at">    &gt; illustrating `marky` markup. The `marky` source code of this</span></span>
-<span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a><span class="at">    &gt; document can be read [here](examplesource.html).</span></span>
+<span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a><span class="at">    &gt; document can be read [here](example-src.html).</span></span>
 <span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a><span class="at">    &gt; For documentation and download please refer to the</span></span>
 <span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a><span class="at">    &gt; [`marky` repository](https://github.com/lehmann7/marky).</span></span>
 <span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a><span class="at">    </span></span>
@@ -826,39 +823,47 @@
 <p>The <code>marky</code> markup can be escaped. When markup is escaped <code>marky</code> removes the escape sequence and prints out the unescaped statement.</p>
 <table>
 <colgroup>
-<col style="width: 53%" />
-<col style="width: 46%" />
+<col style="width: 34%" />
+<col style="width: 30%" />
+<col style="width: 34%" />
 </colgroup>
 <thead>
 <tr class="header">
 <th>Markup</th>
 <th>Escape Sequence</th>
+<th>Unsecaped Sequence</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td>code block hidden</td>
 <td><code>```\!!</code></td>
+<td><code>```!!</code></td>
 </tr>
 <tr class="even">
 <td>code block shown</td>
 <td><code>```\!</code></td>
+<td><code>```!</code></td>
 </tr>
 <tr class="odd">
 <td>inline code</td>
 <td><code>`\!...`</code></td>
+<td><code>`!...`</code></td>
 </tr>
 <tr class="even">
 <td>format code</td>
 <td><code>`\?...`</code></td>
+<td><code>`?...`</code></td>
 </tr>
 <tr class="odd">
 <td>include statement</td>
 <td><code>\!!!</code></td>
+<td><code>!!!</code></td>
 </tr>
 <tr class="even">
 <td>format link</td>
 <td><code>.\???</code></td>
+<td><code>.???</code></td>
 </tr>
 </tbody>
 </table>
