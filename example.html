@@ -298,13 +298,9 @@
 <p>This is a reference to Eq. <a href="#eq:label">1</a>.</p>
 <p>This is a citation <span class="citation" data-cites="Muller1993">(<a href="#ref-Muller1993" role="doc-biblioref">Muller 1993</a>)</span>.</p>
 <h1 data-number="2" id="marky-markup"><span class="header-section-number">2</span> <code>marky</code> Markup</h1>
-<p><strong>Hidden Code, Executed</strong></p>
 <p><strong>Displayed Code, Executed</strong></p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> list_and(l):</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="st">&quot;, &quot;</span>.join(<span class="bu">str</span>(i) <span class="cf">for</span> i <span class="kw">in</span> l[:<span class="op">-</span><span class="dv">1</span>]) <span class="op">+</span> <span class="st">&quot; and &quot;</span> <span class="op">+</span> <span class="bu">str</span>(l[<span class="op">-</span><span class="dv">1</span>])</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    x <span class="op">=</span> <span class="dv">2</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    y <span class="op">=</span> math.sqrt(x)</span></code></pre></div>
+<p><strong>Hidden Code, Executed</strong></p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">&quot;Hello Console!&quot;</span>)</span></code></pre></div>
 <p><strong>Displayed Code, Not Executed</strong></p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>    x <span class="op">=</span> <span class="dv">3</span></span></code></pre></div>
 <p><strong>Inline Formatted Output</strong></p>
@@ -320,8 +316,6 @@
 </ul>
 <p><a href="example.html">Link to this document</a></p>
 <p><strong>Format Codes</strong></p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> FMTCODE_html(): <span class="cf">return</span> <span class="st">&quot;H&lt;sup&gt;T&lt;/sup&gt;&lt;sub&gt;M&lt;/sub&gt;L&quot;</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> FMTCODE_pdf(): <span class="cf">return</span> <span class="st">&quot;\LaTeX&quot;</span></span></code></pre></div>
 <p>This is a <code>.html</code> document and the format code returns: H<sup>T</sup><sub>M</sub>L.</p>
 <h1 class="unnumbered" id="references">References</h1>
 <div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
