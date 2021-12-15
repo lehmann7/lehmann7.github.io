@@ -22,7 +22,7 @@
       padding-top: 50px;
       padding-bottom: 50px;
       hyphens: auto;
-      word-wrap: break-word;
+      overflow-wrap: break-word;
       text-rendering: optimizeLegibility;
       font-kerning: normal;
     }
@@ -93,6 +93,7 @@
     pre code {
       padding: 0;
       overflow: visible;
+      overflow-wrap: normal;
     }
     .sourceCode {
      background-color: transparent;
@@ -252,7 +253,6 @@
 <li><a href="#references">References</a></li>
 </ul>
 </nav>
-<hr />
 <blockquote>
 <p><strong>Abstract</strong> – This is a <code>marky</code> example document for illustrating <code>marky</code> markup. The <code>marky</code> source code of this document can be read <a href="example-src.html">here</a>. For more information please refer to the <a href="https://github.com/lehmann7/marky"><code>marky</code> repository</a>, <a href="marky.html"><code>marky</code> documentation</a> or the <a href="quickstart.html"><code>marky</code> quickstart</a>.</p>
 </blockquote>
@@ -328,7 +328,7 @@
 <p><strong>Format Codes</strong></p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> html_FMTCODE(): <span class="cf">return</span> <span class="st">&quot;H&lt;sup&gt;T&lt;/sup&gt;&lt;sub&gt;M&lt;/sub&gt;L&quot;</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> pdf_FMTCODE(): <span class="cf">return</span> <span class="st">&quot;\LaTeX&quot;</span></span></code></pre></div>
-<p>This is a H<sup>T</sup><sub>M</sub>L document.</p>
+<p>This is a <code>?_FMTCODE()</code> document.</p>
 <hr />
 <p><em>Thanks for reading, please try <code>marky</code>.</em></p>
 <hr />

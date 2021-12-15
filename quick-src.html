@@ -23,7 +23,7 @@
       padding-top: 50px;
       padding-bottom: 50px;
       hyphens: auto;
-      word-wrap: break-word;
+      overflow-wrap: break-word;
       text-rendering: optimizeLegibility;
       font-kerning: normal;
     }
@@ -94,6 +94,7 @@
     pre code {
       padding: 0;
       overflow: visible;
+      overflow-wrap: normal;
     }
     .sourceCode {
      background-color: transparent;
@@ -228,7 +229,7 @@
 <div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>    <span class="op">---</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    title: <span class="st">&quot;`marky` Quickstart&quot;</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    author: lehmann7</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    date: <span class="dv">2021</span><span class="op">-</span><span class="dv">09</span><span class="op">-</span><span class="dv">09</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    date: <span class="dv">2021</span><span class="op">-</span><span class="dv">0</span><span class="er">9</span><span class="op">-</span><span class="dv">0</span><span class="er">9</span></span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    header<span class="op">-</span>includes<span class="op">--</span>pdf:</span>
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>       <span class="op">\</span>usepackage{multicol}</span>
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>       <span class="op">\</span>hypersetup{colorlinks<span class="op">=</span>false,</span>
@@ -238,7 +239,7 @@
 <span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>       <span class="op">&lt;</span>style<span class="op">&gt;*</span> { box<span class="op">-</span>sizing: border<span class="op">-</span>box<span class="op">;</span> }<span class="op">&lt;/</span>style<span class="op">&gt;</span></span>
 <span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>    xnos<span class="op">-</span>cleveref: true</span>
 <span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>    xnos<span class="op">-</span>capitalise: true</span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>    fontsize: <span class="dv">11</span>pt</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>    fontsize: <span class="dv">11</span><span class="er">pt</span></span>
 <span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>    </span>
 <span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>    <span class="op">---</span></span>
 <span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>    </span>
@@ -578,11 +579,11 @@
 <span id="cb1-351"><a href="#cb1-351" aria-hidden="true" tabindex="-1"></a>    </span>
 <span id="cb1-352"><a href="#cb1-352" aria-hidden="true" tabindex="-1"></a>    The variable $x$ <span class="kw">is</span></span>
 <span id="cb1-353"><a href="#cb1-353" aria-hidden="true" tabindex="-1"></a>    <span class="op">*</span> unformatted output: `<span class="op">!</span> x`</span>
-<span id="cb1-354"><a href="#cb1-354" aria-hidden="true" tabindex="-1"></a>    <span class="op">*</span> formatted output: `<span class="op">!</span> x:<span class="fl">.4</span>f`</span>
+<span id="cb1-354"><a href="#cb1-354" aria-hidden="true" tabindex="-1"></a>    <span class="op">*</span> formatted output: `<span class="op">!</span> x:<span class="fl">.4</span><span class="er">f</span>`</span>
 <span id="cb1-355"><a href="#cb1-355" aria-hidden="true" tabindex="-1"></a>    </span>
 <span id="cb1-356"><a href="#cb1-356" aria-hidden="true" tabindex="-1"></a>    The variable $y<span class="op">=</span>x<span class="op">+</span><span class="dv">1</span>$ <span class="kw">is</span></span>
 <span id="cb1-357"><a href="#cb1-357" aria-hidden="true" tabindex="-1"></a>    <span class="op">*</span> unformatted output: `<span class="op">!</span> y`</span>
-<span id="cb1-358"><a href="#cb1-358" aria-hidden="true" tabindex="-1"></a>    <span class="op">*</span> formatted output: `<span class="op">!</span> y:<span class="fl">.4</span>f`</span>
+<span id="cb1-358"><a href="#cb1-358" aria-hidden="true" tabindex="-1"></a>    <span class="op">*</span> formatted output: `<span class="op">!</span> y:<span class="fl">.4</span><span class="er">f</span>`</span>
 <span id="cb1-359"><a href="#cb1-359" aria-hidden="true" tabindex="-1"></a>    </span>
 <span id="cb1-360"><a href="#cb1-360" aria-hidden="true" tabindex="-1"></a>    (The code block <span class="cf">for</span> the definition of $y$ <span class="kw">is</span> hidden.)</span>
 <span id="cb1-361"><a href="#cb1-361" aria-hidden="true" tabindex="-1"></a>    </span>
@@ -726,10 +727,10 @@
 <span id="cb1-499"><a href="#cb1-499" aria-hidden="true" tabindex="-1"></a>        p <span class="op">=</span> [random.random() <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">3</span>)]</span>
 <span id="cb1-500"><a href="#cb1-500" aria-hidden="true" tabindex="-1"></a>    </span>
 <span id="cb1-501"><a href="#cb1-501" aria-hidden="true" tabindex="-1"></a>        __(<span class="ss">f&quot;&quot;&quot;</span></span>
-<span id="cb1-502"><a href="#cb1-502" aria-hidden="true" tabindex="-1"></a><span class="ss">            Parameter one is </span><span class="sc">{p</span>[<span class="dv">0</span>]<span class="sc">:.3f}</span><span class="ss"> and the value depends on the seed</span></span>
+<span id="cb1-502"><a href="#cb1-502" aria-hidden="true" tabindex="-1"></a><span class="ss">            Parameter one is </span><span class="sc">{</span>p[<span class="dv">0</span>]<span class="sc">:.3f}</span><span class="ss"> and the value depends on the seed</span></span>
 <span id="cb1-503"><a href="#cb1-503" aria-hidden="true" tabindex="-1"></a><span class="ss">            of the pseudo random number generator, which was chosen</span></span>
-<span id="cb1-504"><a href="#cb1-504" aria-hidden="true" tabindex="-1"></a><span class="ss">            to be </span><span class="sc">{s}</span><span class="ss">. For the same seed always the same random numbers</span></span>
-<span id="cb1-505"><a href="#cb1-505" aria-hidden="true" tabindex="-1"></a><span class="ss">            are created. The next two numbers are </span><span class="sc">{p</span>[<span class="dv">1</span>]<span class="sc">:.3f}</span><span class="ss"> and </span><span class="sc">{p</span>[<span class="dv">2</span>]<span class="sc">:.3f}</span><span class="ss">.</span></span>
+<span id="cb1-504"><a href="#cb1-504" aria-hidden="true" tabindex="-1"></a><span class="ss">            to be </span><span class="sc">{</span>s<span class="sc">}</span><span class="ss">. For the same seed always the same random numbers</span></span>
+<span id="cb1-505"><a href="#cb1-505" aria-hidden="true" tabindex="-1"></a><span class="ss">            are created. The next two numbers are </span><span class="sc">{</span>p[<span class="dv">1</span>]<span class="sc">:.3f}</span><span class="ss"> and </span><span class="sc">{</span>p[<span class="dv">2</span>]<span class="sc">:.3f}</span><span class="ss">.</span></span>
 <span id="cb1-506"><a href="#cb1-506" aria-hidden="true" tabindex="-1"></a><span class="ss">            The sum of the three numbers is </span><span class="sc">{</span><span class="bu">sum</span>(p)<span class="sc">:.3f}</span><span class="ss"> and it is</span></span>
 <span id="cb1-507"><a href="#cb1-507" aria-hidden="true" tabindex="-1"></a><span class="ss">            </span><span class="sc">{</span><span class="st">&#39;greater&#39;</span> <span class="cf">if</span> <span class="bu">sum</span>(p) <span class="op">&gt;</span> <span class="fl">2.</span> <span class="cf">else</span> <span class="st">&#39;lesser or equal&#39;</span><span class="sc">}</span><span class="ss"> than two.</span></span>
 <span id="cb1-508"><a href="#cb1-508" aria-hidden="true" tabindex="-1"></a><span class="ss">        &quot;&quot;&quot;</span>)</span>
@@ -828,39 +829,39 @@
 <span id="cb1-601"><a href="#cb1-601" aria-hidden="true" tabindex="-1"></a>    rendered into `html` <span class="kw">and</span> `pdf`, <span class="im">as</span> well <span class="im">as</span> <span class="bu">format</span> specific codes</span>
 <span id="cb1-602"><a href="#cb1-602" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> tweaking <span class="kw">or</span> polishing `html` <span class="kw">and</span> `pdf` output.</span>
 <span id="cb1-603"><a href="#cb1-603" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-604"><a href="#cb1-604" aria-hidden="true" tabindex="-1"></a>    Format codes are specified <span class="kw">in</span> code blocks <span class="kw">and</span> called using the</span>
-<span id="cb1-605"><a href="#cb1-605" aria-hidden="true" tabindex="-1"></a>    inline syntax `` `<span class="op">\</span>?FUNCALL(ARGS)` `` <span class="kw">or</span> `` `<span class="op">\</span>?VARIABLE(ARGS)` ``,</span>
-<span id="cb1-606"><a href="#cb1-606" aria-hidden="true" tabindex="-1"></a>    which <span class="kw">is</span> translated into the following pyhon function calls.</span>
-<span id="cb1-607"><a href="#cb1-607" aria-hidden="true" tabindex="-1"></a>    <span class="fl">1.</span> `htmlFMTCODE(ARGS)`: called when linked <span class="cf">for</span> `html`.</span>
-<span id="cb1-608"><a href="#cb1-608" aria-hidden="true" tabindex="-1"></a>    <span class="fl">2.</span> `pdfFMTCODE(ARGS)`: called when linked <span class="cf">for</span> `pdf`.</span>
-<span id="cb1-609"><a href="#cb1-609" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-610"><a href="#cb1-610" aria-hidden="true" tabindex="-1"></a>    Assuming preprocessing the <span class="bu">file</span> `md<span class="op">/</span>marky.md`, linking <span class="bu">format</span> codes</span>
-<span id="cb1-611"><a href="#cb1-611" aria-hidden="true" tabindex="-1"></a>    results <span class="kw">in</span> the two following output files.</span>
-<span id="cb1-612"><a href="#cb1-612" aria-hidden="true" tabindex="-1"></a>    <span class="fl">1.</span> `build<span class="op">/</span>marky.html.md`: contains output of `html` <span class="bu">format</span> codes.</span>
-<span id="cb1-613"><a href="#cb1-613" aria-hidden="true" tabindex="-1"></a>    <span class="fl">2.</span> `build<span class="op">/</span>marky.pdf.md`: contains output of `pdf` <span class="bu">format</span> codes.</span>
-<span id="cb1-614"><a href="#cb1-614" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-615"><a href="#cb1-615" aria-hidden="true" tabindex="-1"></a>    <span class="op">**</span>Example <span class="dv">1</span>: Multi<span class="op">-</span>Column Text <span class="kw">in</span> `pdf` <span class="kw">and</span> `html`<span class="op">**</span></span>
-<span id="cb1-616"><a href="#cb1-616" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-617"><a href="#cb1-617" aria-hidden="true" tabindex="-1"></a>    Defnition of two <span class="bu">format</span> codes `mcol_begin` <span class="kw">and</span> `mcol_end`, one <span class="cf">for</span> the</span>
-<span id="cb1-618"><a href="#cb1-618" aria-hidden="true" tabindex="-1"></a>    begin of multi column <span class="kw">and</span> another <span class="cf">for</span> the end of the multi column</span>
-<span id="cb1-619"><a href="#cb1-619" aria-hidden="true" tabindex="-1"></a>    section. The <span class="bu">format</span> codes are appended <span class="cf">with</span> `_html` <span class="kw">and</span> `_pdf`</span>
-<span id="cb1-620"><a href="#cb1-620" aria-hidden="true" tabindex="-1"></a>    respectively.</span>
-<span id="cb1-621"><a href="#cb1-621" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-622"><a href="#cb1-622" aria-hidden="true" tabindex="-1"></a>    ```<span class="op">!</span></span>
-<span id="cb1-623"><a href="#cb1-623" aria-hidden="true" tabindex="-1"></a>        <span class="kw">def</span> pdf_mcol_begin(): <span class="cf">return</span> <span class="vs">r&quot;\begin</span><span class="sc">{multicols}{2}</span><span class="vs">&quot;</span></span>
-<span id="cb1-624"><a href="#cb1-624" aria-hidden="true" tabindex="-1"></a>        <span class="kw">def</span> pdf_mcol_end(): <span class="cf">return</span> <span class="vs">r&quot;\end</span><span class="sc">{multicols}</span><span class="vs">&quot;</span></span>
-<span id="cb1-625"><a href="#cb1-625" aria-hidden="true" tabindex="-1"></a>        <span class="kw">def</span> html_mcol_begin(): <span class="cf">return</span> <span class="vs">r&quot;&lt;div style=&#39;column-count: 2;&#39;&gt;&quot;</span></span>
-<span id="cb1-626"><a href="#cb1-626" aria-hidden="true" tabindex="-1"></a>        <span class="kw">def</span> html_mcol_end(): <span class="cf">return</span> <span class="vs">r&quot;&lt;/div&gt;&quot;</span></span>
-<span id="cb1-627"><a href="#cb1-627" aria-hidden="true" tabindex="-1"></a>    ```</span>
-<span id="cb1-628"><a href="#cb1-628" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-629"><a href="#cb1-629" aria-hidden="true" tabindex="-1"></a>    The `column<span class="op">-</span>count` CSS <span class="bu">property</span> requires Internet Explorer<span class="op">&gt;=</span><span class="dv">10</span>,</span>
-<span id="cb1-630"><a href="#cb1-630" aria-hidden="true" tabindex="-1"></a>    Firefox<span class="op">&gt;=</span><span class="dv">52</span>, Safari<span class="op">&gt;=</span><span class="dv">9</span>, Opera<span class="op">&gt;=</span><span class="dv">37</span> <span class="kw">or</span> Chrome<span class="op">&gt;=</span><span class="dv">50</span>, refer to</span>
-<span id="cb1-631"><a href="#cb1-631" aria-hidden="true" tabindex="-1"></a>    [w3schools](https:<span class="op">//</span>www.w3schools.com<span class="op">/</span>css<span class="op">/</span>css3_multiple_columns.asp).</span>
-<span id="cb1-632"><a href="#cb1-632" aria-hidden="true" tabindex="-1"></a>    In order to use the `multicol` <span class="op">*</span>tex<span class="op">*</span> package, the statement</span>
-<span id="cb1-633"><a href="#cb1-633" aria-hidden="true" tabindex="-1"></a>    `<span class="op">\</span>usepackage{multicol}` has to be included <span class="kw">in</span> the yaml meta data</span>
-<span id="cb1-634"><a href="#cb1-634" aria-hidden="true" tabindex="-1"></a>    <span class="kw">in</span> the front matter of the Markdown document.</span>
-<span id="cb1-635"><a href="#cb1-635" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-636"><a href="#cb1-636" aria-hidden="true" tabindex="-1"></a>    `?_mcol_begin()`Text Text Text Text Text Text Text Text Text Text</span>
+<span id="cb1-604"><a href="#cb1-604" aria-hidden="true" tabindex="-1"></a>    Assuming preprocessing the <span class="bu">file</span> `md<span class="op">/</span>marky.md`, linking <span class="bu">format</span> codes</span>
+<span id="cb1-605"><a href="#cb1-605" aria-hidden="true" tabindex="-1"></a>    results <span class="kw">in</span> the two following output files.</span>
+<span id="cb1-606"><a href="#cb1-606" aria-hidden="true" tabindex="-1"></a>    <span class="fl">1.</span> `build<span class="op">/</span>marky.html.md`: contains output of `html` <span class="bu">format</span> codes.</span>
+<span id="cb1-607"><a href="#cb1-607" aria-hidden="true" tabindex="-1"></a>    <span class="fl">2.</span> `build<span class="op">/</span>marky.pdf.md`: contains output of `pdf` <span class="bu">format</span> codes.</span>
+<span id="cb1-608"><a href="#cb1-608" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-609"><a href="#cb1-609" aria-hidden="true" tabindex="-1"></a>    <span class="op">**</span>Example <span class="dv">1</span>: Multi<span class="op">-</span>Column Text <span class="kw">in</span> `pdf` <span class="kw">and</span> `html`<span class="op">**</span></span>
+<span id="cb1-610"><a href="#cb1-610" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-611"><a href="#cb1-611" aria-hidden="true" tabindex="-1"></a>    Defnition of two <span class="bu">format</span> codes `mcol_begin` <span class="kw">and</span> `mcol_end`, one <span class="cf">for</span> the</span>
+<span id="cb1-612"><a href="#cb1-612" aria-hidden="true" tabindex="-1"></a>    begin of multi column <span class="kw">and</span> another <span class="cf">for</span> the end of the multi column</span>
+<span id="cb1-613"><a href="#cb1-613" aria-hidden="true" tabindex="-1"></a>    section. The <span class="bu">format</span> codes are appended <span class="cf">with</span> `_html` <span class="kw">and</span> `_pdf`</span>
+<span id="cb1-614"><a href="#cb1-614" aria-hidden="true" tabindex="-1"></a>    respectively.</span>
+<span id="cb1-615"><a href="#cb1-615" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-616"><a href="#cb1-616" aria-hidden="true" tabindex="-1"></a>    ```<span class="op">!</span></span>
+<span id="cb1-617"><a href="#cb1-617" aria-hidden="true" tabindex="-1"></a>        mcol_begin <span class="op">=</span> fmtcode(</span>
+<span id="cb1-618"><a href="#cb1-618" aria-hidden="true" tabindex="-1"></a>            pdf<span class="op">=</span><span class="vs">r&quot;\begin</span><span class="sc">{multicols}{2}</span><span class="vs">&quot;</span>,</span>
+<span id="cb1-619"><a href="#cb1-619" aria-hidden="true" tabindex="-1"></a>            html<span class="op">=</span><span class="st">&quot;&lt;div style=&#39;column-count: 2;&#39;&gt;&quot;</span></span>
+<span id="cb1-620"><a href="#cb1-620" aria-hidden="true" tabindex="-1"></a>        )</span>
+<span id="cb1-621"><a href="#cb1-621" aria-hidden="true" tabindex="-1"></a>        mcol_end <span class="op">=</span> fmtcode(</span>
+<span id="cb1-622"><a href="#cb1-622" aria-hidden="true" tabindex="-1"></a>            pdf<span class="op">=</span><span class="vs">r&quot;\end</span><span class="sc">{multicols}</span><span class="vs">&quot;</span>,</span>
+<span id="cb1-623"><a href="#cb1-623" aria-hidden="true" tabindex="-1"></a>            html<span class="op">=</span><span class="st">&quot;&lt;/div&gt;&quot;</span></span>
+<span id="cb1-624"><a href="#cb1-624" aria-hidden="true" tabindex="-1"></a>        )</span>
+<span id="cb1-625"><a href="#cb1-625" aria-hidden="true" tabindex="-1"></a>    ```</span>
+<span id="cb1-626"><a href="#cb1-626" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-627"><a href="#cb1-627" aria-hidden="true" tabindex="-1"></a>    The `column<span class="op">-</span>count` CSS <span class="bu">property</span> requires Internet Explorer<span class="op">&gt;=</span><span class="dv">10</span>,</span>
+<span id="cb1-628"><a href="#cb1-628" aria-hidden="true" tabindex="-1"></a>    Firefox<span class="op">&gt;=</span><span class="dv">52</span>, Safari<span class="op">&gt;=</span><span class="dv">9</span>, Opera<span class="op">&gt;=</span><span class="dv">37</span> <span class="kw">or</span> Chrome<span class="op">&gt;=</span><span class="dv">50</span>, refer to</span>
+<span id="cb1-629"><a href="#cb1-629" aria-hidden="true" tabindex="-1"></a>    [w3schools](https:<span class="op">//</span>www.w3schools.com<span class="op">/</span>css<span class="op">/</span>css3_multiple_columns.asp).</span>
+<span id="cb1-630"><a href="#cb1-630" aria-hidden="true" tabindex="-1"></a>    In order to use the `multicol` <span class="op">*</span>tex<span class="op">*</span> package, the statement</span>
+<span id="cb1-631"><a href="#cb1-631" aria-hidden="true" tabindex="-1"></a>    `<span class="op">\</span>usepackage{multicol}` has to be included <span class="kw">in</span> the yaml meta data</span>
+<span id="cb1-632"><a href="#cb1-632" aria-hidden="true" tabindex="-1"></a>    <span class="kw">in</span> the front matter of the Markdown document.</span>
+<span id="cb1-633"><a href="#cb1-633" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-634"><a href="#cb1-634" aria-hidden="true" tabindex="-1"></a>    `<span class="op">!</span>mcol_begin()`</span>
+<span id="cb1-635"><a href="#cb1-635" aria-hidden="true" tabindex="-1"></a>    Text Text Text Text Text Text Text Text Text Text Text Text Text</span>
+<span id="cb1-636"><a href="#cb1-636" aria-hidden="true" tabindex="-1"></a>    Text Text Text Text Text Text Text Text Text Text Text Text Text</span>
 <span id="cb1-637"><a href="#cb1-637" aria-hidden="true" tabindex="-1"></a>    Text Text Text Text Text Text Text Text Text Text Text Text Text</span>
 <span id="cb1-638"><a href="#cb1-638" aria-hidden="true" tabindex="-1"></a>    Text Text Text Text Text Text Text Text Text Text Text Text Text</span>
 <span id="cb1-639"><a href="#cb1-639" aria-hidden="true" tabindex="-1"></a>    Text Text Text Text Text Text Text Text Text Text Text Text Text</span>
@@ -872,80 +873,56 @@
 <span id="cb1-645"><a href="#cb1-645" aria-hidden="true" tabindex="-1"></a>    Text Text Text Text Text Text Text Text Text Text Text Text Text</span>
 <span id="cb1-646"><a href="#cb1-646" aria-hidden="true" tabindex="-1"></a>    Text Text Text Text Text Text Text Text Text Text Text Text Text</span>
 <span id="cb1-647"><a href="#cb1-647" aria-hidden="true" tabindex="-1"></a>    Text Text Text Text Text Text Text Text Text Text Text Text Text</span>
-<span id="cb1-648"><a href="#cb1-648" aria-hidden="true" tabindex="-1"></a>    Text Text Text Text Text Text Text Text Text Text Text Text Text</span>
-<span id="cb1-649"><a href="#cb1-649" aria-hidden="true" tabindex="-1"></a>    `?_mcol_end()`</span>
-<span id="cb1-650"><a href="#cb1-650" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-651"><a href="#cb1-651" aria-hidden="true" tabindex="-1"></a>    <span class="op">**</span>Example <span class="dv">2</span>: Multi<span class="op">-</span>Column Text <span class="kw">in</span> `pdf` <span class="kw">and</span> `html`<span class="op">**</span></span>
-<span id="cb1-652"><a href="#cb1-652" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-653"><a href="#cb1-653" aria-hidden="true" tabindex="-1"></a>    ```<span class="op">!</span></span>
-<span id="cb1-654"><a href="#cb1-654" aria-hidden="true" tabindex="-1"></a>        <span class="kw">def</span> pdf_mcol(text): <span class="cf">return</span> <span class="vs">r&quot;\begin</span><span class="sc">{multicols}{2}</span><span class="vs">&quot;</span> <span class="op">+</span> text <span class="op">+</span> <span class="vs">r&quot;\end</span><span class="sc">{multicols}</span><span class="vs">&quot;</span></span>
-<span id="cb1-655"><a href="#cb1-655" aria-hidden="true" tabindex="-1"></a>        <span class="kw">def</span> html_mcol(text): <span class="cf">return</span> <span class="vs">r&quot;&lt;div style=&#39;column-count: 2;&#39;&gt;&quot;</span> <span class="op">+</span> <span class="vs">r&quot;&lt;/div&gt;&quot;</span></span>
-<span id="cb1-656"><a href="#cb1-656" aria-hidden="true" tabindex="-1"></a>    ```</span>
-<span id="cb1-657"><a href="#cb1-657" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-658"><a href="#cb1-658" aria-hidden="true" tabindex="-1"></a>    `?_mcol(<span class="st">&quot;&quot;&quot;</span></span>
-<span id="cb1-659"><a href="#cb1-659" aria-hidden="true" tabindex="-1"></a><span class="st">    Text Text Text Text Text Text Text Text Text Text Text Text Text</span></span>
-<span id="cb1-660"><a href="#cb1-660" aria-hidden="true" tabindex="-1"></a><span class="st">    Text Text Text Text Text Text Text Text Text Text Text Text Text</span></span>
-<span id="cb1-661"><a href="#cb1-661" aria-hidden="true" tabindex="-1"></a><span class="st">    Text Text Text Text Text Text Text Text Text Text Text Text Text</span></span>
-<span id="cb1-662"><a href="#cb1-662" aria-hidden="true" tabindex="-1"></a><span class="st">    Text Text Text Text Text Text Text Text Text Text Text Text Text</span></span>
-<span id="cb1-663"><a href="#cb1-663" aria-hidden="true" tabindex="-1"></a><span class="st">    Text Text Text Text Text Text Text Text Text Text Text Text Text</span></span>
-<span id="cb1-664"><a href="#cb1-664" aria-hidden="true" tabindex="-1"></a><span class="st">    Text Text Text Text Text Text Text Text Text Text Text Text Text</span></span>
-<span id="cb1-665"><a href="#cb1-665" aria-hidden="true" tabindex="-1"></a><span class="st">    Text Text Text Text Text Text Text Text Text Text Text Text Text</span></span>
-<span id="cb1-666"><a href="#cb1-666" aria-hidden="true" tabindex="-1"></a><span class="st">    Text Text Text Text Text Text Text Text Text Text Text Text Text</span></span>
-<span id="cb1-667"><a href="#cb1-667" aria-hidden="true" tabindex="-1"></a><span class="st">    Text Text Text Text Text Text Text Text Text Text Text Text Text</span></span>
-<span id="cb1-668"><a href="#cb1-668" aria-hidden="true" tabindex="-1"></a><span class="st">    Text Text Text Text Text Text Text Text Text Text Text Text Text</span></span>
-<span id="cb1-669"><a href="#cb1-669" aria-hidden="true" tabindex="-1"></a><span class="st">    Text Text Text Text Text Text Text Text Text Text Text Text Text</span></span>
-<span id="cb1-670"><a href="#cb1-670" aria-hidden="true" tabindex="-1"></a><span class="st">    Text Text Text Text Text Text Text Text Text Text Text Text Text</span></span>
-<span id="cb1-671"><a href="#cb1-671" aria-hidden="true" tabindex="-1"></a><span class="st">    Text Text Text Text Text Text Text Text Text Text Text Text Text</span></span>
-<span id="cb1-672"><a href="#cb1-672" aria-hidden="true" tabindex="-1"></a><span class="st">    &quot;&quot;&quot;</span>)`</span>
-<span id="cb1-673"><a href="#cb1-673" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-674"><a href="#cb1-674" aria-hidden="true" tabindex="-1"></a>    <span class="op">---</span></span>
-<span id="cb1-675"><a href="#cb1-675" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-676"><a href="#cb1-676" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Include Statement</span></span>
+<span id="cb1-648"><a href="#cb1-648" aria-hidden="true" tabindex="-1"></a>    `<span class="op">!</span>mcol_end()`</span>
+<span id="cb1-649"><a href="#cb1-649" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-650"><a href="#cb1-650" aria-hidden="true" tabindex="-1"></a>    <span class="op">---</span></span>
+<span id="cb1-651"><a href="#cb1-651" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-652"><a href="#cb1-652" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Include Statement</span></span>
+<span id="cb1-653"><a href="#cb1-653" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-654"><a href="#cb1-654" aria-hidden="true" tabindex="-1"></a>    `marky` allows to include other Markdown text using the `<span class="op">\!!!</span>` statement.</span>
+<span id="cb1-655"><a href="#cb1-655" aria-hidden="true" tabindex="-1"></a>    Please refer to the `marky` documentation <span class="cf">for</span> complete description</span>
+<span id="cb1-656"><a href="#cb1-656" aria-hidden="true" tabindex="-1"></a>    of the `<span class="op">\!!!</span>` statement. During rendering `marky` keeps track of</span>
+<span id="cb1-657"><a href="#cb1-657" aria-hidden="true" tabindex="-1"></a>    included files <span class="kw">and</span> creates Makefile rules <span class="cf">for</span> dependent make.</span>
+<span id="cb1-658"><a href="#cb1-658" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-659"><a href="#cb1-659" aria-hidden="true" tabindex="-1"></a>    ```md</span>
+<span id="cb1-660"><a href="#cb1-660" aria-hidden="true" tabindex="-1"></a>        <span class="op">!!!</span> <span class="bu">file</span>.mdi</span>
+<span id="cb1-661"><a href="#cb1-661" aria-hidden="true" tabindex="-1"></a>    ```</span>
+<span id="cb1-662"><a href="#cb1-662" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-663"><a href="#cb1-663" aria-hidden="true" tabindex="-1"></a>    <span class="op">---</span></span>
+<span id="cb1-664"><a href="#cb1-664" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-665"><a href="#cb1-665" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Meta Data</span></span>
+<span id="cb1-666"><a href="#cb1-666" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-667"><a href="#cb1-667" aria-hidden="true" tabindex="-1"></a>    `marky` supports document meta data <span class="kw">in</span> Markdown front matter.</span>
+<span id="cb1-668"><a href="#cb1-668" aria-hidden="true" tabindex="-1"></a>    This feature <span class="kw">is</span> <span class="kw">not</span> explained <span class="kw">in</span> the quickstart. Please refer</span>
+<span id="cb1-669"><a href="#cb1-669" aria-hidden="true" tabindex="-1"></a>    to the `marky` documentation <span class="cf">for</span> explanation.</span>
+<span id="cb1-670"><a href="#cb1-670" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-671"><a href="#cb1-671" aria-hidden="true" tabindex="-1"></a>    ```md</span>
+<span id="cb1-672"><a href="#cb1-672" aria-hidden="true" tabindex="-1"></a>        <span class="op">---</span></span>
+<span id="cb1-673"><a href="#cb1-673" aria-hidden="true" tabindex="-1"></a>        META_DATA</span>
+<span id="cb1-674"><a href="#cb1-674" aria-hidden="true" tabindex="-1"></a>        <span class="op">---</span></span>
+<span id="cb1-675"><a href="#cb1-675" aria-hidden="true" tabindex="-1"></a>        MARKDOWN</span>
+<span id="cb1-676"><a href="#cb1-676" aria-hidden="true" tabindex="-1"></a>    ```</span>
 <span id="cb1-677"><a href="#cb1-677" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-678"><a href="#cb1-678" aria-hidden="true" tabindex="-1"></a>    `marky` allows to include other Markdown text using the `<span class="op">\!!!</span>` statement.</span>
-<span id="cb1-679"><a href="#cb1-679" aria-hidden="true" tabindex="-1"></a>    Please refer to the `marky` documentation <span class="cf">for</span> complete description</span>
-<span id="cb1-680"><a href="#cb1-680" aria-hidden="true" tabindex="-1"></a>    of the `<span class="op">\!!!</span>` statement. During rendering `marky` keeps track of</span>
-<span id="cb1-681"><a href="#cb1-681" aria-hidden="true" tabindex="-1"></a>    included files <span class="kw">and</span> creates Makefile rules <span class="cf">for</span> dependent make.</span>
-<span id="cb1-682"><a href="#cb1-682" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-683"><a href="#cb1-683" aria-hidden="true" tabindex="-1"></a>    ```md</span>
-<span id="cb1-684"><a href="#cb1-684" aria-hidden="true" tabindex="-1"></a>        <span class="op">!!!</span> <span class="bu">file</span>.mdi</span>
-<span id="cb1-685"><a href="#cb1-685" aria-hidden="true" tabindex="-1"></a>    ```</span>
-<span id="cb1-686"><a href="#cb1-686" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-687"><a href="#cb1-687" aria-hidden="true" tabindex="-1"></a>    <span class="op">---</span></span>
-<span id="cb1-688"><a href="#cb1-688" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-689"><a href="#cb1-689" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Meta Data</span></span>
-<span id="cb1-690"><a href="#cb1-690" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-691"><a href="#cb1-691" aria-hidden="true" tabindex="-1"></a>    `marky` supports document meta data <span class="kw">in</span> Markdown front matter.</span>
-<span id="cb1-692"><a href="#cb1-692" aria-hidden="true" tabindex="-1"></a>    This feature <span class="kw">is</span> <span class="kw">not</span> explained <span class="kw">in</span> the quickstart. Please refer</span>
-<span id="cb1-693"><a href="#cb1-693" aria-hidden="true" tabindex="-1"></a>    to the `marky` documentation <span class="cf">for</span> explanation.</span>
+<span id="cb1-678"><a href="#cb1-678" aria-hidden="true" tabindex="-1"></a>    <span class="op">---</span></span>
+<span id="cb1-679"><a href="#cb1-679" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-680"><a href="#cb1-680" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Escape Markup</span></span>
+<span id="cb1-681"><a href="#cb1-681" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-682"><a href="#cb1-682" aria-hidden="true" tabindex="-1"></a>    The `marky` markup can be escaped. When markup <span class="kw">is</span> escaped</span>
+<span id="cb1-683"><a href="#cb1-683" aria-hidden="true" tabindex="-1"></a>    `marky` removes the escape sequence <span class="kw">and</span> prints out the</span>
+<span id="cb1-684"><a href="#cb1-684" aria-hidden="true" tabindex="-1"></a>    unescaped statement.</span>
+<span id="cb1-685"><a href="#cb1-685" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-686"><a href="#cb1-686" aria-hidden="true" tabindex="-1"></a>    Markup           <span class="op">|</span>Escape Sequence<span class="op">|</span>Unsecaped Sequence</span>
+<span id="cb1-687"><a href="#cb1-687" aria-hidden="true" tabindex="-1"></a>    <span class="op">-----------------|---------------|-----------------</span></span>
+<span id="cb1-688"><a href="#cb1-688" aria-hidden="true" tabindex="-1"></a>    code block hidden<span class="op">|</span>`` ```<span class="op">\\!!</span> ``  <span class="op">|</span>`` ```<span class="op">\!!</span> ``</span>
+<span id="cb1-689"><a href="#cb1-689" aria-hidden="true" tabindex="-1"></a>    code block shown <span class="op">|</span>`` ```<span class="op">\\!</span> ``   <span class="op">|</span>`` ```<span class="op">\!</span> ``</span>
+<span id="cb1-690"><a href="#cb1-690" aria-hidden="true" tabindex="-1"></a>    inline code      <span class="op">|</span>`` `<span class="op">\\!</span>...` `` <span class="op">|</span>`` `<span class="op">\!</span>...` ``</span>
+<span id="cb1-691"><a href="#cb1-691" aria-hidden="true" tabindex="-1"></a>    <span class="bu">format</span> code      <span class="op">|</span>`` `<span class="op">\\</span>?...` `` <span class="op">|</span>`` `<span class="op">\</span>?...` ``</span>
+<span id="cb1-692"><a href="#cb1-692" aria-hidden="true" tabindex="-1"></a>    include statement<span class="op">|</span>`<span class="op">\\!!!</span>`        <span class="op">|</span>`<span class="op">\!!!</span>`</span>
+<span id="cb1-693"><a href="#cb1-693" aria-hidden="true" tabindex="-1"></a>    <span class="bu">format</span> link      <span class="op">|</span>`.<span class="op">\</span>???`       <span class="op">|</span>`.???`</span>
 <span id="cb1-694"><a href="#cb1-694" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-695"><a href="#cb1-695" aria-hidden="true" tabindex="-1"></a>    ```md</span>
-<span id="cb1-696"><a href="#cb1-696" aria-hidden="true" tabindex="-1"></a>        <span class="op">---</span></span>
-<span id="cb1-697"><a href="#cb1-697" aria-hidden="true" tabindex="-1"></a>        META_DATA</span>
-<span id="cb1-698"><a href="#cb1-698" aria-hidden="true" tabindex="-1"></a>        <span class="op">---</span></span>
-<span id="cb1-699"><a href="#cb1-699" aria-hidden="true" tabindex="-1"></a>        MARKDOWN</span>
-<span id="cb1-700"><a href="#cb1-700" aria-hidden="true" tabindex="-1"></a>    ```</span>
-<span id="cb1-701"><a href="#cb1-701" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-702"><a href="#cb1-702" aria-hidden="true" tabindex="-1"></a>    <span class="op">---</span></span>
-<span id="cb1-703"><a href="#cb1-703" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-704"><a href="#cb1-704" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Escape Markup</span></span>
-<span id="cb1-705"><a href="#cb1-705" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-706"><a href="#cb1-706" aria-hidden="true" tabindex="-1"></a>    The `marky` markup can be escaped. When markup <span class="kw">is</span> escaped</span>
-<span id="cb1-707"><a href="#cb1-707" aria-hidden="true" tabindex="-1"></a>    `marky` removes the escape sequence <span class="kw">and</span> prints out the</span>
-<span id="cb1-708"><a href="#cb1-708" aria-hidden="true" tabindex="-1"></a>    unescaped statement.</span>
-<span id="cb1-709"><a href="#cb1-709" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-710"><a href="#cb1-710" aria-hidden="true" tabindex="-1"></a>    Markup           <span class="op">|</span>Escape Sequence<span class="op">|</span>Unsecaped Sequence</span>
-<span id="cb1-711"><a href="#cb1-711" aria-hidden="true" tabindex="-1"></a>    <span class="op">-----------------|---------------|-----------------</span></span>
-<span id="cb1-712"><a href="#cb1-712" aria-hidden="true" tabindex="-1"></a>    code block hidden<span class="op">|</span>`` ```<span class="op">\\!!</span> ``  <span class="op">|</span>`` ```<span class="op">\!!</span> ``</span>
-<span id="cb1-713"><a href="#cb1-713" aria-hidden="true" tabindex="-1"></a>    code block shown <span class="op">|</span>`` ```<span class="op">\\!</span> ``   <span class="op">|</span>`` ```<span class="op">\!</span> ``</span>
-<span id="cb1-714"><a href="#cb1-714" aria-hidden="true" tabindex="-1"></a>    inline code      <span class="op">|</span>`` `<span class="op">\\!</span>...` `` <span class="op">|</span>`` `<span class="op">\!</span>...` ``</span>
-<span id="cb1-715"><a href="#cb1-715" aria-hidden="true" tabindex="-1"></a>    <span class="bu">format</span> code      <span class="op">|</span>`` `<span class="op">\\</span>?...` `` <span class="op">|</span>`` `<span class="op">\</span>?...` ``</span>
-<span id="cb1-716"><a href="#cb1-716" aria-hidden="true" tabindex="-1"></a>    include statement<span class="op">|</span>`<span class="op">\\!!!</span>`        <span class="op">|</span>`<span class="op">\!!!</span>`</span>
-<span id="cb1-717"><a href="#cb1-717" aria-hidden="true" tabindex="-1"></a>    <span class="bu">format</span> link      <span class="op">|</span>`.<span class="op">\</span>???`       <span class="op">|</span>`.???`</span>
-<span id="cb1-718"><a href="#cb1-718" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-719"><a href="#cb1-719" aria-hidden="true" tabindex="-1"></a>    <span class="op">---</span></span>
-<span id="cb1-720"><a href="#cb1-720" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-721"><a href="#cb1-721" aria-hidden="true" tabindex="-1"></a>    <span class="op">*</span>Thanks <span class="cf">for</span> reading, please <span class="cf">try</span> `marky`.<span class="op">*</span></span>
-<span id="cb1-722"><a href="#cb1-722" aria-hidden="true" tabindex="-1"></a>    </span></code></pre></div>
+<span id="cb1-695"><a href="#cb1-695" aria-hidden="true" tabindex="-1"></a>    <span class="op">---</span></span>
+<span id="cb1-696"><a href="#cb1-696" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-697"><a href="#cb1-697" aria-hidden="true" tabindex="-1"></a>    <span class="op">*</span>Thanks <span class="cf">for</span> reading, please <span class="cf">try</span> `marky`.<span class="op">*</span></span>
+<span id="cb1-698"><a href="#cb1-698" aria-hidden="true" tabindex="-1"></a>    </span></code></pre></div>
 </body>
 </html>

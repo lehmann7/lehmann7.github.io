@@ -23,7 +23,7 @@
       padding-top: 50px;
       padding-bottom: 50px;
       hyphens: auto;
-      word-wrap: break-word;
+      overflow-wrap: break-word;
       text-rendering: optimizeLegibility;
       font-kerning: normal;
     }
@@ -94,6 +94,7 @@
     pre code {
       padding: 0;
       overflow: visible;
+      overflow-wrap: normal;
     }
     .sourceCode {
      background-color: transparent;
@@ -408,103 +409,101 @@
 <span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a><span class="at">    </span></span>
 <span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a><span class="at">    ---</span></span>
 <span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a><span class="at">    </span></span>
-<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a><span class="at">    ---</span></span>
-<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a><span class="at">    </span></span>
-<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a><span class="at">    &gt; **Abstract** -- This is a `marky` example document for</span></span>
-<span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a><span class="at">    &gt; illustrating `marky` markup. The `marky` source code of this</span></span>
-<span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a><span class="at">    &gt; document can be read [here](example-src.html).</span></span>
-<span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a><span class="at">    &gt; For more information please refer to the</span></span>
-<span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a><span class="at">    &gt; [`marky` repository](https://github.com/lehmann7/marky),</span></span>
-<span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a><span class="at">    &gt; [`marky` documentation](marky.html) or the</span></span>
-<span id="cb6-27"><a href="#cb6-27" aria-hidden="true" tabindex="-1"></a><span class="at">    &gt; [`marky` quickstart](quickstart.html).</span></span>
+<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a><span class="at">    &gt; **Abstract** -- This is a `marky` example document for</span></span>
+<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a><span class="at">    &gt; illustrating `marky` markup. The `marky` source code of this</span></span>
+<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a><span class="at">    &gt; document can be read [here](example-src.html).</span></span>
+<span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a><span class="at">    &gt; For more information please refer to the</span></span>
+<span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a><span class="at">    &gt; [`marky` repository](https://github.com/lehmann7/marky),</span></span>
+<span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a><span class="at">    &gt; [`marky` documentation](marky.html) or the</span></span>
+<span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a><span class="at">    &gt; [`marky` quickstart](quickstart.html).</span></span>
+<span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a><span class="at">    </span></span>
+<span id="cb6-27"><a href="#cb6-27" aria-hidden="true" tabindex="-1"></a><span class="at">    ---</span></span>
 <span id="cb6-28"><a href="#cb6-28" aria-hidden="true" tabindex="-1"></a><span class="at">    </span></span>
-<span id="cb6-29"><a href="#cb6-29" aria-hidden="true" tabindex="-1"></a><span class="at">    ---</span></span>
+<span id="cb6-29"><a href="#cb6-29" aria-hidden="true" tabindex="-1"></a><span class="co">    # Referenced Section {#sec:label}</span></span>
 <span id="cb6-30"><a href="#cb6-30" aria-hidden="true" tabindex="-1"></a><span class="at">    </span></span>
-<span id="cb6-31"><a href="#cb6-31" aria-hidden="true" tabindex="-1"></a><span class="co">    # Referenced Section {#sec:label}</span></span>
+<span id="cb6-31"><a href="#cb6-31" aria-hidden="true" tabindex="-1"></a><span class="at">    This is a reference to @sec:label.</span></span>
 <span id="cb6-32"><a href="#cb6-32" aria-hidden="true" tabindex="-1"></a><span class="at">    </span></span>
-<span id="cb6-33"><a href="#cb6-33" aria-hidden="true" tabindex="-1"></a><span class="at">    This is a reference to @sec:label.</span></span>
+<span id="cb6-33"><a href="#cb6-33" aria-hidden="true" tabindex="-1"></a><span class="at">    ![This is the caption](data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHElEQVQI12P4//8/w38GIAXDIBKE0DHxgljNBAAO9TXL0Y4OHwAAAABJRU5ErkJggg==){</span><span class="co">#fig:label}</span></span>
 <span id="cb6-34"><a href="#cb6-34" aria-hidden="true" tabindex="-1"></a><span class="at">    </span></span>
-<span id="cb6-35"><a href="#cb6-35" aria-hidden="true" tabindex="-1"></a><span class="at">    ![This is the caption](data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHElEQVQI12P4//8/w38GIAXDIBKE0DHxgljNBAAO9TXL0Y4OHwAAAABJRU5ErkJggg==){</span><span class="co">#fig:label}</span></span>
+<span id="cb6-35"><a href="#cb6-35" aria-hidden="true" tabindex="-1"></a><span class="at">    This is a reference to @fig:label.</span></span>
 <span id="cb6-36"><a href="#cb6-36" aria-hidden="true" tabindex="-1"></a><span class="at">    </span></span>
-<span id="cb6-37"><a href="#cb6-37" aria-hidden="true" tabindex="-1"></a><span class="at">    This is a reference to @fig:label.</span></span>
-<span id="cb6-38"><a href="#cb6-38" aria-hidden="true" tabindex="-1"></a><span class="at">    </span></span>
-<span id="cb6-39"><a href="#cb6-39" aria-hidden="true" tabindex="-1"></a><span class="at">    A  |B  |C  |D</span></span>
-<span id="cb6-40"><a href="#cb6-40" aria-hidden="true" tabindex="-1"></a><span class="at">    ---|---|---|---</span></span>
-<span id="cb6-41"><a href="#cb6-41" aria-hidden="true" tabindex="-1"></a><span class="at">    000|111|444|555</span></span>
-<span id="cb6-42"><a href="#cb6-42" aria-hidden="true" tabindex="-1"></a><span class="at">    222|333|666|777</span></span>
+<span id="cb6-37"><a href="#cb6-37" aria-hidden="true" tabindex="-1"></a><span class="at">    A  |B  |C  |D</span></span>
+<span id="cb6-38"><a href="#cb6-38" aria-hidden="true" tabindex="-1"></a><span class="at">    ---|---|---|---</span></span>
+<span id="cb6-39"><a href="#cb6-39" aria-hidden="true" tabindex="-1"></a><span class="at">    000|111|444|555</span></span>
+<span id="cb6-40"><a href="#cb6-40" aria-hidden="true" tabindex="-1"></a><span class="at">    222|333|666|777</span></span>
+<span id="cb6-41"><a href="#cb6-41" aria-hidden="true" tabindex="-1"></a><span class="at">    </span></span>
+<span id="cb6-42"><a href="#cb6-42" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">Table</span><span class="kw">:</span><span class="at"> This is the caption {</span><span class="co">#tbl:label}</span></span>
 <span id="cb6-43"><a href="#cb6-43" aria-hidden="true" tabindex="-1"></a><span class="at">    </span></span>
-<span id="cb6-44"><a href="#cb6-44" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">Table</span><span class="kw">:</span><span class="at"> This is the caption {</span><span class="co">#tbl:label}</span></span>
+<span id="cb6-44"><a href="#cb6-44" aria-hidden="true" tabindex="-1"></a><span class="at">    This is a reference to @tbl:label.</span></span>
 <span id="cb6-45"><a href="#cb6-45" aria-hidden="true" tabindex="-1"></a><span class="at">    </span></span>
-<span id="cb6-46"><a href="#cb6-46" aria-hidden="true" tabindex="-1"></a><span class="at">    This is a reference to @tbl:label.</span></span>
+<span id="cb6-46"><a href="#cb6-46" aria-hidden="true" tabindex="-1"></a><span class="at">    $$\mbox{e}^{\mbox{i}\pi}+1=0$${</span><span class="co">#eq:label}</span></span>
 <span id="cb6-47"><a href="#cb6-47" aria-hidden="true" tabindex="-1"></a><span class="at">    </span></span>
-<span id="cb6-48"><a href="#cb6-48" aria-hidden="true" tabindex="-1"></a><span class="at">    $$\mbox{e}^{\mbox{i}\pi}+1=0$${</span><span class="co">#eq:label}</span></span>
+<span id="cb6-48"><a href="#cb6-48" aria-hidden="true" tabindex="-1"></a><span class="at">    This is a reference to @eq:label.</span></span>
 <span id="cb6-49"><a href="#cb6-49" aria-hidden="true" tabindex="-1"></a><span class="at">    </span></span>
-<span id="cb6-50"><a href="#cb6-50" aria-hidden="true" tabindex="-1"></a><span class="at">    This is a reference to @eq:label.</span></span>
+<span id="cb6-50"><a href="#cb6-50" aria-hidden="true" tabindex="-1"></a><span class="at">    This is a citation [@Muller1993].</span></span>
 <span id="cb6-51"><a href="#cb6-51" aria-hidden="true" tabindex="-1"></a><span class="at">    </span></span>
-<span id="cb6-52"><a href="#cb6-52" aria-hidden="true" tabindex="-1"></a><span class="at">    This is a citation [@Muller1993].</span></span>
+<span id="cb6-52"><a href="#cb6-52" aria-hidden="true" tabindex="-1"></a><span class="co">    # `marky` Markup for Execution of Embedded Python Code</span></span>
 <span id="cb6-53"><a href="#cb6-53" aria-hidden="true" tabindex="-1"></a><span class="at">    </span></span>
-<span id="cb6-54"><a href="#cb6-54" aria-hidden="true" tabindex="-1"></a><span class="co">    # `marky` Markup for Execution of Embedded Python Code</span></span>
+<span id="cb6-54"><a href="#cb6-54" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="ot">**Displayed</span><span class="at"> Code, Executed**</span></span>
 <span id="cb6-55"><a href="#cb6-55" aria-hidden="true" tabindex="-1"></a><span class="at">    </span></span>
-<span id="cb6-56"><a href="#cb6-56" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="ot">**Displayed</span><span class="at"> Code, Executed**</span></span>
-<span id="cb6-57"><a href="#cb6-57" aria-hidden="true" tabindex="-1"></a><span class="at">    </span></span>
-<span id="cb6-58"><a href="#cb6-58" aria-hidden="true" tabindex="-1"></a><span class="at">    ```!</span></span>
-<span id="cb6-59"><a href="#cb6-59" aria-hidden="true" tabindex="-1"></a><span class="at">        import math</span></span>
-<span id="cb6-60"><a href="#cb6-60" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">def list_and(l)</span><span class="kw">:</span></span>
-<span id="cb6-61"><a href="#cb6-61" aria-hidden="true" tabindex="-1"></a><span class="at">            return &quot;, &quot;.join(str(i) for i in l[:-1]) + &quot; and &quot; + str(l[-1])</span></span>
-<span id="cb6-62"><a href="#cb6-62" aria-hidden="true" tabindex="-1"></a><span class="at">    </span></span>
-<span id="cb6-63"><a href="#cb6-63" aria-hidden="true" tabindex="-1"></a><span class="at">        x = 2</span></span>
-<span id="cb6-64"><a href="#cb6-64" aria-hidden="true" tabindex="-1"></a><span class="at">        y = math.sqrt(x)</span></span>
-<span id="cb6-65"><a href="#cb6-65" aria-hidden="true" tabindex="-1"></a><span class="at">    ```</span></span>
+<span id="cb6-56"><a href="#cb6-56" aria-hidden="true" tabindex="-1"></a><span class="at">    ```!</span></span>
+<span id="cb6-57"><a href="#cb6-57" aria-hidden="true" tabindex="-1"></a><span class="at">        import math</span></span>
+<span id="cb6-58"><a href="#cb6-58" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">def list_and(l)</span><span class="kw">:</span></span>
+<span id="cb6-59"><a href="#cb6-59" aria-hidden="true" tabindex="-1"></a><span class="at">            return &quot;, &quot;.join(str(i) for i in l[:-1]) + &quot; and &quot; + str(l[-1])</span></span>
+<span id="cb6-60"><a href="#cb6-60" aria-hidden="true" tabindex="-1"></a><span class="at">    </span></span>
+<span id="cb6-61"><a href="#cb6-61" aria-hidden="true" tabindex="-1"></a><span class="at">        x = 2</span></span>
+<span id="cb6-62"><a href="#cb6-62" aria-hidden="true" tabindex="-1"></a><span class="at">        y = math.sqrt(x)</span></span>
+<span id="cb6-63"><a href="#cb6-63" aria-hidden="true" tabindex="-1"></a><span class="at">    ```</span></span>
+<span id="cb6-64"><a href="#cb6-64" aria-hidden="true" tabindex="-1"></a><span class="at">    </span></span>
+<span id="cb6-65"><a href="#cb6-65" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="ot">**Hidden</span><span class="at"> Code, Executed**</span></span>
 <span id="cb6-66"><a href="#cb6-66" aria-hidden="true" tabindex="-1"></a><span class="at">    </span></span>
-<span id="cb6-67"><a href="#cb6-67" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="ot">**Hidden</span><span class="at"> Code, Executed**</span></span>
-<span id="cb6-68"><a href="#cb6-68" aria-hidden="true" tabindex="-1"></a><span class="at">    </span></span>
-<span id="cb6-69"><a href="#cb6-69" aria-hidden="true" tabindex="-1"></a><span class="at">    ```!!</span></span>
-<span id="cb6-70"><a href="#cb6-70" aria-hidden="true" tabindex="-1"></a><span class="at">        print(&quot;Hello Console!&quot;)</span></span>
-<span id="cb6-71"><a href="#cb6-71" aria-hidden="true" tabindex="-1"></a><span class="at">    ```</span></span>
+<span id="cb6-67"><a href="#cb6-67" aria-hidden="true" tabindex="-1"></a><span class="at">    ```!!</span></span>
+<span id="cb6-68"><a href="#cb6-68" aria-hidden="true" tabindex="-1"></a><span class="at">        print(&quot;Hello Console!&quot;)</span></span>
+<span id="cb6-69"><a href="#cb6-69" aria-hidden="true" tabindex="-1"></a><span class="at">    ```</span></span>
+<span id="cb6-70"><a href="#cb6-70" aria-hidden="true" tabindex="-1"></a><span class="at">    </span></span>
+<span id="cb6-71"><a href="#cb6-71" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="ot">**Displayed</span><span class="at"> Code, Not Executed**</span></span>
 <span id="cb6-72"><a href="#cb6-72" aria-hidden="true" tabindex="-1"></a><span class="at">    </span></span>
-<span id="cb6-73"><a href="#cb6-73" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="ot">**Displayed</span><span class="at"> Code, Not Executed**</span></span>
-<span id="cb6-74"><a href="#cb6-74" aria-hidden="true" tabindex="-1"></a><span class="at">    </span></span>
-<span id="cb6-75"><a href="#cb6-75" aria-hidden="true" tabindex="-1"></a><span class="at">    ```python</span></span>
-<span id="cb6-76"><a href="#cb6-76" aria-hidden="true" tabindex="-1"></a><span class="at">        x = 3</span></span>
-<span id="cb6-77"><a href="#cb6-77" aria-hidden="true" tabindex="-1"></a><span class="at">    ```</span></span>
+<span id="cb6-73"><a href="#cb6-73" aria-hidden="true" tabindex="-1"></a><span class="at">    ```python</span></span>
+<span id="cb6-74"><a href="#cb6-74" aria-hidden="true" tabindex="-1"></a><span class="at">        x = 3</span></span>
+<span id="cb6-75"><a href="#cb6-75" aria-hidden="true" tabindex="-1"></a><span class="at">    ```</span></span>
+<span id="cb6-76"><a href="#cb6-76" aria-hidden="true" tabindex="-1"></a><span class="at">    </span></span>
+<span id="cb6-77"><a href="#cb6-77" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="ot">**Inline</span><span class="at"> Formatted Output**</span></span>
 <span id="cb6-78"><a href="#cb6-78" aria-hidden="true" tabindex="-1"></a><span class="at">    </span></span>
-<span id="cb6-79"><a href="#cb6-79" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="ot">**Inline</span><span class="at"> Formatted Output**</span></span>
+<span id="cb6-79"><a href="#cb6-79" aria-hidden="true" tabindex="-1"></a><span class="at">    The square root of $x=`!x`$ is `!y:.3f`.</span></span>
 <span id="cb6-80"><a href="#cb6-80" aria-hidden="true" tabindex="-1"></a><span class="at">    </span></span>
-<span id="cb6-81"><a href="#cb6-81" aria-hidden="true" tabindex="-1"></a><span class="at">    The square root of $x=`!x`$ is `!y:.3f`.</span></span>
+<span id="cb6-81"><a href="#cb6-81" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="ot">**Inline</span><span class="at"> Expression**</span></span>
 <span id="cb6-82"><a href="#cb6-82" aria-hidden="true" tabindex="-1"></a><span class="at">    </span></span>
-<span id="cb6-83"><a href="#cb6-83" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="ot">**Inline</span><span class="at"> Expression**</span></span>
+<span id="cb6-83"><a href="#cb6-83" aria-hidden="true" tabindex="-1"></a><span class="at">    The first ten numbers are `!list_and(range(10))`.</span></span>
 <span id="cb6-84"><a href="#cb6-84" aria-hidden="true" tabindex="-1"></a><span class="at">    </span></span>
-<span id="cb6-85"><a href="#cb6-85" aria-hidden="true" tabindex="-1"></a><span class="at">    The first ten numbers are `!list_and(range(10))`.</span></span>
+<span id="cb6-85"><a href="#cb6-85" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="ot">**Format</span><span class="at"> Links**</span></span>
 <span id="cb6-86"><a href="#cb6-86" aria-hidden="true" tabindex="-1"></a><span class="at">    </span></span>
-<span id="cb6-87"><a href="#cb6-87" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="ot">**Format</span><span class="at"> Links**</span></span>
-<span id="cb6-88"><a href="#cb6-88" aria-hidden="true" tabindex="-1"></a><span class="at">    </span></span>
-<span id="cb6-89"><a href="#cb6-89" aria-hidden="true" tabindex="-1"></a><span class="at">    ```md</span></span>
-<span id="cb6-90"><a href="#cb6-90" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="kw">[</span><span class="at">Link to document</span><span class="kw">]</span><span class="at">(file.???)</span></span>
-<span id="cb6-91"><a href="#cb6-91" aria-hidden="true" tabindex="-1"></a><span class="at">    ```</span></span>
-<span id="cb6-92"><a href="#cb6-92" aria-hidden="true" tabindex="-1"></a><span class="at">    </span></span>
-<span id="cb6-93"><a href="#cb6-93" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">will be proprocessed into the following text</span><span class="kw">:</span></span>
-<span id="cb6-94"><a href="#cb6-94" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">* for `html`</span><span class="kw">:</span><span class="at"> `[Link to document](file.html)`</span></span>
-<span id="cb6-95"><a href="#cb6-95" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">* for `pdf`</span><span class="kw">:</span><span class="at"> `[Link to document](file.pdf)`</span></span>
+<span id="cb6-87"><a href="#cb6-87" aria-hidden="true" tabindex="-1"></a><span class="at">    ```md</span></span>
+<span id="cb6-88"><a href="#cb6-88" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="kw">[</span><span class="at">Link to document</span><span class="kw">]</span><span class="at">(file.???)</span></span>
+<span id="cb6-89"><a href="#cb6-89" aria-hidden="true" tabindex="-1"></a><span class="at">    ```</span></span>
+<span id="cb6-90"><a href="#cb6-90" aria-hidden="true" tabindex="-1"></a><span class="at">    </span></span>
+<span id="cb6-91"><a href="#cb6-91" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">will be proprocessed into the following text</span><span class="kw">:</span></span>
+<span id="cb6-92"><a href="#cb6-92" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">* for `html`</span><span class="kw">:</span><span class="at"> `[Link to document](file.html)`</span></span>
+<span id="cb6-93"><a href="#cb6-93" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">* for `pdf`</span><span class="kw">:</span><span class="at"> `[Link to document](file.pdf)`</span></span>
+<span id="cb6-94"><a href="#cb6-94" aria-hidden="true" tabindex="-1"></a><span class="at">    </span></span>
+<span id="cb6-95"><a href="#cb6-95" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="kw">[</span><span class="at">Link to this document</span><span class="kw">]</span><span class="at">(example.html)</span></span>
 <span id="cb6-96"><a href="#cb6-96" aria-hidden="true" tabindex="-1"></a><span class="at">    </span></span>
-<span id="cb6-97"><a href="#cb6-97" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="kw">[</span><span class="at">Link to this document</span><span class="kw">]</span><span class="at">(example.html)</span></span>
+<span id="cb6-97"><a href="#cb6-97" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="ot">**Format</span><span class="at"> Codes**</span></span>
 <span id="cb6-98"><a href="#cb6-98" aria-hidden="true" tabindex="-1"></a><span class="at">    </span></span>
-<span id="cb6-99"><a href="#cb6-99" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="ot">**Format</span><span class="at"> Codes**</span></span>
-<span id="cb6-100"><a href="#cb6-100" aria-hidden="true" tabindex="-1"></a><span class="at">    </span></span>
-<span id="cb6-101"><a href="#cb6-101" aria-hidden="true" tabindex="-1"></a><span class="at">    ```!</span></span>
-<span id="cb6-102"><a href="#cb6-102" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">def html_FMTCODE()</span><span class="kw">:</span><span class="at"> return &quot;H&lt;sup&gt;T&lt;/sup&gt;&lt;sub&gt;M&lt;/sub&gt;L&quot;</span></span>
-<span id="cb6-103"><a href="#cb6-103" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">def pdf_FMTCODE()</span><span class="kw">:</span><span class="at"> return &quot;\LaTeX&quot;</span></span>
-<span id="cb6-104"><a href="#cb6-104" aria-hidden="true" tabindex="-1"></a><span class="at">    ```</span></span>
+<span id="cb6-99"><a href="#cb6-99" aria-hidden="true" tabindex="-1"></a><span class="at">    ```!</span></span>
+<span id="cb6-100"><a href="#cb6-100" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">def html_FMTCODE()</span><span class="kw">:</span><span class="at"> return &quot;H&lt;sup&gt;T&lt;/sup&gt;&lt;sub&gt;M&lt;/sub&gt;L&quot;</span></span>
+<span id="cb6-101"><a href="#cb6-101" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">def pdf_FMTCODE()</span><span class="kw">:</span><span class="at"> return &quot;\LaTeX&quot;</span></span>
+<span id="cb6-102"><a href="#cb6-102" aria-hidden="true" tabindex="-1"></a><span class="at">    ```</span></span>
+<span id="cb6-103"><a href="#cb6-103" aria-hidden="true" tabindex="-1"></a><span class="at">    </span></span>
+<span id="cb6-104"><a href="#cb6-104" aria-hidden="true" tabindex="-1"></a><span class="at">    This is a `?_FMTCODE()` document.</span></span>
 <span id="cb6-105"><a href="#cb6-105" aria-hidden="true" tabindex="-1"></a><span class="at">    </span></span>
-<span id="cb6-106"><a href="#cb6-106" aria-hidden="true" tabindex="-1"></a><span class="at">    This is a `?_FMTCODE()` document.</span></span>
+<span id="cb6-106"><a href="#cb6-106" aria-hidden="true" tabindex="-1"></a><span class="at">    ---</span></span>
 <span id="cb6-107"><a href="#cb6-107" aria-hidden="true" tabindex="-1"></a><span class="at">    </span></span>
-<span id="cb6-108"><a href="#cb6-108" aria-hidden="true" tabindex="-1"></a><span class="at">    ---</span></span>
+<span id="cb6-108"><a href="#cb6-108" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="ot">*Thanks</span><span class="at"> for reading, please try `marky`.*</span></span>
 <span id="cb6-109"><a href="#cb6-109" aria-hidden="true" tabindex="-1"></a><span class="at">    </span></span>
-<span id="cb6-110"><a href="#cb6-110" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="ot">*Thanks</span><span class="at"> for reading, please try `marky`.*</span></span>
+<span id="cb6-110"><a href="#cb6-110" aria-hidden="true" tabindex="-1"></a><span class="at">    ---</span></span>
 <span id="cb6-111"><a href="#cb6-111" aria-hidden="true" tabindex="-1"></a><span class="at">    </span></span>
-<span id="cb6-112"><a href="#cb6-112" aria-hidden="true" tabindex="-1"></a><span class="at">    ---</span></span>
-<span id="cb6-113"><a href="#cb6-113" aria-hidden="true" tabindex="-1"></a><span class="at">    </span></span>
-<span id="cb6-114"><a href="#cb6-114" aria-hidden="true" tabindex="-1"></a><span class="co">    # References {-}</span></span>
-<span id="cb6-115"><a href="#cb6-115" aria-hidden="true" tabindex="-1"></a><span class="at">    </span></span></code></pre></div>
+<span id="cb6-112"><a href="#cb6-112" aria-hidden="true" tabindex="-1"></a><span class="co">    # References {-}</span></span>
+<span id="cb6-113"><a href="#cb6-113" aria-hidden="true" tabindex="-1"></a><span class="at">    </span></span></code></pre></div>
 <hr />
 <h1 data-number="6" id="code-blocks"><span class="header-section-number">6</span> Code Blocks</h1>
 <p>Code blocks are embedded in Markdown using fenced code using either the <code>!</code> or <code>!!</code> flag for displayed and hidden code respectively.</p>
@@ -662,47 +661,8 @@
 <span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a>        _(<span class="st">&quot;</span><span class="sc">% 8d</span><span class="st">&quot;</span> <span class="op">%</span> (i<span class="op">*</span><span class="dv">3</span>))</span>
 <span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> j <span class="kw">in</span> [<span class="dv">1</span>, <span class="dv">2</span>]:</span>
 <span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a>            _(_, <span class="st">&quot;|</span><span class="sc">% 8d</span><span class="st">&quot;</span> <span class="op">%</span> (i<span class="op">*</span><span class="dv">3</span><span class="op">+</span>j))</span></code></pre></div>
-<table>
-<colgroup>
-<col style="width: 33%" />
-<col style="width: 33%" />
-<col style="width: 33%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Column 1</th>
-<th>Column 2</th>
-<th>Column 3</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>0</td>
-<td>1</td>
-<td>2</td>
-</tr>
-<tr class="even">
-<td>3</td>
-<td>4</td>
-<td>5</td>
-</tr>
-<tr class="odd">
-<td>6</td>
-<td>7</td>
-<td>8</td>
-</tr>
-<tr class="even">
-<td>9</td>
-<td>10</td>
-<td>11</td>
-</tr>
-<tr class="odd">
-<td>12</td>
-<td>13</td>
-<td>14</td>
-</tr>
-</tbody>
-</table>
+<p>Column 1|Column 2|Column 3</p>
+<p>——–|——–|——– 0| 1| 2 3| 4| 5 6| 7| 8 9| 10| 11 12| 13| 14</p>
 <p>The algorithm produces the following Markdown text.</p>
 <div class="sourceCode" id="cb16"><pre class="sourceCode md"><code class="sourceCode markdown"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>Column 1|Column 2|Column 3</span>
 <span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>--------|--------|--------</span>
@@ -721,10 +681,10 @@
 <span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>    p <span class="op">=</span> [random.random() <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">3</span>)]</span>
 <span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>    __(<span class="ss">f&quot;&quot;&quot;</span></span>
-<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a><span class="ss">        Parameter one is </span><span class="sc">{p</span>[<span class="dv">0</span>]<span class="sc">:.3f}</span><span class="ss"> and the value depends on the seed</span></span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a><span class="ss">        Parameter one is </span><span class="sc">{</span>p[<span class="dv">0</span>]<span class="sc">:.3f}</span><span class="ss"> and the value depends on the seed</span></span>
 <span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a><span class="ss">        of the pseudo random number generator, which was chosen</span></span>
-<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a><span class="ss">        to be </span><span class="sc">{s}</span><span class="ss">. For the same seed always the same random numbers</span></span>
-<span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a><span class="ss">        are created. The next two numbers are </span><span class="sc">{p</span>[<span class="dv">1</span>]<span class="sc">:.3f}</span><span class="ss"> and </span><span class="sc">{p</span>[<span class="dv">2</span>]<span class="sc">:.3f}</span><span class="ss">.</span></span>
+<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a><span class="ss">        to be </span><span class="sc">{</span>s<span class="sc">}</span><span class="ss">. For the same seed always the same random numbers</span></span>
+<span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a><span class="ss">        are created. The next two numbers are </span><span class="sc">{</span>p[<span class="dv">1</span>]<span class="sc">:.3f}</span><span class="ss"> and </span><span class="sc">{</span>p[<span class="dv">2</span>]<span class="sc">:.3f}</span><span class="ss">.</span></span>
 <span id="cb17-11"><a href="#cb17-11" aria-hidden="true" tabindex="-1"></a><span class="ss">        The sum of the three numbers is </span><span class="sc">{</span><span class="bu">sum</span>(p)<span class="sc">:.3f}</span><span class="ss"> and it is</span></span>
 <span id="cb17-12"><a href="#cb17-12" aria-hidden="true" tabindex="-1"></a><span class="ss">        </span><span class="sc">{</span><span class="st">&#39;greater&#39;</span> <span class="cf">if</span> <span class="bu">sum</span>(p) <span class="op">&gt;</span> <span class="fl">2.</span> <span class="cf">else</span> <span class="st">&#39;lesser or equal&#39;</span><span class="sc">}</span><span class="ss"> than two.</span></span>
 <span id="cb17-13"><a href="#cb17-13" aria-hidden="true" tabindex="-1"></a><span class="ss">    &quot;&quot;&quot;</span>)</span></code></pre></div>
@@ -793,11 +753,6 @@
 <h1 data-number="10" id="format-dependent-code"><span class="header-section-number">10</span> Format Dependent Code</h1>
 <p><code>pandoc</code> Markdown allows to write format specific code within Markdown using <code>html</code> and <em>tex</em> for <code>pdf</code> documents. However, when inserting raw <code>html</code> or raw <em>tex</em> code, the document only can be rendered into <code>html</code> or <code>pdf</code> accordingly. This is only a short summary, for an in-depth explanation of all features please refer to Format Codes, <a href="marky.html"><code>marky</code> documentation</a>.</p>
 <p><code>marky</code> introduces format codes, which are applied during linking after preprocessing. During linking format specific codes for <code>html</code> and <code>pdf</code> are applied in a consistent manner, resulting in documents with Markdown and <code>html</code> or Markdown and <em>tex</em> only. Using this pattern <code>marky</code> documents contain regular Markdown, which can be rendered into <code>html</code> and <code>pdf</code>, as well as format specific codes for tweaking or polishing <code>html</code> and <code>pdf</code> output.</p>
-<p>Format codes are specified in code blocks and called using the inline syntax <code>`?FUNCALL(ARGS)`</code> or <code>`?VARIABLE(ARGS)`</code>, which is translated into the following pyhon function calls.</p>
-<ol type="1">
-<li><code>htmlFMTCODE(ARGS)</code>: called when linked for <code>html</code>.</li>
-<li><code>pdfFMTCODE(ARGS)</code>: called when linked for <code>pdf</code>.</li>
-</ol>
 <p>Assuming preprocessing the file <code>md/marky.md</code>, linking format codes results in the two following output files.</p>
 <ol type="1">
 <li><code>build/marky.html.md</code>: contains output of <code>html</code> format codes.</li>
@@ -805,31 +760,29 @@
 </ol>
 <p><strong>Example 1: Multi-Column Text in <code>pdf</code> and <code>html</code></strong></p>
 <p>Defnition of two format codes <code>mcol_begin</code> and <code>mcol_end</code>, one for the begin of multi column and another for the end of the multi column section. The format codes are appended with <code>_html</code> and <code>_pdf</code> respectively.</p>
-<div class="sourceCode" id="cb23"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> pdf_mcol_begin(): <span class="cf">return</span> <span class="vs">r&quot;\begin</span><span class="sc">{multicols}{2}</span><span class="vs">&quot;</span></span>
-<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> pdf_mcol_end(): <span class="cf">return</span> <span class="vs">r&quot;\end</span><span class="sc">{multicols}</span><span class="vs">&quot;</span></span>
-<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> html_mcol_begin(): <span class="cf">return</span> <span class="vs">r&quot;&lt;div style=&#39;column-count: 2;&#39;&gt;&quot;</span></span>
-<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> html_mcol_end(): <span class="cf">return</span> <span class="vs">r&quot;&lt;/div&gt;&quot;</span></span></code></pre></div>
+<div class="sourceCode" id="cb23"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>    mcol_begin <span class="op">=</span> fmtcode(</span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>        pdf<span class="op">=</span><span class="vs">r&quot;\begin</span><span class="sc">{multicols}{2}</span><span class="vs">&quot;</span>,</span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>        html<span class="op">=</span><span class="st">&quot;&lt;div style=&#39;column-count: 2;&#39;&gt;&quot;</span></span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a>    mcol_end <span class="op">=</span> fmtcode(</span>
+<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a>        pdf<span class="op">=</span><span class="vs">r&quot;\end</span><span class="sc">{multicols}</span><span class="vs">&quot;</span>,</span>
+<span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a>        html<span class="op">=</span><span class="st">&quot;&lt;/div&gt;&quot;</span></span>
+<span id="cb23-8"><a href="#cb23-8" aria-hidden="true" tabindex="-1"></a>    )</span></code></pre></div>
 <p>The <code>column-count</code> CSS property requires Internet Explorer&gt;=10, Firefox&gt;=52, Safari&gt;=9, Opera&gt;=37 or Chrome&gt;=50, refer to <a href="https://www.w3schools.com/css/css3_multiple_columns.asp">w3schools</a>. In order to use the <code>multicol</code> <em>tex</em> package, the statement <code>\usepackage{multicol}</code> has to be included in the yaml meta data in the front matter of the Markdown document.</p>
 <div style="column-count: 2;">
-<p>Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text</p>
-</div>
-<p><strong>Example 2: Multi-Column Text in <code>pdf</code> and <code>html</code></strong></p>
-<div class="sourceCode" id="cb24"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> pdf_mcol(text): <span class="cf">return</span> <span class="vs">r&quot;\begin</span><span class="sc">{multicols}{2}</span><span class="vs">&quot;</span> <span class="op">+</span> text <span class="op">+</span> <span class="vs">r&quot;\end</span><span class="sc">{multicols}</span><span class="vs">&quot;</span></span>
-<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> html_mcol(text): <span class="cf">return</span> <span class="vs">r&quot;&lt;div style=&#39;column-count: 2;&#39;&gt;&quot;</span> <span class="op">+</span> <span class="vs">r&quot;&lt;/div&gt;&quot;</span></span></code></pre></div>
-<div style="column-count: 2;">
-
+<p>Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text</p>
 </div>
 <hr />
 <h1 data-number="11" id="include-statement"><span class="header-section-number">11</span> Include Statement</h1>
 <p><code>marky</code> allows to include other Markdown text using the <code>!!!</code> statement. Please refer to the <code>marky</code> documentation for complete description of the <code>!!!</code> statement. During rendering <code>marky</code> keeps track of included files and creates Makefile rules for dependent make.</p>
-<div class="sourceCode" id="cb25"><pre class="sourceCode md"><code class="sourceCode markdown"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="in">    !!! file.mdi</span></span></code></pre></div>
+<div class="sourceCode" id="cb24"><pre class="sourceCode md"><code class="sourceCode markdown"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="in">    !!! file.mdi</span></span></code></pre></div>
 <hr />
 <h1 data-number="12" id="meta-data"><span class="header-section-number">12</span> Meta Data</h1>
 <p><code>marky</code> supports document meta data in Markdown front matter. This feature is not explained in the quickstart. Please refer to the <code>marky</code> documentation for explanation.</p>
-<div class="sourceCode" id="cb26"><pre class="sourceCode md"><code class="sourceCode markdown"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="in">    ---</span></span>
-<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a><span class="in">    META_DATA</span></span>
-<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a><span class="in">    ---</span></span>
-<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a><span class="in">    MARKDOWN</span></span></code></pre></div>
+<div class="sourceCode" id="cb25"><pre class="sourceCode md"><code class="sourceCode markdown"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="in">    ---</span></span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a><span class="in">    META_DATA</span></span>
+<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a><span class="in">    ---</span></span>
+<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a><span class="in">    MARKDOWN</span></span></code></pre></div>
 <hr />
 <h1 data-number="13" id="escape-markup"><span class="header-section-number">13</span> Escape Markup</h1>
 <p>The <code>marky</code> markup can be escaped. When markup is escaped <code>marky</code> removes the escape sequence and prints out the unescaped statement.</p>
@@ -864,8 +817,8 @@
 </tr>
 <tr class="even">
 <td>format code</td>
+<td><code>`\\?...`</code></td>
 <td><code>`\?...`</code></td>
-<td><code>`?...`</code></td>
 </tr>
 <tr class="odd">
 <td>include statement</td>
